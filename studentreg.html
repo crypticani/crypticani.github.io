@@ -3,19 +3,20 @@
     <head>
         <title>Student Registration Form</title> 
     </head>
-    <body>
+    <body bgcolor="#FCD02C">
         <h3>Enter the details of Student</h3>
-        <form method="GET">
-            Student Name:   <input type="text" name="studentname" required><br>
-            Father's Name:<input type="text" name="fathersname" required><br>
-            Mother's Name:<input type="text" name="mothersname" ><br>
-            D.O.B.: <input type="date" name="dob" required><br>
+        <form method="POST">
+            Student Name:   <input type="text" name="studentname" required><br><br>
+            Father's Name:<input type="text" name="fathersname" required><br><br>
+            Mother's Name:<input type="text" name="mothersname" ><br><br>
+            D.O.B.: <input type="date" name="dob" required><br><br>
             Gender: 
-            Male<input type="radio" name="Gender">
-            Female<input type="radio" name="Gender" ><br>
-            Address:  <input type="text" name="address" required><br>
+            Male<input type="radio" name="Gender" >
+            Female<input type="radio" name="Gender" ><br><br>
+            Address:  <input type="text" name="address" required><br><br>
             State:         
-            <select>
+            <select required>
+                <option value=" " disabled selected>--select--</option>
                 <option value="Bihar">Bihar </option>
                 <option value="Chhatisgarh">Chhatisgarh</option>
                 <option value="Jharkhand">Jharkhand</option>
@@ -23,21 +24,22 @@
                 <option value="Madhya Pradesh">Madhya Pradesh</option>
                 <option value="Uttar Pradesh">Uttar Pradesh</option>
                 <option value="Uttrakhand">Uttrakhand</option>    
-            </select><br>
+            </select>   
             Country:
-            <select>
+            <select required>
                 <option value="India">India</option>
-            </select><br>
-            Email ID:<input type="email" name="email" required><br>
-            Mobile Number:<input type="tel" name="mobile" maxlength="10"><br>
-            Skills and Hobbies: <input type="text"><br>
+            </select><br><br>
+            Email ID:<input type="email" name="email" required><br><br>
+            Mobile Number:<input type="tel" name="mobile" maxlength="10" required><br><br>
+            Skills and Hobbies: <input type="text"><br><br>
             Qualification: <br>
             <input type="checkbox">10th/High School<br>
             <input type="checkbox">Intermediate/Higher Secondary<br>
             <input type="checkbox">Diploma Holder<br>
             <input type="checkbox">Graduate<br>
             Select Course:
-            <select>
+            <select required>
+                <option value=" " disabled selected>--select--</option>
                 <option value="BCA">BCA </option>
                 <option value="BAJMC">BAJMC</option>
                 <option value="Bsc. IT">Bsc. IT</option>
@@ -45,10 +47,11 @@
                 <option value="Bsc (Honours)">Bsc (Honours)</option>
                 <option value="BRS">BRS</option>
                 <option value="MCA">MCA</option>    
-            </select><br>
-            Student's Image: <input type="file"><br><br>
+            </select><br><br>
+            Student's Image: <input type="file"><br><br><br>
             <input type="submit" value="Register">
             <input type="reset" value="Reset">
-        </form>
+        </form><br><br>
+        <a href="index.html"> <b>Home</b></a>
     </body>
 </html>
