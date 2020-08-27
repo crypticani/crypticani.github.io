@@ -1,7 +1,7 @@
 /* Add a black background color to the top navigation */
 .topnav {
 
-    background-color: rgb(114, 147, 236);
+    background-color: rgb(160, 185, 255);
     overflow: hidden;
   }
   
@@ -12,15 +12,15 @@
     text-align: center;
     padding: 14px 16px;
     text-decoration-style: none;
-    font-size: 24px;
-    font-family: cursive;
+    font-size: 25px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     margin-right: 10%;
   }
   
   /* Change the color of links on hover */
   .topnav a:hover {
     background-color: #ddd;
-    color: rgb(136, 146, 238);
+    color: rgb(160, 185, 255);
   }
   
   /* Add a color to the active/current link */
@@ -30,6 +30,8 @@
   }
 
   body, th, td, input, textarea, h1, h2, h3, h4 {
+    background-color: rgb(150, 175, 245);
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    text-align: center;
     font-size: 18px;
   }
