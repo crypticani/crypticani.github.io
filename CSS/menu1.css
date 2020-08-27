@@ -29,9 +29,12 @@
     color: white;
   }
 
-  body, th, td, input, textarea, h1, h2, h3, h4 {
-    background-color: rgb(150, 175, 245);
+   th, td, input, textarea, h1, h2, h3, h4 {
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
     text-align: center;
     font-size: 18px;
   }
+body{
+    background-color: rgb(150, 175, 245);
+
+}
