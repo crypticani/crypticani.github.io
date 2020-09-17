@@ -53,6 +53,11 @@ height: auto;
   width: 50%;
   height: fit-content;
 }
+.stats{
+  float: left;
+  width: 40%;
+  height: auto;
+}
 
  #social{
     bottom:20px;
