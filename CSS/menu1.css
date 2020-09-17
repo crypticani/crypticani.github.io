@@ -43,6 +43,17 @@ body{
     margin: auto;
 }
 
+ .kw1{
+   float: left;
+width: 50%;
+height: auto;
+ } 
+.kw2{
+  float: right;
+  width: 50%;
+  height: fit-content;
+}
+
  #social{
     bottom:20px;
     right: 50px;
