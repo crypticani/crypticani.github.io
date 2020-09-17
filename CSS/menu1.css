@@ -9,14 +9,13 @@
   
   /* Style the links inside the navigation bar */
   .topnav a {
-    float: left;
-    color: #ece1e1;
+    float: center;
+    color: #f8f8f8;
     text-align: center;
-    padding: 14px 16px;
-    text-decoration-style: none;
-    font-size: 25px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    margin-right: 5%;
+    padding: 16px;
+    font-size: 30px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-right: 2%;
   }
   
   /* Change the color of links on hover */
