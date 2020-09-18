@@ -74,12 +74,12 @@ header{
 
  .kw1{
    float: left;
-width: 50%;
-height: auto;
+width: 40%;
+height: fit-content;
  } 
 .kw2{
   float: right;
-  width: 50%;
+  width: 60%;
   height: fit-content;
 }
 .stats{
