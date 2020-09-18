@@ -90,16 +90,14 @@ height: auto;
 }
 
  #social{
-    bottom:20px;
-    right: 50px;
+ position:absolute;
+    bottom: 20px;
+    left: 20px;
   }
 
   #social li{
     list-style-type:none;
     float: left;
     padding: 5px;
-    transition:1s;
-    color:white;
     position:relative;
-    cursor:pointer;  
   }
