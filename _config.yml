@@ -1,0 +1,20 @@
+# Site settings
+title: Aniket Kumar
+description: Personal Website of Aniket Kumar, a student of DSVV, Haridwar. Python Developer, Web Developer, Open Source Enthusiast.
+# baseurl: "/particle" # the subpath of your site, e.g. /blog
+# url: "localhost:3000" # the base hostname & protocol for your site e.g. http://willianjusten.com.br
+
+# User settings
+username: Aniket Kumar
+user_description: Linux and FOSS lover, who have learnt Programming, Data Structures, Computer Organization, Data Base Management System, Software Engineering, Data Communications and Computer Networking,Computer Graphics, etc. Using Linux as my daily driver and regularly contributing to the fedora project.
+user_title: Python Developer
+email: aniket.kumar@hotmail.com
+twitter_username: crypticani
+github_username:  crypticani
+linkedin_username:  crypticani
+
+# Google-analytics
+google-analytics:
+  id: ""
+
+exclude: ['package.json', 'src' , 'node_modules']
