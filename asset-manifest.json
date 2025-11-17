@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.51de9e84.chunk.css",
-    "main.js": "/static/js/main.e2cff77b.chunk.js",
-    "main.js.map": "/static/js/main.e2cff77b.chunk.js.map",
+    "main.css": "/static/css/main.604b00d9.chunk.css",
+    "main.js": "/static/js/main.8f70adbc.chunk.js",
+    "main.js.map": "/static/js/main.8f70adbc.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.d0908954.js",
     "runtime-main.js.map": "/static/js/runtime-main.d0908954.js.map",
-    "static/js/2.d9799961.chunk.js": "/static/js/2.d9799961.chunk.js",
-    "static/js/2.d9799961.chunk.js.map": "/static/js/2.d9799961.chunk.js.map",
+    "static/js/2.69a2df68.chunk.js": "/static/js/2.69a2df68.chunk.js",
+    "static/js/2.69a2df68.chunk.js.map": "/static/js/2.69a2df68.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.912c1131282be54967079024a71a9898.js": "/precache-manifest.912c1131282be54967079024a71a9898.js",
+    "precache-manifest.ef9875f787c0d84f7ca7a8c66a2de34f.js": "/precache-manifest.ef9875f787c0d84f7ca7a8c66a2de34f.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.51de9e84.chunk.css.map": "/static/css/main.51de9e84.chunk.css.map",
+    "static/css/main.604b00d9.chunk.css.map": "/static/css/main.604b00d9.chunk.css.map",
     "static/media/index.css": "/static/media/Montserrat-Regular.ee653992.ttf",
     "static/media/about.png": "/static/media/about.8fb0e5fd.png",
     "static/media/animated_logo.svg": "/static/media/animated_logo.dcd6dee2.svg",
@@ -40,13 +40,11 @@
     "static/media/home-bg.jpg": "/static/media/home-bg.bc2c7afa.jpg",
     "static/media/home-main.svg": "/static/media/home-main.1aed08b3.svg",
     "static/media/ibm_logo.png": "/static/media/ibm_logo.d3fccbe1.png",
-    "static/media/iiitk_logo.png": "/static/media/iiitk_logo.571a8584.png",
     "static/media/intel_logo.jpg": "/static/media/intel_logo.29152cf7.jpg",
     "static/media/iu_logo.png": "/static/media/iu_logo.60ed0bd3.png",
     "static/media/jsFramework.svg": "/static/media/jsFramework.5b4a6449.svg",
     "static/media/lpu.jpeg": "/static/media/lpu.4ff414b5.jpeg",
     "static/media/manOnTable.svg": "/static/media/manOnTable.83ac24fb.svg",
-    "static/media/nptel_logo.png": "/static/media/nptel_logo.95a12a2b.png",
     "static/media/oracle.png": "/static/media/oracle.e71d1ba8.png",
     "static/media/pre.svg": "/static/media/pre.cf8c6935.svg",
     "static/media/programmer.svg": "/static/media/programmer.5faf790b.svg",
@@ -56,8 +54,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.d0908954.js",
-    "static/js/2.d9799961.chunk.js",
-    "static/css/main.51de9e84.chunk.css",
-    "static/js/main.e2cff77b.chunk.js"
+    "static/js/2.69a2df68.chunk.js",
+    "static/css/main.604b00d9.chunk.css",
+    "static/js/main.8f70adbc.chunk.js"
   ]
 }
