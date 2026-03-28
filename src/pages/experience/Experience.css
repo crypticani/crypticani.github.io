@@ -1,0 +1,120 @@
+/* ─── Page wrapper ────────────────────────────────────────────────────────── */
+.experience-main {
+  width: 100%;
+}
+
+/* ─── Hero section ────────────────────────────────────────────────────────── */
+.basic-experience {
+  margin: 0 5%;
+  padding-bottom: 20px;
+}
+
+.experience-heading-div {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.experience-heading-div > * {
+  flex: 1;
+}
+
+.experience-heading-img-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.experience-heading-img-div > * {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ─── Hero text ───────────────────────────────────────────────────────────── */
+.experience-heading-text-div {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.experience-heading-text {
+  font-size: 52px;
+  font-weight: 700;
+  font-family: "Google Sans Medium";
+  line-height: 1.15;
+  text-align: center;
+  margin: 80px 0 0 0;
+  letter-spacing: -0.5px;
+}
+
+.experience-heading-sub-text {
+  font-size: 22px;
+  font-family: "Google Sans Regular";
+  text-align: center;
+  margin: 0;
+  opacity: 0.75;
+}
+
+.experience-header-detail-text {
+  font-size: 16px;
+  line-height: 1.7;
+  margin: 0 20px;
+  font-family: "Google Sans Regular";
+  opacity: 0.7;
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ─── Section badge ───────────────────────────────────────────────────────── */
+.experience-section-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 14px;
+  border-radius: 20px;
+  font-family: "Google Sans Medium";
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+/* ─── Responsive ──────────────────────────────────────────────────────────── */
+@media (max-width: 1380px) {
+  .experience-heading-text {
+    font-size: 44px;
+    margin-top: 60px;
+  }
+  .experience-heading-sub-text {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .basic-experience {
+    margin: 0 4%;
+  }
+
+  .experience-heading-text {
+    font-size: 30px;
+    margin-top: 28px;
+  }
+
+  .experience-heading-sub-text {
+    font-size: 17px;
+  }
+
+  .experience-heading-div {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .experience-header-detail-text {
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0 8px;
+  }
+}
