@@ -142,7 +142,7 @@ fetch(baseUrl, {
   .then((txt) => {
     const data = JSON.parse(txt);
     var cropped = { data: [] };
-    cropped["data"] = data["data"]["user"]["pullRequests"]["nodes"];
+    cropped["data"] = data["data"]["user"]["pullRequests"]["nodes"].filter((node) => node !== null);
 
     var open = 0;
     var closed = 0;
@@ -180,7 +180,7 @@ fetch(baseUrl, {
   .then((txt) => {
     const data = JSON.parse(txt);
     var cropped = { data: [] };
-    cropped["data"] = data["data"]["user"]["issues"]["nodes"];
+    cropped["data"] = data["data"]["user"]["issues"]["nodes"].filter((node) => node !== null);
 
     var open = 0;
     var closed = 0;
@@ -214,7 +214,7 @@ fetch(baseUrl, {
   .then((response) => response.text())
   .then((txt) => {
     const data = JSON.parse(txt);
-    const orgs = data["data"]["user"]["repositoriesContributedTo"]["nodes"];
+    const orgs = (data["data"]["user"]["repositoriesContributedTo"]["nodes"] || []).filter((node) => node !== null);
     var newOrgs = { data: [] };
     for (var i = 0; i < orgs.length; i++) {
       var obj = orgs[i]["owner"];
@@ -269,7 +269,7 @@ fetch(baseUrl, {
   .then((txt) => {
     const data = JSON.parse(txt);
     // console.log(txt);
-    const projects = data["data"]["user"]["pinnedItems"]["nodes"];
+    const projects = (data["data"]["user"]["pinnedItems"]["nodes"] || []).filter((node) => node !== null);
     var newProjects = { data: [] };
     for (var i = 0; i < projects.length; i++) {
       var obj = projects[i];
