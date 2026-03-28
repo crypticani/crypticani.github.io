@@ -32,7 +32,7 @@ class Header extends Component {
               <span style={{ color: theme.text }}>/&gt;</span>
             </NavLink>
             <input className="menu-btn" type="checkbox" id="menu-btn" />
-            <label className="menu-icon" htmlFor="menu-btn">
+            <label className="menu-icon" htmlFor="menu-btn" style={{ color: theme.text }}>
               <span className="navicon"></span>
             </label>
             <ul className="menu" style={{ backgroundColor: theme.body }}>
@@ -84,7 +84,7 @@ class Header extends Component {
                   Projects
                 </NavLink>
               </li>
-              {/* <li>
+              <li>
                 <NavLink
                   to="/opensource"
                   tag={Link}
@@ -95,7 +95,7 @@ class Header extends Component {
                 >
                   Open Source
                 </NavLink>
-              </li> */}
+              </li>
               <li>
                 <NavLink
                   to="/contact"
