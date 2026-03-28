@@ -25,10 +25,6 @@
   text-decoration: none;
 }
 
-.header li a:hover,
-.header .menu-btn:hover {
-  /* background-color: #A6E1FA; */
-}
 
 .header .logo {
   display: block;
@@ -61,7 +57,6 @@
 
 .header .menu-icon {
   cursor: pointer;
-  display: inline-block;
   float: right;
   padding: 28px 20px;
   position: relative;
@@ -69,7 +64,7 @@
 }
 
 .header .menu-icon .navicon {
-  background: #333;
+  background: currentColor;
   display: block;
   height: 2px;
   position: relative;
@@ -79,7 +74,7 @@
 
 .header .menu-icon .navicon:before,
 .header .menu-icon .navicon:after {
-  background: #333;
+  background: currentColor;
   content: "";
   display: block;
   height: 100%;
