@@ -1,6 +1,5 @@
 import React from "react";
 import "./Greeting.css";
-import SocialMedia from "../../components/socialMedia/SocialMedia";
 import Button from "../../components/button/Button";
 import { greeting } from "../../portfolio";
 import { Fade } from "react-reveal";
@@ -22,6 +21,9 @@ export default function Greeting(props) {
                   ( {greeting.nickname} )
                 </h2>
               )}
+              <h2 className="greeting-headline" style={{ color: theme.text }}>
+                {greeting.headline}
+              </h2>
               <p
                 className="greeting-text-p subTitle"
                 style={{ color: theme.secondaryText }}
@@ -29,11 +31,9 @@ export default function Greeting(props) {
                 {greeting.subTitle}
               </p>
               <div className="greeting-actions-row">
-                <SocialMedia theme={theme} />
-
                 <div>
                   <Button
-                    text="See my Resume"
+                    text="View Resume"
                     newTab={true}
                     href={greeting.resumeLink}
                     theme={theme}
@@ -42,11 +42,28 @@ export default function Greeting(props) {
 
                 <div>
                   <Button
-                    text="⭐ Star Me On Github"
+                    text="GitHub"
                     newTab={true}
-                    href={greeting.portfolio_repository}
+                    href={greeting.githubProfile}
                     theme={theme}
-                    className="portfolio-repo-btn"
+                  />
+                </div>
+
+                <div>
+                  <Button
+                    text="LinkedIn"
+                    newTab={true}
+                    href={greeting.linkedInProfile}
+                    theme={theme}
+                  />
+                </div>
+
+                <div>
+                  <Button
+                    text="Contact Me"
+                    newTab={false}
+                    href={greeting.contactLink}
+                    theme={theme}
                   />
                 </div>
               </div>

@@ -1,5 +1,7 @@
 {
-  "description": "I began my career as a Full‑Stack Developer working with Python, Django, and Vue.js, and later transitioned into a DevOps Engineer, driven by a strong interest in Linux, cloud platforms, and infrastructure automation.",
+  "title": "Experience",
+  "subtitle": "DevOps, platform engineering, cloud infrastructure, and SRE work",
+  "description": "3+ years working on high-availability infrastructure, CI/CD automation, Kubernetes and containerized workloads, observability, database HA/DR, cloud operations, FinOps, IAM, and DevSecOps practices.",
   "header_image_path": "experience.svg",
   "sections": [
     {
@@ -7,13 +9,29 @@
       "experiences": [
         {
           "title": "DevOps Engineer",
-          "company": "Kochar Innovations Private Limited",
-          "company_url": "https://www.linkedin.com/company/knowmax/about/",
-          "logo_path": "muffito_logo.png",
-          "duration": "June 2023 - Current",
-          "location": "Amritsar, Punjab",
-          "description": "Deployment of applications using Docker on production infrastructure as well as on premise at client's data center. Configuration of Database clusters for High Availability from scratch (MySQL, PostgreSQL, MongoDB, Typesense, Clickhouse, Redis, KeyDB) and their backup and restore methodologies. Deployed Keycloak in High Availability mode from scratch and Integrated SSO for various applications. Managing Cloud Infrastructure. Leading the DevOps team and helping them in solving their problems whenever required. Designing System Architecture of the applications for High Availability. Configuration of CI/CD using Jenkins from scratch",
-          "color": "#9b1578"
+          "company": "KocharTech",
+          "company_url": "https://www.kochartech.com/",
+          "logo_path": "kochartech-small.jpg",
+          "duration": "Jun 2023 - Present",
+          "location": "Amritsar, India",
+          "descriptions": [
+            "Own HA infrastructure, CI/CD, observability, and cloud operations.",
+            "Support 15+ production applications with 99.9% uptime SLA.",
+            "Lead 8 engineers/interns across delivery and operations work.",
+            "Introduced reviews, runbooks, incident practices, and on-call rotation.",
+            "Reduced MTTR by 40%.",
+            "Built Jenkins, GitLab CI, and GitHub Actions pipelines.",
+            "Automated build-test-deploy workflows.",
+            "Increased release cadence from bi-weekly to multiple daily deployments.",
+            "Containerized 20+ services.",
+            "Managed Kubernetes workloads with rolling updates and zero-downtime releases.",
+            "Integrated Grype-based container vulnerability scanning into CI/CD gates.",
+            "Reduced production vulnerability exposure by 90%.",
+            "Designed HA data platforms using PostgreSQL + Patroni, MySQL Group Replication, MongoDB Replica Sets, ClickHouse, Redis Sentinel, and KeyDB.",
+            "Implemented DR automation with snapshots, cross-region backup replication, and recovery runbooks.",
+            "Achieved sub-30-minute RTO and optimized cloud spend by 25%."
+          ],
+          "color": "#2f80ed"
         }
       ]
     },
@@ -22,49 +40,47 @@
       "experiences": [
         {
           "title": "IT Intern",
-          "company": "Kochar Infotech Ltd.",
+          "company": "KocharTech",
           "company_url": "https://www.kochartech.com/",
-          "logo_path": "delhivery_logo.png",
-          "duration": "June 2022 - May 2023",
-          "location": "Gurgaon, Haryana",
-          "description": "Configured monitoring infrastructure for the organization from scratch using Prometheus, Alertmanager, Garafana, Loki and Fluentbit. Streamlined the deployment process of applications by dockerizing them. Customized Linux distro for organizational needs. Tracked Linux users with the help of Python and MQTT protocol. Configured auto data backup of all the Linux users to S3 buckets. Developed an admin panel to track all the active devices, fetch backup data and system logs, access the active systems remotely using Python, Django and MQTT",
-          "color": "#ee3c26"
+          "logo_path": "kochartech-small.jpg",
+          "duration": "Jun 2022 - May 2023",
+          "location": "Amritsar, India",
+          "descriptions": [
+            "Built an observability stack across 100+ hosts and 200+ containers.",
+            "Used Prometheus, Alertmanager, Grafana, Loki, and Fluent Bit.",
+            "Developed Python exporters and 15+ Grafana dashboards with PromQL panels.",
+            "Automated Linux home-directory backups to AWS S3.",
+            "Built a Django + MQTT device management portal for 50+ devices."
+          ],
+          "color": "#0f766e"
         },
         {
           "title": "Full Stack Development Intern",
-          "company": "The Code Work",
+          "company": "TheCodeWork",
           "company_url": "https://thecodework.com",
-          "logo_path": "delhivery_logo.png",
-          "duration": "June 2021 - Oct 2021",
-          "description": "Worked on Django, Django Rest Framework and Vue JS Projects",
-          "color": "#9b1578"
+          "logo_path": "thecodework.png",
+          "duration": "Jun 2021 - Oct 2021",
+          "location": "Remote",
+          "descriptions": [
+            "Developed Django/DRF backend APIs.",
+            "Built VueJS/TailwindCSS interfaces for a no-code application platform."
+          ],
+          "color": "#7c3aed"
         },
         {
           "title": "Software Development Intern",
           "company": "All World Gayatri Pariwar",
           "company_url": "https://awgp.org",
-          "logo_path": "delhivery_logo.png",
+          "logo_path": "awgp.png",
           "duration": "Feb 2021 - May 2021",
-          "description": "Worked on Django, JavaScript and PHP Projects",
-          "color": "#9b1578"
-        }
-      ]
-    },
-    {
-      "title": "Volunteerships",
-      "experiences": [
-        {
-          "title": "Volunteer",
-          "organization": "Fedora",
-          "company_url": "https://fedoraproject.org",
-          "logo_path": "delhivery_logo.png",
-          "duration": "July 2020 - June 2021",
-          "description": "Contributor at Fedora Community Outreach Task Force",
+          "descriptions": [
+            "Collaborated with the software development team to fix bugs.",
+            "Added features to existing software.",
+            "Contributed to ERP development and wrote project documentation."
+          ],
           "color": "#9b1578"
         }
       ]
     }
-  ],
-  "subtitle": "Work, Internship and Volunteership",
-  "title": "Experience"
+  ]
 }

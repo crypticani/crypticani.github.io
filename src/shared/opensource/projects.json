@@ -1,1 +1,74 @@
-{"data":[{"id":"R_kgDORg63vA","name":"spend-meter","createdAt":"2026-03-07T16:09:35Z","url":"https://github.com/crypticani/spend-meter","description":"Mobile-first, local-first personal finance tracker that runs entirely in your browser. No login, no cloud, just your data.","isFork":false,"languages":[{"name":"JavaScript","iconifyClass":"logos-javascript"},{"name":"HTML","iconifyClass":"logos-html-5"},{"name":"CSS","iconifyClass":"logos-css-3"}]},{"id":"R_kgDOReTofA","name":"uptime-lens","createdAt":"2026-03-04T14:24:01Z","url":"https://github.com/crypticani/uptime-lens","description":"Real-time uptime and status monitoring for core cloud and developer services.","isFork":false,"languages":[{"name":"CSS","iconifyClass":"logos-css-3"},{"name":"HTML","iconifyClass":"logos-html-5"},{"name":"JavaScript","iconifyClass":"logos-javascript"}]},{"id":"MDEwOlJlcG9zaXRvcnkzNjYzMzM4NjQ=","name":"UTSAV","createdAt":"2021-05-11T09:54:00Z","url":"https://github.com/crypticani/UTSAV","description":" A sports event management system developed using Django. ","isFork":false,"languages":[{"name":"Python","iconifyClass":"logos-python"},{"name":"CSS","iconifyClass":"logos-css-3"},{"name":"JavaScript","iconifyClass":"logos-javascript"},{"name":"HTML","iconifyClass":"logos-html-5"}]},{"id":"R_kgDOGzPoJQ","name":"MyClassBot","createdAt":"2022-02-07T06:36:02Z","url":"https://github.com/crypticani/MyClassBot","description":"A bot written in Python to automate attending classes on MyClass (Codetantra).","isFork":false,"languages":[{"name":"Python","iconifyClass":"logos-python"}]},{"id":"MDEwOlJlcG9zaXRvcnkyOTE0NzQ0OTk=","name":"himmat","createdAt":"2020-08-30T13:21:34Z","url":"https://github.com/crypticani/himmat","description":"A CLI app for daily motivation from the book \"Lose Not Your Heart\" (\"Haariye na himmat\" in hindi) written by Pt. Shriram Sharma Acharya","isFork":false,"languages":[{"name":"Python","iconifyClass":"logos-python"}]},{"id":"MDEwOlJlcG9zaXRvcnkyNTA5NDIxNjU=","name":"Drag-N-Drive_game","createdAt":"2020-03-29T03:02:32Z","url":"https://github.com/rupalisingh2709/Drag-N-Drive_game","description":"A simple but interesting car racing game coded in c language.","isFork":false,"languages":[]}]}
+{
+  "data": [
+    {
+      "id": "R_kgDORg63vA",
+      "name": "spend-meter",
+      "createdAt": "2026-03-07T16:09:35Z",
+      "url": "https://github.com/crypticani/spend-meter",
+      "description": "Mobile-first, local-first personal finance tracker that runs entirely in your browser. No login, no cloud, just your data.",
+      "isFork": false,
+      "languages": [
+        { "name": "JavaScript", "iconifyClass": "logos-javascript" },
+        { "name": "HTML", "iconifyClass": "logos-html-5" },
+        { "name": "CSS", "iconifyClass": "logos-css-3" }
+      ]
+    },
+    {
+      "id": "R_kgDOReTofA",
+      "name": "uptime-lens",
+      "createdAt": "2026-03-04T14:24:01Z",
+      "url": "https://github.com/crypticani/uptime-lens",
+      "description": "Real-time uptime and status monitoring for core cloud and developer services.",
+      "isFork": false,
+      "languages": [
+        { "name": "CSS", "iconifyClass": "logos-css-3" },
+        { "name": "HTML", "iconifyClass": "logos-html-5" },
+        { "name": "JavaScript", "iconifyClass": "logos-javascript" }
+      ]
+    },
+    {
+      "id": "MDEwOlJlcG9zaXRvcnkzNjYzMzM4NjQ=",
+      "name": "UTSAV",
+      "createdAt": "2021-05-11T09:54:00Z",
+      "url": "https://github.com/crypticani/UTSAV",
+      "description": "A sports event management system developed using Django.",
+      "isFork": false,
+      "languages": [
+        { "name": "Python", "iconifyClass": "logos-python" },
+        { "name": "CSS", "iconifyClass": "logos-css-3" },
+        { "name": "JavaScript", "iconifyClass": "logos-javascript" },
+        { "name": "HTML", "iconifyClass": "logos-html-5" }
+      ]
+    },
+    {
+      "id": "R_kgDOGzPoJQ",
+      "name": "MyClassBot",
+      "createdAt": "2022-02-07T06:36:02Z",
+      "url": "https://github.com/crypticani/MyClassBot",
+      "description": "A bot written in Python to automate attending classes on MyClass (Codetantra).",
+      "isFork": false,
+      "languages": [{ "name": "Python", "iconifyClass": "logos-python" }]
+    },
+    {
+      "id": "MDEwOlJlcG9zaXRvcnkyOTE0NzQ0OTk=",
+      "name": "himmat",
+      "createdAt": "2020-08-30T13:21:34Z",
+      "url": "https://github.com/crypticani/himmat",
+      "description": "A CLI app for daily motivation from the book \"Lose Not Your Heart\".",
+      "isFork": false,
+      "languages": [{ "name": "Python", "iconifyClass": "logos-python" }]
+    },
+    {
+      "id": "qurli",
+      "name": "qurli",
+      "createdAt": "2026-05-17T00:00:00Z",
+      "url": "https://github.com/crypticani/qurli",
+      "description": "Lightweight terminal-native HTTP client for developers, DevOps engineers, and SREs.",
+      "isFork": false,
+      "languages": [
+        { "name": "CLI", "iconifyClass": "mdi:console" },
+        { "name": "HTTP", "iconifyClass": "mdi:api" }
+      ]
+    }
+  ]
+}
