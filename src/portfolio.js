@@ -597,10 +597,33 @@ const contactPageData = {
       "Based in Samastipur, Bihar, India. Reach out for DevOps, platform engineering, cloud infrastructure, observability, SRE, CI/CD automation, developer tooling, and DevSecOps conversations.",
   },
   blogSection: {
-    title: "Security Notes & Technical Writing",
+    title: "Handbooks & Technical Writing",
     subtitle:
-      "Notes on infrastructure, Linux, DevOps, cloud, development, VAPT fundamentals, and practical security. The VAPT Handbook is my structured security-content track and belongs here, not in selected professional work.",
-    link: "https://crypticani.hashnode.dev/",
+      "Structured notes and handbooks for DevOps, platform engineering, application security, VAPT fundamentals, Linux, cloud, and practical security workflows.",
+    link: "https://blog.crypticani.dev/",
+    featuredLinks: [
+      {
+        title: "Hashnode Blog",
+        description:
+          "Short technical posts on DevOps, Linux, cloud infrastructure, developer workflows, security, and engineering lessons from hands-on work.",
+        buttonText: "Read Blog",
+        href: "https://blog.crypticani.dev/",
+      },
+      {
+        title: "The DevOps Handbook",
+        description:
+          "A hands-on path across Linux, networking, Git, scripting, containers, CI/CD, observability, cloud, Terraform, Ansible, Kubernetes, and DevOps projects.",
+        buttonText: "View Handbook",
+        href: "https://github.com/crypticani/the-devops-handbook",
+      },
+      {
+        title: "The VAPT Handbook",
+        description:
+          "A practical application security handbook covering recon, web/API testing, auth and session issues, cloud-backed app surfaces, reporting, and responsible practice.",
+        buttonText: "View Handbook",
+        href: "https://github.com/crypticani/the-vapt-handbook",
+      },
+    ],
     avatar_image_path: "blogs_image.svg",
   },
 };

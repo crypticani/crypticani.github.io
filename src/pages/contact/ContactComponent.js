@@ -64,13 +64,59 @@ class Contact extends Component {
                 >
                   {blogSection["subtitle"]}
                 </p>
+                {blogSection.featuredLinks?.length ? (
+                  <div className="handbook-card-grid">
+                    {blogSection.featuredLinks.map((handbook) => (
+                      <div
+                        className="handbook-card"
+                        key={handbook.href}
+                        style={{
+                          backgroundColor: theme.highlight,
+                          borderColor: theme.secondaryText,
+                        }}
+                      >
+                        <h2
+                          className="handbook-card-title"
+                          style={{ color: theme.text }}
+                        >
+                          {handbook.title}
+                        </h2>
+                        <p
+                          className="handbook-card-description"
+                          style={{ color: theme.secondaryText }}
+                        >
+                          {handbook.description}
+                        </p>
+                        <Button
+                          className="handbook-card-action"
+                          text={handbook.buttonText}
+                          newTab={true}
+                          href={handbook.href}
+                          theme={theme}
+                        />
+                      </div>
+                    ))}
+                  </div>
+                ) : null}
                 <div className="blogsite-btn-div">
-                  <Button
-                    text="Visit My Blogsite"
-                    newTab={true}
-                    href={blogSection.link}
-                    theme={theme}
-                  />
+                  {blogSection.links?.length ? (
+                    blogSection.links.map((link) => (
+                      <Button
+                        key={link.href}
+                        text={link.text}
+                        newTab={true}
+                        href={link.href}
+                        theme={theme}
+                      />
+                    ))
+                  ) : !blogSection.featuredLinks?.length ? (
+                    <Button
+                      text="Visit My Blogsite"
+                      newTab={true}
+                      href={blogSection.link}
+                      theme={theme}
+                    />
+                  ) : null}
                 </div>
               </div>
               <div className="blog-heading-img-div">
