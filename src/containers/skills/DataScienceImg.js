@@ -84,7 +84,7 @@ export default class DataScienceImg extends Component {
         <text x="424" y="194" fill={theme.text} fontSize="18">
           Alertmanager
         </text>
-        <text x="424" y="224" fill={theme.secondaryText} fontSize="14">
+        <text x="402" y="224" fill={theme.secondaryText} fontSize="14">
           noise-aware alerts and on-call signals
         </text>
         <rect

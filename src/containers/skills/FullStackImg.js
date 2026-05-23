@@ -99,7 +99,7 @@ export default class FullStackImg extends Component {
           stroke={theme.headerColor}
         />
         <text
-          x="214"
+          x="198"
           y="394"
           fill={theme.secondaryText}
           fontSize="15"
