@@ -1,0 +1,56 @@
+.proof-bar-section {
+  width: 90%;
+  margin: 0 auto 72px;
+}
+
+.proof-bar-grid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.proof-card {
+  border: 1px solid;
+  border-radius: 8px;
+  min-height: 160px;
+  padding: 22px;
+  text-align: left;
+}
+
+.proof-label {
+  font-family: "Google Sans Medium";
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  margin: 0 0 12px;
+  text-transform: uppercase;
+}
+
+.proof-value {
+  font-family: "Google Sans Bold";
+  font-size: 34px;
+  line-height: 1;
+  margin: 0 0 12px;
+}
+
+.proof-detail {
+  font-family: "Google Sans Regular";
+  font-size: 15px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+@media (max-width: 1100px) {
+  .proof-bar-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 620px) {
+  .proof-bar-section {
+    margin-bottom: 52px;
+  }
+
+  .proof-bar-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -32,7 +32,11 @@ class Header extends Component {
               <span style={{ color: theme.text }}>/&gt;</span>
             </NavLink>
             <input className="menu-btn" type="checkbox" id="menu-btn" />
-            <label className="menu-icon" htmlFor="menu-btn" style={{ color: theme.text }}>
+            <label
+              className="menu-icon"
+              htmlFor="menu-btn"
+              style={{ color: theme.text }}
+            >
               <span className="navicon"></span>
             </label>
             <ul className="menu" style={{ backgroundColor: theme.body }}>
@@ -82,18 +86,6 @@ class Header extends Component {
                   onMouseOut={(event) => onMouseOut(event)}
                 >
                   Projects
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  to="/opensource"
-                  tag={Link}
-                  activeStyle={{ fontWeight: "bold" }}
-                  style={{ color: theme.text }}
-                  onMouseEnter={(event) => onMouseEnter(event, theme.highlight)}
-                  onMouseOut={(event) => onMouseOut(event)}
-                >
-                  Open Source
                 </NavLink>
               </li>
               <li>

@@ -41,6 +41,8 @@
 .repo-name-div {
   display: flex;
   align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
 .repo-svg {
@@ -59,6 +61,16 @@
   overflow: hidden;
   line-height: 1.2;
   margin: 0px;
+}
+
+.repo-status {
+  border: 1px solid;
+  border-radius: 999px;
+  font-family: "Google Sans Medium";
+  font-size: 12px;
+  line-height: 1;
+  padding: 6px 8px;
+  white-space: nowrap;
 }
 
 .repo-star-svg {

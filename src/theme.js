@@ -198,17 +198,17 @@ export const materialTealTheme = {
 };
 
 export const materialDarkBGTheme = {
-  body: "#263238",
-  text: "#f5eaeaff",
+  body: "#0B1220",
+  text: "#E5E7EB",
   expTxtColor: "#000a12",
-  highlight: "#4f5b62",
-  dark: "#000a12",
-  secondaryText: "#aeaeae",
-  imageHighlight: "#607d8b",
+  highlight: "#111827",
+  dark: "#020617",
+  secondaryText: "#94A3B8",
+  imageHighlight: "#2DD4BF",
   compImgHighlight: "#E6E6E6",
-  jacketColor: "#8eacbb",
-  headerColor: "#34515e",
-  splashBg: "#4f5b62",
+  jacketColor: "#1E3A5F",
+  headerColor: "#1F2937",
+  splashBg: "#0B1220",
   homeBackgroundImage: homeBg, // new key for background image
 };
 

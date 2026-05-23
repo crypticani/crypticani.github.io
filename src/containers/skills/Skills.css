@@ -8,6 +8,45 @@
   line-height: normal;
   font-family: "Google Sans Regular";
   text-align: center;
+  margin-bottom: 14px;
+}
+
+.skills-header-subtitle {
+  font-family: "Google Sans Medium";
+  font-size: 20px;
+  line-height: 1.5;
+  margin: 0 auto 34px;
+  max-width: 820px;
+  text-align: center;
+}
+
+.capability-grid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin: 0 auto 48px;
+}
+
+.capability-card {
+  border: 1px solid;
+  border-radius: 8px;
+  min-height: 170px;
+  padding: 22px;
+  text-align: left;
+}
+
+.capability-title {
+  font-family: "Google Sans Medium";
+  font-size: 22px;
+  line-height: 1.2;
+  margin: 0 0 12px;
+}
+
+.capability-description {
+  font-family: "Google Sans Regular";
+  font-size: 15.5px;
+  line-height: 1.55;
+  margin: 0;
 }
 
 .skills-text {
@@ -45,6 +84,9 @@
   .skills-header {
     font-size: 50px;
   }
+  .capability-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
   /* .skills-image-div > img {
     margin-top: 0px;
   } */
@@ -56,6 +98,17 @@
   }
   .skills-header {
     font-size: 30px;
+  }
+  .skills-header-subtitle {
+    font-size: 16px;
+    margin-bottom: 24px;
+  }
+  .capability-grid {
+    grid-template-columns: 1fr;
+  }
+  .capability-card {
+    min-height: auto;
+    padding: 18px;
   }
   .greeting-text-p {
     font-size: 16px;
