@@ -43,6 +43,29 @@ const greeting = {
   contactLink: "/contact",
 };
 
+const proofPoints = [
+  {
+    label: "DevOps Experience",
+    value: "3+ years",
+    detail: "Infrastructure, delivery, reliability, and automation work.",
+  },
+  {
+    label: "Production Scope",
+    value: "15+ apps",
+    detail: "High-availability operations across production services.",
+  },
+  {
+    label: "Reliability Target",
+    value: "99.9% SLA",
+    detail: "Runbooks, incident practices, observability, and on-call flow.",
+  },
+  {
+    label: "Cost Optimization",
+    value: "25%",
+    detail: "Cloud spend reduction through right-sizing and FinOps practices.",
+  },
+];
+
 const socialMediaLinks = [
   {
     name: "Github",
@@ -91,6 +114,38 @@ const socialMediaLinks = [
 const iconStyle = (color) => ({ color });
 
 const skills = {
+  summary: [
+    {
+      title: "Infrastructure",
+      description:
+        "Cloud and on-prem systems with Linux, networking, HA architecture, DR, DNS, Nginx, and cost controls.",
+    },
+    {
+      title: "Delivery",
+      description:
+        "CI/CD pipelines, Kubernetes rollouts, container workflows, release automation, and DevSecOps gates.",
+    },
+    {
+      title: "Reliability",
+      description:
+        "Observability stacks, alerting, logs, dashboards, runbooks, incident response, and MTTR reduction.",
+    },
+    {
+      title: "Data Platforms",
+      description:
+        "PostgreSQL, MySQL, MongoDB, ClickHouse, Redis, KeyDB, backups, replication, failover, and restore plans.",
+    },
+    {
+      title: "Security",
+      description:
+        "IAM, Keycloak, LDAP, SAML/OIDC, container scanning, VAPT fundamentals, and practical reporting.",
+    },
+    {
+      title: "Development",
+      description:
+        "Python, Bash, Go, Django/DRF, exporters, CLI tools, admin portals, and workflow automation.",
+    },
+  ],
   data: [
     {
       title: "Cloud & Infrastructure",
@@ -516,21 +571,14 @@ const experience = {
           duration: "Jun 2023 - Present",
           location: "Amritsar, India",
           descriptions: [
-            "Own HA infrastructure, CI/CD, observability, and cloud operations.",
-            "Support 15+ production applications with 99.9% uptime SLA.",
-            "Lead 8 engineers/interns across delivery and operations work.",
-            "Introduced reviews, runbooks, incident practices, and on-call rotation.",
-            "Reduced MTTR by 40%.",
-            "Built Jenkins, GitLab CI, and GitHub Actions pipelines.",
-            "Automated build-test-deploy workflows.",
-            "Increased release cadence from bi-weekly to multiple daily deployments.",
-            "Containerized 20+ services.",
-            "Managed Kubernetes workloads with rolling updates and zero-downtime releases.",
-            "Integrated Grype-based container vulnerability scanning into CI/CD gates.",
-            "Reduced production vulnerability exposure by 90%.",
+            "Own HA infrastructure, CI/CD, observability, and cloud operations for 15+ production applications with 99.9% uptime SLA.",
+            "Lead 8 engineers/interns and introduced reviews, runbooks, incident practices, and on-call rotation, reducing MTTR by 40%.",
+            "Built Jenkins, GitLab CI, and GitHub Actions pipelines that moved releases from bi-weekly to multiple daily deployments.",
+            "Containerized 20+ services and managed Kubernetes workloads with rolling updates and zero-downtime release practices.",
+            "Integrated Grype-based container vulnerability scanning into CI/CD gates, reducing production vulnerability exposure by 90%.",
             "Designed HA data platforms using PostgreSQL + Patroni, MySQL Group Replication, MongoDB Replica Sets, ClickHouse, Redis Sentinel, and KeyDB.",
-            "Implemented DR automation with snapshots, cross-region backup replication, and recovery runbooks.",
-            "Achieved sub-30-minute RTO and optimized cloud spend by 25%.",
+            "Implemented DR automation with snapshots, cross-region backup replication, and recovery runbooks, achieving sub-30-minute RTO.",
+            "Optimized cloud spend by 25% through cost review, rightsizing, and operational cleanup.",
           ],
           color: "#2f80ed",
         },
@@ -586,11 +634,58 @@ const experience = {
   ],
 };
 
+const caseStudies = {
+  title: "Selected Infrastructure Case Studies",
+  subtitle:
+    "Anonymized, client-safe examples of the platform, reliability, security, and operations work behind my resume.",
+  studies: [
+    {
+      title: "High-Availability Infrastructure & DR",
+      focus: "Reliability engineering",
+      description:
+        "Designed production HA patterns, backup replication, restore runbooks, and recovery workflows across cloud and on-prem environments without exposing client-specific infrastructure.",
+      outcomes: ["99.9% SLA", "Sub-30-minute RTO", "Cross-region backups"],
+    },
+    {
+      title: "Observability Platform",
+      focus: "Monitoring and incident response",
+      description:
+        "Built Prometheus, Alertmanager, Grafana, Loki, Fluent Bit, and custom exporter coverage across hosts, containers, applications, and infrastructure health signals.",
+      outcomes: ["100+ hosts", "200+ containers", "15+ dashboards"],
+    },
+    {
+      title: "CI/CD Automation with DevSecOps Gates",
+      focus: "Delivery automation",
+      description:
+        "Implemented build-test-deploy pipelines across Jenkins, GitLab CI, and GitHub Actions with Grype-based vulnerability gates and safer deployment workflows.",
+      outcomes: [
+        "Multiple daily releases",
+        "20+ services",
+        "90% exposure reduction",
+      ],
+    },
+    {
+      title: "Cloud Cost Optimization / FinOps",
+      focus: "Cost-aware operations",
+      description:
+        "Reviewed cloud usage, eliminated waste, optimized resources, and connected operational choices to measurable infrastructure cost reduction.",
+      outcomes: ["25% spend reduction", "Usage review", "Operational cleanup"],
+    },
+    {
+      title: "Identity & SSO Foundations",
+      focus: "IAM and access control",
+      description:
+        "Worked with Keycloak, LDAP, SAML/OIDC, access patterns, service ownership, and auditability for internal and application-facing identity workflows.",
+      outcomes: ["Keycloak", "LDAP", "SAML/OIDC"],
+    },
+  ],
+};
+
 // Projects Page
 const projectsHeader = {
   title: "Projects",
   description:
-    "GitHub-backed projects and tools. I keep this section limited to public repositories so every project card links to a real codebase.",
+    "GitHub-backed projects, tools, and platform ideas. I prioritize public repositories and mark early-stage work clearly when it is still being prepared.",
   avatar_image_path: "projects_image.svg",
 };
 
@@ -645,11 +740,13 @@ export {
   settings,
   seo,
   greeting,
+  proofPoints,
   socialMediaLinks,
   skills,
   degrees,
   certifications,
   experience,
+  caseStudies,
   projectsHeader,
   contactPageData,
 };

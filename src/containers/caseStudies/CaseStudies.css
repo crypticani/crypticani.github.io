@@ -1,0 +1,127 @@
+.case-studies-section {
+  width: 90%;
+  margin: 0 auto 82px;
+}
+
+.case-studies-header {
+  max-width: 860px;
+  margin: 0 auto 34px;
+  text-align: center;
+}
+
+.case-studies-title {
+  font-family: "Google Sans Regular";
+  font-size: 54px;
+  font-weight: 400;
+  line-height: 1.1;
+  margin: 0 0 16px;
+}
+
+.case-studies-subtitle {
+  font-family: "Google Sans Medium";
+  font-size: 20px;
+  line-height: 1.55;
+  margin: 0;
+}
+
+.case-studies-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+
+.case-studies-grid > * {
+  grid-column: span 2;
+}
+
+.case-studies-grid > *:nth-last-child(2) {
+  grid-column: 2 / span 2;
+}
+
+.case-studies-grid > *:last-child {
+  grid-column: 4 / span 2;
+}
+
+.case-study-card {
+  border: 1px solid;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  min-height: 290px;
+  padding: 24px;
+  text-align: left;
+}
+
+.case-study-focus {
+  font-family: "Google Sans Medium";
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  margin: 0 0 14px;
+  text-transform: uppercase;
+}
+
+.case-study-title {
+  font-family: "Google Sans Medium";
+  font-size: 24px;
+  line-height: 1.2;
+  margin: 0 0 12px;
+}
+
+.case-study-description {
+  font-family: "Google Sans Regular";
+  font-size: 16px;
+  line-height: 1.55;
+  margin: 0;
+}
+
+.case-study-outcomes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 24px;
+}
+
+.case-study-outcome {
+  border: 1px solid;
+  border-radius: 999px;
+  font-family: "Google Sans Medium";
+  font-size: 13px;
+  line-height: 1;
+  padding: 8px 10px;
+}
+
+@media (max-width: 1100px) {
+  .case-studies-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .case-studies-grid > *,
+  .case-studies-grid > *:nth-last-child(2),
+  .case-studies-grid > *:last-child {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .case-studies-section {
+    margin-bottom: 56px;
+  }
+
+  .case-studies-title {
+    font-size: 30px;
+  }
+
+  .case-studies-subtitle {
+    font-size: 16px;
+  }
+
+  .case-studies-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .case-study-card {
+    min-height: auto;
+    padding: 20px;
+  }
+}

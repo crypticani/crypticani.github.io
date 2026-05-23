@@ -30,6 +30,17 @@ export default function GithubRepoCard({ repo, theme }) {
             <p className="repo-name" style={{ color: theme.text }}>
               {repo.name}
             </p>
+            {repo.status && (
+              <span
+                className="repo-status"
+                style={{
+                  color: theme.imageHighlight,
+                  borderColor: theme.imageHighlight,
+                }}
+              >
+                {repo.status}
+              </span>
+            )}
           </div>
           <p className="repo-description" style={{ color: theme.text }}>
             {repo.description}

@@ -69,6 +69,20 @@
         { "name": "CLI", "iconifyClass": "mdi:console" },
         { "name": "HTTP", "iconifyClass": "mdi:api" }
       ]
+    },
+    {
+      "id": "cloudpulse",
+      "name": "CloudPulse",
+      "createdAt": "2026-05-23T00:00:00Z",
+      "url": "https://github.com/crypticani/cloudpulse",
+      "description": "Coming soon: cloud cost visibility and FinOps analytics platform focused on practical cloud infrastructure operations.",
+      "isFork": false,
+      "status": "Coming soon",
+      "languages": [
+        { "name": "Go", "iconifyClass": "logos-go" },
+        { "name": "PostgreSQL", "iconifyClass": "logos-postgresql" },
+        { "name": "FinOps", "iconifyClass": "mdi:finance" }
+      ]
     }
   ]
 }
