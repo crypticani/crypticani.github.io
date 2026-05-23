@@ -43,9 +43,18 @@
   font-family: "Google Sans Bold Italic";
 }
 
+.greeting-headline {
+  max-width: 760px;
+  margin: 28px 40px 18px 0;
+  font-size: 30px;
+  line-height: 1.25;
+  font-family: "Google Sans Medium";
+}
+
 .greeting-text-p {
-  font-size: 40px;
-  line-height: 40px;
+  max-width: 780px;
+  font-size: 24px;
+  line-height: 1.45;
   margin-right: 40px;
   font-family: "Google Sans Medium";
 }
@@ -61,7 +70,10 @@
     font-size: 50px;
   }
   .greeting-text-p {
-    font-size: 20px;
+    font-size: 18px;
+  }
+  .greeting-headline {
+    font-size: 24px;
   }
 }
 @media (max-width: 768px) {
@@ -75,6 +87,11 @@
   }
   .greeting-nickname {
     font-size: 25px;
+    text-align: center;
+  }
+  .greeting-headline {
+    font-size: 22px;
+    margin: 26px 0 16px;
     text-align: center;
   }
   .greeting-text-p {
@@ -97,9 +114,9 @@
 .greeting-actions-row {
   display: flex;
   align-items: center;
-  gap: 1rem; /* space between items */
-  flex-wrap: nowrap; /* keep everything on one line if possible */
-  margin-top: 2 rem;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
 }
 
 /* optional: remove internal block behavior if needed
@@ -110,8 +127,11 @@
 
 @media (max-width: 600px) {
   .greeting-actions-row {
-    flex-direction: column;
-    gap: 1.25rem;
+    justify-content: center;
+    gap: 0.75rem;
+  }
+  .greeting-actions-row > div {
+    width: 90%;
   }
   .button-greeting-div,
   .portfolio-repo-btn-div {

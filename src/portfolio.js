@@ -1,263 +1,361 @@
-/* Change this file to get your personal Porfolio */
+/* Portfolio content */
+
+const siteUrl = "https://crypticani.dev";
+const resumePath = `${siteUrl}/files/Aniket_Kumar_DevOps_Resume.pdf`;
 
 // Website related settings
 const settings = {
-  isSplash: false, // Change this to false if you don't want Splash screen.
+  isSplash: false,
 };
 
-//SEO Related settings
+// SEO related settings
 const seo = {
-  title: "Aniket's Portfolio",
+  title: "Aniket Kumar | DevOps Engineer | Platform Engineering | SRE",
   description:
-    "DevOps Engineer and passionate learner who pairs hands-on Linux and containerization with cloud infrastructure to build reliable, cost-aware environments, streamline CI/CD pipelines, and implement end-to-end monitoring and observability for faster detection and recovery. Additionally, designs system architectures with high availability by incorporating redundancy, load balancing, and automated failover to minimize downtime and avoid single points of failure.",
+    "Portfolio of Aniket Kumar, a DevOps Engineer focused on high-availability infrastructure, CI/CD automation, Kubernetes, observability, database HA/DR, cloud cost optimization, and DevSecOps.",
+  keywords:
+    "DevOps Engineer, Platform Engineer, SRE, Kubernetes, Docker, Jenkins, GitLab CI, GitHub Actions, Prometheus, Grafana, Loki, PostgreSQL, MySQL, MongoDB, OCI, AWS, GCP, DevSecOps, FinOps, Keycloak, LDAP",
   og: {
-    title: "Aniket Kumar Portfolio",
+    title: "Aniket Kumar | DevOps Engineer | Platform Engineering | SRE",
     type: "website",
-    url: "https://crypticani.github.io/",
+    url: siteUrl,
   },
 };
 
-//Home Page
+// Home Page
 const greeting = {
   title: "Aniket Kumar",
   logo_name: "crypticani",
   nickname: "crypticani",
+  headline:
+    "DevOps Engineer building reliable, observable, and cost-aware infrastructure.",
   subTitle:
-    "DevOps Engineer and passionate learner who pairs hands-on Linux and containerization with cloud infrastructure to build reliable, cost-aware environments, streamline CI/CD pipelines, and implement end-to-end monitoring and observability for faster detection and recovery, designs system architectures with high availability.",
-  resumeLink:
-    "https://crypticani.github.io/files/Aniket_Kumar_Resume_DevOps.pdf",
+    "I work on high-availability infrastructure, CI/CD automation, Kubernetes workloads, observability, database HA/DR, and DevSecOps practices across cloud and on-prem environments.",
+  role: "DevOps Engineer | Platform Engineering | Cloud Infrastructure | SRE",
+  location: "Samastipur, Bihar, India",
+  resumeLink: resumePath,
   portfolio_repository: "https://github.com/crypticani/portfolio",
   githubProfile: "https://github.com/crypticani",
+  linkedInProfile: "https://linkedin.com/in/crypticani",
+  contactLink: "/contact",
 };
 
 const socialMediaLinks = [
-  /* Your Social Media Link */
-  // github: "https://github.com/Aniket1919",
-  // linkedin: "https://www.linkedin.com/in/Aniket-Kumar-88710b138/",
-  // gmail: "AniketKumar98@gmail.com",
-  // gitlab: "https://gitlab.com/AniketKumar98",
-  // facebook: "https://www.facebook.com/laymanbrother.19/",
-  // twitter: "https://twitter.com/Aniket_1919",
-  // instagram: "https://www.instagram.com/layman_brother/"
-
   {
     name: "Github",
     link: "https://github.com/crypticani",
-    fontAwesomeIcon: "fa-github", // Reference https://fontawesome.com/icons/github?style=brands
-    backgroundColor: "#181717", // Reference https://simpleicons.org/?q=github
+    fontAwesomeIcon: "fa-github",
+    backgroundColor: "#181717",
   },
   {
     name: "LinkedIn",
-    link: "https://www.linkedin.com/in/crypticani/",
-    fontAwesomeIcon: "fa-linkedin-in", // Reference https://fontawesome.com/icons/linkedin-in?style=brands
-    backgroundColor: "#0077B5", // Reference https://simpleicons.org/?q=linkedin
+    link: "https://linkedin.com/in/crypticani",
+    fontAwesomeIcon: "fa-linkedin-in",
+    backgroundColor: "#0077B5",
   },
   {
     name: "Email",
-    link: "mailto:crypticani@protonmail.com",
-    fontAwesomeIcon: "fas fa-envelope", // Reference https://fontawesome.com/icons/envelope?style=brands
-    backgroundColor: "#bd20e4ff", // Reference https://simpleicons.org/?q=gmail
+    link: "mailto:aniket.kumar@hotmail.com",
+    fontAwesomeIcon: "fas fa-envelope",
+    backgroundColor: "#0a66c2",
   },
   {
     name: "YouTube",
     link: "https://www.youtube.com/@knowledgewit",
-    fontAwesomeIcon: "fa-youtube", // Reference https://fontawesome.com/icons/youtube?style=brands
-    backgroundColor: "#FF0000", // Reference https://simpleicons.org/?q=youtube
+    fontAwesomeIcon: "fa-youtube",
+    backgroundColor: "#FF0000",
   },
   {
     name: "X-Twitter",
     link: "https://twitter.com/crypticani",
-    fontAwesomeIcon: "fa-x-twitter", // Reference https://fontawesome.com/icons/x-twitter?f=brands&s=solid
-    backgroundColor: "#000000", // Reference https://simpleicons.org/?q=x
+    fontAwesomeIcon: "fa-x-twitter",
+    backgroundColor: "#000000",
   },
-  // {
-  //   name: "Facebook",
-  //   link: "https://www.facebook.com/laymanbrother.19/",
-  //   fontAwesomeIcon: "fa-facebook-f", // Reference https://fontawesome.com/icons/facebook-f?style=brands
-  //   backgroundColor: "#1877F2", // Reference https://simpleicons.org/?q=facebook
-  // },
   {
     name: "Instagram",
     link: "https://www.instagram.com/_crypticani/",
-    fontAwesomeIcon: "fa-instagram", // Reference https://fontawesome.com/icons/instagram?style=brands
-    backgroundColor: "#E4405F", // Reference https://simpleicons.org/?q=instagram
+    fontAwesomeIcon: "fa-instagram",
+    backgroundColor: "#E4405F",
   },
 ];
+
+const iconStyle = (color) => ({ color });
 
 const skills = {
   data: [
     {
-      title: "DevOps and Cloud Infrastructure",
+      title: "Cloud & Infrastructure",
       fileName: "CloudInfraImg",
       skills: [
-        "⚡ Experience working and managing multiple cloud platforms",
-        "⚡ Deployment of applications using Docker on production infrastructure as well as on premise at client's data center and maintaining websites on virtual machine instances along with integration of databases",
-        "⚡ Configuration of Database clusters for High Availability from scratch (MySQL, PostgreSQL, MongoDB, Typesense, Clickhouse, Redis, KeyDB) and their backup and restore methodologies",
-        "⚡ Configuring and Managing Single Sign On for various applications",
-        "⚡ Designing System Architecture of the applications for High Availability",
-        "⚡ Configuration of CI/CD using Jenkins from scratch",
-        "⚡ Configuring monitoring infrastructure from scratch using Prometheus, Alertmanager, Garafana, Loki and Fluentbit",
+        "OCI, AWS, GCP, Linux, Nginx, load balancing, DNS, HA architecture, disaster recovery, and FinOps.",
+        "Designing production infrastructure with redundancy, failover paths, backup strategy, and operational runbooks.",
+        "Keeping infrastructure reliable, cost-aware, and maintainable across cloud and on-prem environments.",
       ],
       softwareSkills: [
         {
+          skillName: "OCI",
+          fontAwesomeClassname: "simple-icons:oracle",
+          style: iconStyle("#f80000"),
+        },
+        {
+          skillName: "AWS",
+          fontAwesomeClassname: "simple-icons:amazonaws",
+          style: iconStyle("#ff9900"),
+        },
+        {
+          skillName: "GCP",
+          fontAwesomeClassname: "simple-icons:googlecloud",
+          style: iconStyle("#4285f4"),
+        },
+        {
           skillName: "Linux",
           fontAwesomeClassname: "simple-icons:linux",
-          style: {
-            color: "#00060fff",
-          },
-        },
-        {
-          skillName: "Docker",
-          fontAwesomeClassname: "simple-icons:docker",
-          style: {
-            color: "#3e33a3ff",
-          },
-        },
-        {
-          skillName: "Jenkins",
-          fontAwesomeClassname: "simple-icons:jenkins",
-          style: {
-            color: "#be4444ff",
-          },
-        },
-        {
-          skillName: "Ansible",
-          fontAwesomeClassname: "simple-icons:ansible",
-          style: {
-            color: "#252524ff",
-          },
-        },
-        {
-          skillName: "PostgreSQL",
-          fontAwesomeClassname: "simple-icons:postgresql",
-          style: {
-            color: "#336791",
-          },
-        },
-        {
-          skillName: "MongoDB",
-          fontAwesomeClassname: "simple-icons:mongodb",
-          style: {
-            color: "#47A248",
-          },
-        },
-        {
-          skillName: "Kubernetes",
-          fontAwesomeClassname: "simple-icons:kubernetes",
-          style: {
-            color: "#326CE5",
-          },
-        },
-        {
-          skillName: "Prometheus",
-          fontAwesomeClassname: "simple-icons:prometheus",
-          style: {
-            color: "#e02007ff",
-          },
-        },
-        {
-          skillName: "Grafana",
-          fontAwesomeClassname: "simple-icons:grafana",
-          style: {
-            color: "#c64c14ff",
-          },
+          style: iconStyle("#111111"),
         },
         {
           skillName: "Nginx",
           fontAwesomeClassname: "simple-icons:nginx",
-          style: {
-            color: "#0a741bff",
-          },
+          style: iconStyle("#009639"),
         },
         {
-          skillName: "Python",
-          fontAwesomeClassname: "simple-icons:python",
-          style: {
-            color: "#0d0553ff",
-          },
+          skillName: "Load Balancing",
+          fontAwesomeClassname: "mdi:scale-balance",
+          style: iconStyle("#2f80ed"),
         },
         {
-          skillName: "Git",
-          fontAwesomeClassname: "simple-icons:git",
-          style: {
-            color: "#c64c14ff",
-          },
+          skillName: "DNS",
+          fontAwesomeClassname: "mdi:dns-outline",
+          style: iconStyle("#6f42c1"),
+        },
+        {
+          skillName: "HA Architecture",
+          fontAwesomeClassname: "mdi:server-network",
+          style: iconStyle("#0f766e"),
+        },
+        {
+          skillName: "Disaster Recovery",
+          fontAwesomeClassname: "mdi:backup-restore",
+          style: iconStyle("#c2410c"),
+        },
+        {
+          skillName: "FinOps",
+          fontAwesomeClassname: "mdi:finance",
+          style: iconStyle("#047857"),
         },
       ],
     },
     {
-      title: "Full Stack Development",
-      fileName: "FullStackImg",
+      title: "Containers & CI/CD",
+      fileName: "CloudInfraImg",
       skills: [
-        "⚡ Building responsive website front end using React/Angular",
-        "⚡ Developing fullstack web applications using Django.",
-        "⚡ Creating application backend in Node, Express, Flask and Django Rest Framework",
+        "Docker, Kubernetes, Docker Compose, Jenkins, GitLab CI, GitHub Actions, and Grype.",
+        "Building automated build-test-deploy workflows with safer release paths and CI/CD security gates.",
+        "Managing containerized workloads with rolling updates and zero-downtime deployment practices.",
       ],
       softwareSkills: [
         {
-          skillName: "HTML5",
-          fontAwesomeClassname: "simple-icons:html5",
-          style: {
-            color: "#E34F26",
-          },
+          skillName: "Docker",
+          fontAwesomeClassname: "simple-icons:docker",
+          style: iconStyle("#2496ed"),
         },
         {
-          skillName: "CSS3",
-          fontAwesomeClassname: "fa-css3",
-          style: {
-            color: "#1572B6",
-          },
+          skillName: "Kubernetes",
+          fontAwesomeClassname: "simple-icons:kubernetes",
+          style: iconStyle("#326ce5"),
         },
         {
-          skillName: "TailwindCSS",
-          fontAwesomeClassname: "simple-icons:tailwindcss",
-          style: {
-            color: "#CC6699",
-          },
+          skillName: "Docker Compose",
+          fontAwesomeClassname: "simple-icons:docker",
+          style: iconStyle("#1d63ed"),
         },
         {
-          skillName: "JavaScript",
-          fontAwesomeClassname: "simple-icons:javascript",
-          style: {
-            backgroundColor: "#000000",
-            color: "#F7DF1E",
-          },
+          skillName: "Jenkins",
+          fontAwesomeClassname: "simple-icons:jenkins",
+          style: iconStyle("#d24939"),
         },
         {
-          skillName: "ReactJS",
-          fontAwesomeClassname: "simple-icons:react",
-          style: {
-            color: "#61DAFB",
-          },
+          skillName: "GitLab CI",
+          fontAwesomeClassname: "simple-icons:gitlab",
+          style: iconStyle("#fc6d26"),
         },
         {
-          skillName: "NodeJS",
-          fontAwesomeClassname: "devicon-plain:nodejs-wordmark",
-          style: {
-            color: "#339933",
-          },
+          skillName: "GitHub Actions",
+          fontAwesomeClassname: "simple-icons:githubactions",
+          style: iconStyle("#2088ff"),
         },
         {
-          skillName: "NPM",
-          fontAwesomeClassname: "simple-icons:npm",
-          style: {
-            color: "#CB3837",
-          },
+          skillName: "Grype",
+          fontAwesomeClassname: "mdi:shield-search",
+          style: iconStyle("#7c3aed"),
+        },
+      ],
+    },
+    {
+      title: "Observability",
+      fileName: "DataScienceImg",
+      skills: [
+        "Prometheus, Grafana, Loki, Alertmanager, Fluent Bit, PromQL, and custom exporters.",
+        "Building dashboards, alerts, logs, and metrics pipelines that support faster incident detection and recovery.",
+        "Developing Python exporters and operational views for hosts, containers, services, and infrastructure health.",
+      ],
+      softwareSkills: [
+        {
+          skillName: "Prometheus",
+          fontAwesomeClassname: "simple-icons:prometheus",
+          style: iconStyle("#e6522c"),
         },
         {
-          skillName: "Yarn",
-          fontAwesomeClassname: "simple-icons:yarn",
-          style: {
-            color: "#2C8EBB",
-          },
+          skillName: "Grafana",
+          fontAwesomeClassname: "simple-icons:grafana",
+          style: iconStyle("#f46800"),
         },
         {
-          skillName: "Django",
+          skillName: "Loki",
+          fontAwesomeClassname: "simple-icons:grafana",
+          style: iconStyle("#f59e0b"),
+        },
+        {
+          skillName: "Alertmanager",
+          fontAwesomeClassname: "mdi:bell-alert",
+          style: iconStyle("#dc2626"),
+        },
+        {
+          skillName: "Fluent Bit",
+          fontAwesomeClassname: "mdi:file-document-outline",
+          style: iconStyle("#0ea5e9"),
+        },
+        {
+          skillName: "PromQL",
+          fontAwesomeClassname: "mdi:chart-line",
+          style: iconStyle("#9333ea"),
+        },
+      ],
+    },
+    {
+      title: "Data Platforms & HA",
+      fileName: "CloudInfraImg",
+      skills: [
+        "PostgreSQL + Patroni, MySQL Group Replication, MongoDB Replica Sets, ClickHouse, Redis Sentinel, and KeyDB.",
+        "Designing database HA/DR patterns with backups, recovery runbooks, replication, failover, and restore validation.",
+        "Supporting reliable stateful platforms without exposing client-specific infrastructure details.",
+      ],
+      softwareSkills: [
+        {
+          skillName: "PostgreSQL",
+          fontAwesomeClassname: "simple-icons:postgresql",
+          style: iconStyle("#336791"),
+        },
+        {
+          skillName: "MySQL",
+          fontAwesomeClassname: "simple-icons:mysql",
+          style: iconStyle("#4479a1"),
+        },
+        {
+          skillName: "MongoDB",
+          fontAwesomeClassname: "simple-icons:mongodb",
+          style: iconStyle("#47a248"),
+        },
+        {
+          skillName: "ClickHouse",
+          fontAwesomeClassname: "simple-icons:clickhouse",
+          style: iconStyle("#ffcc01"),
+        },
+        {
+          skillName: "Redis",
+          fontAwesomeClassname: "simple-icons:redis",
+          style: iconStyle("#dc382d"),
+        },
+        {
+          skillName: "KeyDB",
+          fontAwesomeClassname: "mdi:database-sync",
+          style: iconStyle("#7c3aed"),
+        },
+        {
+          skillName: "Patroni",
+          fontAwesomeClassname: "mdi:database-cog",
+          style: iconStyle("#0f766e"),
+        },
+      ],
+    },
+    {
+      title: "Security & IAM",
+      fileName: "DesignImg",
+      skills: [
+        "Keycloak, LDAP, SAML/OIDC, DevSecOps, Burp Suite, and VAPT fundamentals.",
+        "Integrating SSO and IAM patterns while keeping access control, service ownership, and auditability clear.",
+        "Adding practical security checks to delivery workflows without overclaiming security specialization.",
+      ],
+      softwareSkills: [
+        {
+          skillName: "Keycloak",
+          fontAwesomeClassname: "simple-icons:keycloak",
+          style: iconStyle("#4d4d4d"),
+        },
+        {
+          skillName: "LDAP",
+          fontAwesomeClassname: "mdi:account-key",
+          style: iconStyle("#2563eb"),
+        },
+        {
+          skillName: "SAML/OIDC",
+          fontAwesomeClassname: "mdi:shield-key",
+          style: iconStyle("#0f766e"),
+        },
+        {
+          skillName: "DevSecOps",
+          fontAwesomeClassname: "mdi:security",
+          style: iconStyle("#b91c1c"),
+        },
+        {
+          skillName: "Burp Suite",
+          fontAwesomeClassname: "simple-icons:burpsuite",
+          style: iconStyle("#ff6633"),
+        },
+        {
+          skillName: "VAPT Fundamentals",
+          fontAwesomeClassname: "mdi:bug-check",
+          style: iconStyle("#7c2d12"),
+        },
+      ],
+    },
+    {
+      title: "Automation & Programming",
+      fileName: "FullStackImg",
+      skills: [
+        "Python, Bash, Go, Django/DRF, Ansible, and Git.",
+        "Writing scripts, exporters, admin tooling, APIs, and automation that reduce manual operational work.",
+        "Using Go for selected tooling while keeping professional positioning centered on DevOps and platform engineering.",
+      ],
+      softwareSkills: [
+        {
+          skillName: "Python",
+          fontAwesomeClassname: "simple-icons:python",
+          style: iconStyle("#3776ab"),
+        },
+        {
+          skillName: "Bash",
+          fontAwesomeClassname: "simple-icons:gnubash",
+          style: iconStyle("#4eaa25"),
+        },
+        {
+          skillName: "Go",
+          fontAwesomeClassname: "simple-icons:go",
+          style: iconStyle("#00add8"),
+        },
+        {
+          skillName: "Django/DRF",
           fontAwesomeClassname: "simple-icons:django",
-          style: {
-            backgroundColor: "#f5eaeaff",
-            color: "#033d16ff",
-          },
+          style: iconStyle("#092e20"),
+        },
+        {
+          skillName: "Ansible",
+          fontAwesomeClassname: "simple-icons:ansible",
+          style: iconStyle("#111111"),
+        },
+        {
+          skillName: "Git",
+          fontAwesomeClassname: "simple-icons:git",
+          style: iconStyle("#f05032"),
         },
       ],
     },
@@ -274,9 +372,9 @@ const degrees = {
       alt_name: "LPU",
       duration: "2021 - 2023",
       descriptions: [
-        "⚡ I have studied computer applications subjects like Programming, DS, Algorithms, DBMS, OS, Cloud, etc.",
-        "⚡ Apart from this, I have done courses on Data Science, Cloud Computing and Full Stack Development.",
-        "⚡ Got 8.97 CGPA",
+        "⚡ I studied core computer applications subjects including programming, data structures, algorithms, DBMS, operating systems, and cloud computing.",
+        "⚡ I also completed coursework around data science, cloud computing, and full-stack development.",
+        "⚡ CGPA: 8.97",
       ],
       website_link: "https://lpu.in",
     },
@@ -287,10 +385,10 @@ const degrees = {
       alt_name: "DSVV",
       duration: "2018 - 2021",
       descriptions: [
-        "⚡ I have studied computer applications subjects like Programming, DS, Algorithms, DBMS, OS, Cloud, etc.",
-        "⚡ Apart from this, I have also done a modular course in Cloud Computing",
-        "⚡ During my time at university, I was also associated with Jigyasa Club.",
-        "⚡ I also got the Academic Excellence Award and got 8.0 CGPA",
+        "⚡ I studied computer applications subjects including programming, data structures, algorithms, DBMS, operating systems, and cloud fundamentals.",
+        "⚡ I also completed a modular course in cloud computing and was associated with Jigyasa Club.",
+        "⚡ Academic Excellence Award",
+        "⚡ CGPA: 8.0",
       ],
       website_link: "https://www.dsvv.ac.in/",
     },
@@ -306,7 +404,25 @@ const certifications = {
       certificate_link:
         "https://catalog-education.oracle.com/ords/certview/sharebadge?id=E58B96E195BB05FB979AE79B82FD8C3FCC52498BFB6954F2079D0A4C9BC39560",
       alt_name: "Oracle",
-      color_code: "#810f0fff",
+      color_code: "#810f0f",
+    },
+    {
+      title: "Cloud Architecture",
+      subtitle: "- Google Cloud Skills Boost",
+      logo_path: "gcp_logo.png",
+      certificate_link:
+        "https://www.skills.google/public_profiles/8f5c39be-dc33-4dcf-9222-93a12d66603f",
+      alt_name: "Google Cloud",
+      color_code: "#4285f4",
+    },
+    {
+      title: "Google IT Automation with Python",
+      subtitle: "- Coursera",
+      logo_path: "coursera_logo.png",
+      certificate_link:
+        "https://www.coursera.org/account/accomplishments/specialization/certificate/XKHXNF4UDCEC",
+      alt_name: "Coursera",
+      color_code: "#2a73cc",
     },
     {
       title: "Foundations of Project Management",
@@ -315,16 +431,7 @@ const certifications = {
       certificate_link:
         "https://www.coursera.org/account/accomplishments/certificate/E3TXTAKY7L33",
       alt_name: "Coursera",
-      color_code: "#4285F499",
-    },
-    {
-      title: "Cloud Architecture",
-      subtitle: "- Qwiklabs",
-      logo_path: "gcp_logo.png",
-      certificate_link:
-        "https://www.skills.google/public_profiles/8f5c39be-dc33-4dcf-9222-93a12d66603f",
-      alt_name: "GCP",
-      color_code: "#4285F499",
+      color_code: "#2a73cc",
     },
     {
       title: "Python for Data Science, AI & Development",
@@ -333,16 +440,7 @@ const certifications = {
       certificate_link:
         "https://www.coursera.org/account/accomplishments/verify/E5UEZVFGNJLC",
       alt_name: "Coursera",
-      color_code: "#4285F499",
-    },
-    {
-      title: "Google IT Automation with Python Specialization",
-      subtitle: "- Coursera",
-      logo_path: "coursera_logo.png",
-      certificate_link:
-        "https://www.coursera.org/account/accomplishments/specialization/certificate/XKHXNF4UDCEC",
-      alt_name: "Coursera",
-      color_code: "#4285F499",
+      color_code: "#2a73cc",
     },
     {
       title: "Penetration Testing and Ethical Hacking",
@@ -351,7 +449,7 @@ const certifications = {
       certificate_link:
         "https://app.cybrary.it/courses/api/certificate/CC-0ba8e1bf-7007-486c-bd2b-40533d96e8f1/view",
       alt_name: "Cybrary",
-      color_code: "#0d0d0e99",
+      color_code: "#0d0d0e",
     },
   ],
 };
@@ -359,9 +457,9 @@ const certifications = {
 // Experience Page
 const experience = {
   title: "Experience",
-  subtitle: "Work, Internship and Volunteership",
+  subtitle: "DevOps, platform engineering, cloud infrastructure, and SRE work",
   description:
-    "I began my career as a Full‑Stack Developer working with Python, Django, and Vue.js, and later transitioned into a DevOps Engineer, driven by a strong interest in Linux, cloud platforms, and infrastructure automation.",
+    "3+ years working on high-availability infrastructure, CI/CD automation, Kubernetes and containerized workloads, observability, database HA/DR, cloud operations, FinOps, IAM, and DevSecOps practices.",
   header_image_path: "experience.svg",
   sections: [
     {
@@ -369,14 +467,29 @@ const experience = {
       experiences: [
         {
           title: "DevOps Engineer",
-          company: "Kochar Innovations Private Limited",
-          company_url: "https://www.linkedin.com/company/knowmax/about/",
+          company: "KocharTech",
+          company_url: "https://www.kochartech.com/",
           logo_path: "kochartech-small.jpg",
-          duration: "June 2023 - Current",
-          location: "Amritsar, Punjab",
-          description:
-            "Deployment of applications using Docker on production infrastructure as well as on premise at client's data center. Configuration of Database clusters for High Availability from scratch (MySQL, PostgreSQL, MongoDB, Typesense, Clickhouse, Redis, KeyDB) and their backup and restore methodologies. Deployed Keycloak in High Availability mode from scratch and Integrated SSO for various applications. Managing Cloud Infrastructure. Leading the DevOps team and helping them in solving their problems whenever required. Designing System Architecture of the applications for High Availability. Configuration of CI/CD using Jenkins from scratch",
-          color: "#9b1578",
+          duration: "Jun 2023 - Present",
+          location: "Amritsar, India",
+          descriptions: [
+            "Own HA infrastructure, CI/CD, observability, and cloud operations.",
+            "Support 15+ production applications with 99.9% uptime SLA.",
+            "Lead 8 engineers/interns across delivery and operations work.",
+            "Introduced reviews, runbooks, incident practices, and on-call rotation.",
+            "Reduced MTTR by 40%.",
+            "Built Jenkins, GitLab CI, and GitHub Actions pipelines.",
+            "Automated build-test-deploy workflows.",
+            "Increased release cadence from bi-weekly to multiple daily deployments.",
+            "Containerized 20+ services.",
+            "Managed Kubernetes workloads with rolling updates and zero-downtime releases.",
+            "Integrated Grype-based container vulnerability scanning into CI/CD gates.",
+            "Reduced production vulnerability exposure by 90%.",
+            "Designed HA data platforms using PostgreSQL + Patroni, MySQL Group Replication, MongoDB Replica Sets, ClickHouse, Redis Sentinel, and KeyDB.",
+            "Implemented DR automation with snapshots, cross-region backup replication, and recovery runbooks.",
+            "Achieved sub-30-minute RTO and optimized cloud spend by 25%.",
+          ],
+          color: "#2f80ed",
         },
       ],
     },
@@ -385,24 +498,32 @@ const experience = {
       experiences: [
         {
           title: "IT Intern",
-          company: "Kochar Infotech Ltd.",
+          company: "KocharTech",
           company_url: "https://www.kochartech.com/",
           logo_path: "kochartech-small.jpg",
-          duration: "June 2022 - May 2023",
-          location: "Gurgaon, Haryana",
-          description:
-            "Configured monitoring infrastructure for the organization from scratch using Prometheus, Alertmanager, Garafana, Loki and Fluentbit. Streamlined the deployment process of applications by dockerizing them. Customized Linux distro for organizational needs. Tracked Linux users with the help of Python and MQTT protocol. Configured auto data backup of all the Linux users to S3 buckets. Developed an admin panel to track all the active devices, fetch backup data and system logs, access the active systems remotely using Python, Django and MQTT",
-          color: "#ee3c26",
+          duration: "Jun 2022 - May 2023",
+          location: "Amritsar, India",
+          descriptions: [
+            "Built an observability stack across 100+ hosts and 200+ containers.",
+            "Used Prometheus, Alertmanager, Grafana, Loki, and Fluent Bit.",
+            "Developed Python exporters and 15+ Grafana dashboards with PromQL panels.",
+            "Automated Linux home-directory backups to AWS S3.",
+            "Built a Django + MQTT device management portal for 50+ devices.",
+          ],
+          color: "#0f766e",
         },
         {
           title: "Full Stack Development Intern",
-          company: "The Code Work",
+          company: "TheCodeWork",
           company_url: "https://thecodework.com",
           logo_path: "thecodework.png",
-          duration: "June 2021 - Oct 2021",
-          description:
-            " Working on Django, Django Rest Framework, TailwindCSS and VueJS. Developing a No-Code Project in Django and Django Rest Framework. ",
-          color: "#9b1578",
+          duration: "Jun 2021 - Oct 2021",
+          location: "Remote",
+          descriptions: [
+            "Developed Django/DRF backend APIs.",
+            "Built VueJS/TailwindCSS interfaces for a no-code application platform.",
+          ],
+          color: "#7c3aed",
         },
         {
           title: "Software Development Intern",
@@ -410,22 +531,11 @@ const experience = {
           company_url: "https://awgp.org",
           logo_path: "awgp.png",
           duration: "Feb 2021 - May 2021",
-          description:
-            "Collaborated effectively with members of software development team to fix the bugs or add some new features in existing softwares as well as contributed in the development of the new ERP for the organization and wrote the documentation.",
-          color: "#9b1578",
-        },
-      ],
-    },
-    {
-      title: "Volunteerships",
-      experiences: [
-        {
-          title: "Volunteer",
-          organization: "Fedora",
-          company_url: "https://fedoraproject.org",
-          logo_path: "fedora.png",
-          duration: "July 2020 - June 2021",
-          description: "Contributor at Fedora Community Outreach Task Force",
+          descriptions: [
+            "Collaborated with the software development team to fix bugs.",
+            "Added features to existing software.",
+            "Contributed to ERP development and wrote project documentation.",
+          ],
           color: "#9b1578",
         },
       ],
@@ -437,7 +547,7 @@ const experience = {
 const projectsHeader = {
   title: "Projects",
   description:
-    "My projects makes use of vast variety of latest technology tools. My best experience is to create Data Science projects and deploy them to web applications using cloud infrastructure.",
+    "GitHub-backed projects and tools. I keep this section limited to public repositories so every project card links to a real codebase.",
   avatar_image_path: "projects_image.svg",
 };
 
@@ -447,30 +557,15 @@ const contactPageData = {
     title: "Contact Me",
     profile_image_path: "avatar.svg",
     description:
-      "I am available on almost every social media. You can message me, I will reply within 24 hours. I can help you with Linux, Python. DevOps, Cloud and Opensource Development.",
+      "Based in Samastipur, Bihar, India. Reach out for DevOps, platform engineering, cloud infrastructure, observability, SRE, CI/CD automation, and DevSecOps conversations.",
   },
   blogSection: {
-    title: "Blogs",
+    title: "Learning & Technical Notes",
     subtitle:
-      "I like to document some of my experiences in professional career journey as well as some technical knowledge sharing.",
+      "Notes on infrastructure, Linux, DevOps, cloud, and practical security learning. Security learning content such as The VAPT Handbook belongs here, not in selected professional work.",
     link: "https://crypticani.hashnode.dev/",
     avatar_image_path: "blogs_image.svg",
   },
-  // addressSection: {
-  //   title: "Address",
-  //   subtitle: "Saratoga Ave, San Jose, CA, USA 95129",
-  //   locality: "San Jose",
-  //   country: "USA",
-  //   region: "California",
-  //   postalCode: "95129",
-  //   streetAddress: "Saratoga Avenue",
-  //   avatar_image_path: "address_image.svg",
-  //   location_map_link: "https://maps.app.goo.gl/NvYZqa34Wye4tpS17",
-  // },
-  // phoneSection: {
-  //   title: "",
-  //   subtitle: "",
-  // },
 };
 
 export {
@@ -479,12 +574,9 @@ export {
   greeting,
   socialMediaLinks,
   skills,
-  // competitiveSites,
   degrees,
   certifications,
   experience,
   projectsHeader,
-  // publicationsHeader,
-  // publications,
   contactPageData,
 };

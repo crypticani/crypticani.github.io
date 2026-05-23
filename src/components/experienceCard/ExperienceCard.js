@@ -8,6 +8,7 @@ class ExperienceCard extends Component {
     const index = this.props.index;
     const totalCards = this.props.totalCards;
     const theme = this.props.theme;
+    const descriptions = experience["descriptions"];
 
     const accentColor =
       experience["color"] || theme.imageHighlight || "#607d8b";
@@ -102,15 +103,26 @@ class ExperienceCard extends Component {
             </div>
 
             {/* Divider + Description */}
-            {experience["description"] && (
+            {(experience["description"] || descriptions?.length) && (
               <>
                 <div className="experience-card-divider" />
-                <p
-                  className="experience-card-description"
-                  style={{ color: theme.text }}
-                >
-                  {experience["description"]}
-                </p>
+                {descriptions?.length ? (
+                  <ul
+                    className="experience-card-description-list"
+                    style={{ color: theme.text }}
+                  >
+                    {descriptions.map((description) => (
+                      <li key={description}>{description}</li>
+                    ))}
+                  </ul>
+                ) : (
+                  <p
+                    className="experience-card-description"
+                    style={{ color: theme.text }}
+                  >
+                    {experience["description"]}
+                  </p>
+                )}
               </>
             )}
           </div>

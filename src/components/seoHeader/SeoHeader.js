@@ -24,7 +24,6 @@ function SeoHeader() {
     .link.substring("mailto:".length);
   let JobTitle = experience.sections[0].experiences[0].title;
   let JobCompany = experience.sections[0].experiences[0].company;
-  console.log(JobTitle, "@", JobCompany);
 
   let credentials = [];
   certifications.certifications.forEach((certification) => {
