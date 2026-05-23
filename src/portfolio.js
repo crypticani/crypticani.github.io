@@ -10,13 +10,15 @@ const settings = {
 
 // SEO related settings
 const seo = {
-  title: "Aniket Kumar | DevOps Engineer | Platform Engineering | SRE",
+  title:
+    "Aniket Kumar | DevOps Engineer & Full Stack Engineer | Platform Engineering | SRE",
   description:
-    "Portfolio of Aniket Kumar, a DevOps Engineer focused on high-availability infrastructure, CI/CD automation, Kubernetes, observability, database HA/DR, cloud cost optimization, and DevSecOps.",
+    "Portfolio of Aniket Kumar, a DevOps Engineer and Full Stack Engineer focused on high-availability infrastructure, CI/CD automation, Kubernetes, observability, database HA/DR, cloud cost optimization, DevSecOps, and VAPT fundamentals.",
   keywords:
-    "DevOps Engineer, Platform Engineer, SRE, Kubernetes, Docker, Jenkins, GitLab CI, GitHub Actions, Prometheus, Grafana, Loki, PostgreSQL, MySQL, MongoDB, OCI, AWS, GCP, DevSecOps, FinOps, Keycloak, LDAP",
+    "DevOps Engineer, Full Stack Engineer, Platform Engineer, SRE, Kubernetes, Docker, Jenkins, GitLab CI, GitHub Actions, Prometheus, Grafana, Loki, PostgreSQL, MySQL, MongoDB, OCI, AWS, GCP, DevSecOps, FinOps, Keycloak, LDAP, VAPT, Burp Suite, Python, Django REST Framework",
   og: {
-    title: "Aniket Kumar | DevOps Engineer | Platform Engineering | SRE",
+    title:
+      "Aniket Kumar | DevOps Engineer & Full Stack Engineer | Platform Engineering | SRE",
     type: "website",
     url: siteUrl,
   },
@@ -28,10 +30,11 @@ const greeting = {
   logo_name: "crypticani",
   nickname: "crypticani",
   headline:
-    "DevOps Engineer building reliable, observable, and cost-aware infrastructure.",
+    "DevOps Engineer and Full Stack Engineer building reliable, observable, and cost-aware infrastructure.",
   subTitle:
-    "I work on high-availability infrastructure, CI/CD automation, Kubernetes workloads, observability, database HA/DR, and DevSecOps practices across cloud and on-prem environments.",
-  role: "DevOps Engineer | Platform Engineering | Cloud Infrastructure | SRE",
+    "I work on high-availability infrastructure, CI/CD automation, Kubernetes workloads, observability, database HA/DR, DevSecOps, and backend/tooling development across cloud and on-prem environments.",
+  role:
+    "DevOps Engineer | Full Stack Engineer | Platform Engineering | Cloud Infrastructure | SRE",
   location: "Samastipur, Bihar, India",
   resumeLink: resumePath,
   portfolio_repository: "https://github.com/crypticani/portfolio",
@@ -281,9 +284,9 @@ const skills = {
       title: "Security & IAM",
       fileName: "DesignImg",
       skills: [
-        "Keycloak, LDAP, SAML/OIDC, DevSecOps, Burp Suite, and VAPT fundamentals.",
+        "Keycloak, LDAP, SAML/OIDC, and DevSecOps practices.",
         "Integrating SSO and IAM patterns while keeping access control, service ownership, and auditability clear.",
-        "Adding practical security checks to delivery workflows without overclaiming security specialization.",
+        "Adding practical security checks to delivery workflows through container scanning and CI/CD guardrails.",
       ],
       softwareSkills: [
         {
@@ -306,9 +309,31 @@ const skills = {
           fontAwesomeClassname: "mdi:security",
           style: iconStyle("#b91c1c"),
         },
+      ],
+    },
+    {
+      title: "Application Security & VAPT",
+      fileName: "DesignImg",
+      skills: [
+        "Reconnaissance, inventory mapping, web/API testing, auth/session testing, and OWASP-style issue triage.",
+        "Burp Suite workflows for capturing traffic, modifying requests, comparing responses, and collecting evidence.",
+        "Practical security notes around SPA/API systems, token auth, object storage, webhooks, cloud-backed apps, and CI/CD attack surfaces.",
+        "Reporting-focused mindset: document request, mutation, response delta, impact, and proof clearly.",
+      ],
+      softwareSkills: [
         {
           skillName: "Burp Suite",
           fontAwesomeClassname: "simple-icons:burpsuite",
+          style: iconStyle("#ff6633"),
+        },
+        {
+          skillName: "OWASP",
+          fontAwesomeClassname: "simple-icons:owasp",
+          style: iconStyle("#000000"),
+        },
+        {
+          skillName: "PortSwigger",
+          fontAwesomeClassname: "simple-icons:portswigger",
           style: iconStyle("#ff6633"),
         },
         {
@@ -316,15 +341,26 @@ const skills = {
           fontAwesomeClassname: "mdi:bug-check",
           style: iconStyle("#7c2d12"),
         },
+        {
+          skillName: "Web/API Testing",
+          fontAwesomeClassname: "mdi:web-check",
+          style: iconStyle("#2563eb"),
+        },
+        {
+          skillName: "The VAPT Handbook",
+          fontAwesomeClassname: "mdi:book-open-page-variant",
+          style: iconStyle("#0f766e"),
+        },
       ],
     },
     {
-      title: "Automation & Programming",
+      title: "Development, Automation & Programming",
       fileName: "FullStackImg",
       skills: [
         "Python, Bash, Go, Django/DRF, Ansible, and Git.",
-        "Writing scripts, exporters, admin tooling, APIs, and automation that reduce manual operational work.",
-        "Using Go for selected tooling while keeping professional positioning centered on DevOps and platform engineering.",
+        "Building Django/DRF APIs, internal admin portals, exporters, CLI tooling, and automation scripts.",
+        "Writing developer-focused tooling that reduces manual operational work and improves platform workflows.",
+        "Using Go for selected tooling while keeping professional positioning centered on DevOps, development, and platform engineering.",
       ],
       softwareSkills: [
         {
@@ -457,9 +493,10 @@ const certifications = {
 // Experience Page
 const experience = {
   title: "Experience",
-  subtitle: "DevOps, platform engineering, cloud infrastructure, and SRE work",
+  subtitle:
+    "DevOps, development, platform engineering, cloud infrastructure, and SRE work",
   description:
-    "3+ years working on high-availability infrastructure, CI/CD automation, Kubernetes and containerized workloads, observability, database HA/DR, cloud operations, FinOps, IAM, and DevSecOps practices.",
+    "3+ years working across high-availability infrastructure, CI/CD automation, Kubernetes and containerized workloads, observability, database HA/DR, cloud operations, FinOps, IAM, DevSecOps practices, and developer tooling.",
   header_image_path: "experience.svg",
   sections: [
     {
@@ -557,12 +594,12 @@ const contactPageData = {
     title: "Contact Me",
     profile_image_path: "avatar.svg",
     description:
-      "Based in Samastipur, Bihar, India. Reach out for DevOps, platform engineering, cloud infrastructure, observability, SRE, CI/CD automation, and DevSecOps conversations.",
+      "Based in Samastipur, Bihar, India. Reach out for DevOps, platform engineering, cloud infrastructure, observability, SRE, CI/CD automation, developer tooling, and DevSecOps conversations.",
   },
   blogSection: {
-    title: "Learning & Technical Notes",
+    title: "Security Notes & Technical Writing",
     subtitle:
-      "Notes on infrastructure, Linux, DevOps, cloud, and practical security learning. Security learning content such as The VAPT Handbook belongs here, not in selected professional work.",
+      "Notes on infrastructure, Linux, DevOps, cloud, development, VAPT fundamentals, and practical security. The VAPT Handbook is my structured security-content track and belongs here, not in selected professional work.",
     link: "https://crypticani.hashnode.dev/",
     avatar_image_path: "blogs_image.svg",
   },
