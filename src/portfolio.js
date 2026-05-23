@@ -63,6 +63,12 @@ const socialMediaLinks = [
     backgroundColor: "#0a66c2",
   },
   {
+    name: "Discord",
+    link: "https://discord.com/users/crypticani",
+    fontAwesomeIcon: "fa-discord",
+    backgroundColor: "#5865F2",
+  },
+  {
     name: "YouTube",
     link: "https://www.youtube.com/@knowledgewit",
     fontAwesomeIcon: "fa-youtube",
@@ -597,9 +603,9 @@ const contactPageData = {
       "Based in Samastipur, Bihar, India. Reach out for DevOps, platform engineering, cloud infrastructure, observability, SRE, CI/CD automation, developer tooling, and DevSecOps conversations.",
   },
   blogSection: {
-    title: "Handbooks & Technical Writing",
+    title: "Learning, Community & Technical Writing",
     subtitle:
-      "Structured notes and handbooks for DevOps, platform engineering, application security, VAPT fundamentals, Linux, cloud, and practical security workflows.",
+      "Structured notes, handbooks, and community resources for DevOps, platform engineering, Linux, cloud, application security, and practical infrastructure workflows.",
     link: "https://blog.crypticani.dev/",
     featuredLinks: [
       {
@@ -622,6 +628,13 @@ const contactPageData = {
           "A practical application security handbook covering recon, web/API testing, auth and session issues, cloud-backed app surfaces, reporting, and responsible practice.",
         buttonText: "View Handbook",
         href: "https://github.com/crypticani/the-vapt-handbook",
+      },
+      {
+        title: "DevOps Learning Discord",
+        description:
+          "A Discord community I run as @crypticani for learners working through DevOps, Linux, cloud, CI/CD, observability, and platform engineering topics.",
+        buttonText: "Join Discord",
+        href: "https://discord.gg/TSfxKeMZ57",
       },
     ],
     avatar_image_path: "blogs_image.svg",
