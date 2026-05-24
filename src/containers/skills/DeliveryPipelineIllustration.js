@@ -6,30 +6,37 @@ export default class DeliveryPipelineIllustration extends Component {
     const stage = (x, label, detail, accent = theme.imageHighlight) => (
       <g transform={`translate(${x} 232)`}>
         <rect
-          width="128"
+          width="112"
           height="112"
           rx="16"
           fill={theme.highlight}
           stroke={theme.headerColor}
           strokeWidth="3"
         />
-        <circle cx="64" cy="36" r="18" fill={accent} opacity="0.9" />
+        <circle cx="56" cy="36" r="18" fill={accent} opacity="0.9" />
         <path
-          d="M54 36h20M64 26v20"
+          d="M46 36h20M56 26v20"
           stroke={theme.dark}
           strokeWidth="4"
           strokeLinecap="round"
         />
         <text
-          x="22"
+          x="56"
           y="76"
           fill={theme.text}
           fontSize="15"
           fontFamily="Google Sans Medium"
+          textAnchor="middle"
         >
           {label}
         </text>
-        <text x="22" y="98" fill={theme.secondaryText} fontSize="12">
+        <text
+          x="56"
+          y="98"
+          fill={theme.secondaryText}
+          fontSize="12"
+          textAnchor="middle"
+        >
           {detail}
         </text>
       </g>
@@ -69,19 +76,31 @@ export default class DeliveryPipelineIllustration extends Component {
         <text x="78" y="134" fill={theme.secondaryText} fontSize="15">
           build, scan, deploy, verify, and roll forward safely
         </text>
-        <path
-          d="M172 288h60M360 288h60M548 288h48"
-          stroke={theme.imageHighlight}
-          strokeWidth="5"
+        <line
+          x1="154"
+          y1="288"
+          x2="622"
+          y2="288"
+          stroke={theme.headerColor}
+          strokeWidth="6"
           strokeLinecap="round"
-          strokeDasharray="10 10"
         />
-        {stage(78, "Build", "Jenkins")}
-        {stage(266, "Scan", "Grype", "#F59E0B")}
-        {stage(454, "Deploy", "Kubernetes", "#60A5FA")}
-        <g transform="translate(602 232)">
+        <line
+          x1="154"
+          y1="288"
+          x2="622"
+          y2="288"
+          stroke={theme.imageHighlight}
+          strokeWidth="3"
+          strokeLinecap="round"
+          opacity="0.85"
+        />
+        {stage(98, "Build", "Jenkins")}
+        {stage(254, "Scan", "Grype", "#F59E0B")}
+        {stage(410, "Deploy", "Kubernetes", "#60A5FA")}
+        <g transform="translate(566 232)">
           <rect
-            width="80"
+            width="112"
             height="112"
             rx="16"
             fill={theme.highlight}
@@ -89,14 +108,20 @@ export default class DeliveryPipelineIllustration extends Component {
             strokeWidth="3"
           />
           <path
-            d="M25 58l12 12 22-34"
+            d="M38 58l14 14 28-42"
             fill="none"
             stroke={theme.imageHighlight}
             strokeWidth="7"
             strokeLinecap="round"
             strokeLinejoin="round"
           />
-          <text x="16" y="98" fill={theme.secondaryText} fontSize="12">
+          <text
+            x="56"
+            y="98"
+            fill={theme.secondaryText}
+            fontSize="12"
+            textAnchor="middle"
+          >
             release
           </text>
         </g>

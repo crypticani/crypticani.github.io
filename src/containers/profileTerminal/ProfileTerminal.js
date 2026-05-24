@@ -25,7 +25,7 @@ function outputFor(command, commandHistory) {
     case "whoami":
       return [
         "Aniket Kumar aka crypticani",
-        "DevOps Engineer focused on reliable infrastructure, CI/CD, Kubernetes, observability, automation, DevSecOps, and cloud operations.",
+        "Linux-first DevOps Engineer focused on reliable cloud infrastructure, containers, networking, CI/CD, observability, automation, DevSecOps, and practical security.",
       ];
     case "ls":
       return ["about.txt", "skills/", "projects/", "contact", "resume"];
@@ -33,7 +33,7 @@ function outputFor(command, commandHistory) {
       return [
         "Started as a Django/backend-focused full stack engineer, then moved deeper into DevOps and platform engineering.",
         "I work across Linux systems, cloud infrastructure, CI/CD, monitoring, containers, automation, IAM, and practical DevSecOps.",
-        "Currently sharpening cybersecurity skills and applying that mindset to safer infrastructure and delivery workflows.",
+        "Building cybersecurity depth around web/API testing, auth/session issues, cloud-backed applications, and safer delivery workflows.",
       ];
     case "ls skills/":
       return [

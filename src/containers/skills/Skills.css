@@ -29,6 +29,62 @@
   margin: 0 auto 48px;
 }
 
+.skill-depth-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin: 0 auto 26px;
+}
+
+.skill-depth-card {
+  border: 1px solid;
+  border-radius: 8px;
+  min-height: 205px;
+  padding: 20px;
+  text-align: left;
+}
+
+.skill-depth-card-header {
+  align-items: flex-start;
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.skill-depth-title {
+  font-family: "Google Sans Medium";
+  font-size: 20px;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.skill-depth-label {
+  border: 1px solid;
+  border-radius: 999px;
+  font-family: "Google Sans Medium";
+  font-size: 11px;
+  line-height: 1;
+  padding: 6px 8px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.skill-depth-chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skill-depth-chip {
+  border: 1px solid;
+  border-radius: 999px;
+  font-family: "Google Sans Regular";
+  font-size: 13px;
+  line-height: 1;
+  padding: 8px 10px;
+}
+
 .capability-card {
   border: 1px solid;
   border-radius: 8px;
@@ -90,6 +146,9 @@
   .capability-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+  .skill-depth-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
   /* .skills-image-div > img {
     margin-top: 0px;
   } */
@@ -108,6 +167,14 @@
   }
   .capability-grid {
     grid-template-columns: 1fr;
+  }
+  .skill-depth-grid {
+    grid-template-columns: 1fr;
+    margin-bottom: 22px;
+  }
+  .skill-depth-card {
+    min-height: auto;
+    padding: 18px;
   }
   .capability-card {
     min-height: auto;

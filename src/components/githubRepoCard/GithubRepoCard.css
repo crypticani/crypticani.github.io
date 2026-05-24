@@ -1,4 +1,6 @@
 .repo-card-div {
+  border: 1px solid;
+  border-radius: 8px;
   color: rgb(88, 96, 105);
   box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 30px -15px;
   padding: 2rem;
@@ -82,7 +84,7 @@
   text-align: left;
   display: -webkit-box;
   font-family: "Google Sans Regular";
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   margin-top: 0.8rem;
 }
@@ -114,14 +116,16 @@
 @media (max-width: 768px) {
   .repo-card-div {
     flex: 1 1 100%;
+    padding: 1.45rem;
   }
 
   .repo-name {
-    font-size: 16px;
+    font-size: 19px;
   }
 
   .repo-description {
-    font-size: 14px;
+    font-size: 14.5px;
+    -webkit-line-clamp: 4;
   }
 
   .repo-details {

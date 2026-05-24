@@ -79,16 +79,28 @@ export default class DevelopmentAutomationIllustration extends Component {
         <text x="82" y="136" fill={theme.secondaryText} fontSize="15">
           APIs, exporters, CLIs, scripts, portals, and platform workflow tooling
         </text>
+        <line
+          x1="161"
+          y1="256"
+          x2="601"
+          y2="256"
+          stroke={theme.headerColor}
+          strokeWidth="6"
+          strokeLinecap="round"
+        />
+        <line
+          x1="161"
+          y1="256"
+          x2="601"
+          y2="256"
+          stroke={theme.imageHighlight}
+          strokeWidth="3"
+          strokeLinecap="round"
+          opacity="0.85"
+        />
         {stage(86, "API", "Django / DRF")}
         {stage(306, "Exporter", "Python / PromQL")}
         {stage(526, "CLI", "Go / Bash")}
-        <path
-          d="M236 256h68M456 256h68"
-          stroke={theme.imageHighlight}
-          strokeWidth="5"
-          strokeLinecap="round"
-          strokeDasharray="10 10"
-        />
         <rect
           x="188"
           y="362"

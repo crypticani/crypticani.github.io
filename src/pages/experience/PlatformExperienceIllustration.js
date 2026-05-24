@@ -69,7 +69,7 @@ export default class PlatformExperienceIllustration extends Component {
           stroke={theme.headerColor}
           strokeWidth="5"
           strokeLinecap="round"
-          strokeDasharray="9 10"
+          opacity="0.85"
         />
         {step(106, 166, "AWGP", "software development intern", "#A855F7")}
         {step(

@@ -6,10 +6,10 @@ Live site: https://crypticani.dev
 
 ## Current Positioning
 
-- DevOps Engineer and Full Stack Engineer
+- Linux-first DevOps Engineer with full-stack engineering roots
 - Platform Engineering, Cloud Infrastructure, and SRE
-- High-availability infrastructure, CI/CD automation, Kubernetes, observability, database HA/DR, FinOps, DevSecOps, IAM, and VAPT fundamentals
-- Public work includes `qurli`, technical handbooks, GitHub-backed projects, and CloudPulse marked as coming soon
+- Linux, containers, networking, high-availability infrastructure, CI/CD automation, Kubernetes, observability, database HA/DR, FinOps, DevSecOps, IAM, and practical application security
+- Public work is grouped into featured platform/terminal tools, handbooks and technical writing, and earlier developer work
 
 ## Tech Stack
 
@@ -58,12 +58,12 @@ Key sections:
 - `greeting`: hero copy, resume link, social/profile links
 - `proofPoints`: quick recruiter-facing metrics
 - `socialMediaLinks`: GitHub, LinkedIn, email, Discord
-- `skills`: capability cards, grouped skill sections, and skill icons
+- `skills`: skill-depth matrix, capability cards, grouped skill sections, and skill icons
 - `degrees`: education
 - `certifications`: certification cards
 - `experience`: work and internship history
-- `caseStudies`: anonymized infrastructure case studies
-- `projectsHeader` and `src/shared/opensource/projects.json`: projects page
+- `caseStudies`: anonymized platform stories with problem, build, and outcome framing
+- `projectsHeader` and `src/shared/opensource/projects.json`: grouped projects page data
 - `contactPageData`: contact, writing, handbooks, blog, and Discord community links
 
 ## Resume
@@ -164,6 +164,14 @@ The projects page currently uses curated static data in:
 
 ```text
 src/shared/opensource/projects.json
+```
+
+Project cards are grouped by `category`:
+
+```text
+featured
+writing
+earlier
 ```
 
 The repository still contains `git_data_fetcher.mjs` from the original template for refreshing GitHub GraphQL data into `src/shared/opensource/*.json`. Use it only when intentionally replacing the static GitHub data.

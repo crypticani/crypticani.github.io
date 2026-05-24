@@ -83,7 +83,7 @@ export default class DataPlatformHaIllustration extends Component {
           stroke={theme.headerColor}
           strokeWidth="5"
           strokeLinecap="round"
-          strokeDasharray="9 10"
+          opacity="0.85"
         />
         {database(96, 212, "Primary", theme.imageHighlight)}
         {database(314, 162, "Replica", "#60A5FA")}

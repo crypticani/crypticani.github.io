@@ -113,7 +113,7 @@ export default class SecurityIamIllustration extends Component {
           d="M244 248h40M476 248h40M244 368h56M460 368h56"
           stroke={theme.headerColor}
           strokeWidth="4"
-          strokeDasharray="7 9"
+          strokeLinecap="round"
         />
       </svg>
     );

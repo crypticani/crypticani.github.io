@@ -80,24 +80,18 @@ export default class ProjectPortfolioIllustration extends Component {
         {card(78, 176, "qurli", "terminal HTTP client", theme.imageHighlight)}
         {card(272, 302, "handbooks", "DevOps and VAPT notes", "#60A5FA")}
         {card(466, 176, "CloudPulse", "FinOps monitoring", "#F59E0B", "soon")}
-        <path
-          d="M208 288c72 40 148 40 220 0M272 244h-46M532 244h-46"
-          fill="none"
-          stroke={theme.headerColor}
-          strokeWidth="5"
-          strokeLinecap="round"
-          strokeDasharray="8 10"
-        />
-        <g transform="translate(308 172)">
-          <path
-            d="M72 24c-34 0-62 23-62 52 0 21 15 40 37 48-2 8-8 17-15 23 18-2 30-9 38-19h2c34 0 62-23 62-52S106 24 72 24Z"
+        <g transform="translate(314 248)">
+          <rect
+            width="132"
+            height="56"
+            rx="28"
             fill={theme.highlight}
             stroke={theme.headerColor}
             strokeWidth="3"
           />
           <text
-            x="36"
-            y="82"
+            x="29"
+            y="36"
             fill={theme.secondaryText}
             fontSize="13"
             fontFamily="monospace"

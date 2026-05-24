@@ -31,41 +31,37 @@ export default function Greeting(props) {
                 {greeting.subTitle}
               </p>
               <div className="greeting-actions-row">
-                <div>
-                  <Button
-                    text="View Resume"
-                    newTab={true}
-                    href={greeting.resumeLink}
-                    theme={theme}
-                  />
-                </div>
+                <Button
+                  className="greeting-action greeting-action-primary"
+                  text="View Resume"
+                  newTab={true}
+                  href={greeting.resumeLink}
+                  theme={theme}
+                />
 
-                <div>
-                  <Button
-                    text="GitHub"
-                    newTab={true}
-                    href={greeting.githubProfile}
-                    theme={theme}
-                  />
-                </div>
+                <Button
+                  className="greeting-action"
+                  text="GitHub"
+                  newTab={true}
+                  href={greeting.githubProfile}
+                  theme={theme}
+                />
 
-                <div>
-                  <Button
-                    text="LinkedIn"
-                    newTab={true}
-                    href={greeting.linkedInProfile}
-                    theme={theme}
-                  />
-                </div>
+                <Button
+                  className="greeting-action"
+                  text="LinkedIn"
+                  newTab={true}
+                  href={greeting.linkedInProfile}
+                  theme={theme}
+                />
 
-                <div>
-                  <Button
-                    text="Contact Me"
-                    newTab={false}
-                    href={greeting.contactLink}
-                    theme={theme}
-                  />
-                </div>
+                <Button
+                  className="greeting-action"
+                  text="Contact Me"
+                  newTab={false}
+                  href={greeting.contactLink}
+                  theme={theme}
+                />
               </div>
             </div>
           </div>

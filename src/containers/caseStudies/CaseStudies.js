@@ -39,12 +39,38 @@ export default function CaseStudies({ theme }) {
               <h2 className="case-study-title" style={{ color: theme.text }}>
                 {study.title}
               </h2>
-              <p
-                className="case-study-description"
-                style={{ color: theme.secondaryText }}
-              >
-                {study.description}
-              </p>
+              {study.problem && (
+                <div className="case-study-detail">
+                  <span
+                    className="case-study-detail-label"
+                    style={{ color: theme.imageHighlight }}
+                  >
+                    Problem
+                  </span>
+                  <p style={{ color: theme.secondaryText }}>
+                    {study.problem}
+                  </p>
+                </div>
+              )}
+              {study.built && (
+                <div className="case-study-detail">
+                  <span
+                    className="case-study-detail-label"
+                    style={{ color: theme.imageHighlight }}
+                  >
+                    Built
+                  </span>
+                  <p style={{ color: theme.secondaryText }}>{study.built}</p>
+                </div>
+              )}
+              {study.description && (
+                <p
+                  className="case-study-description"
+                  style={{ color: theme.secondaryText }}
+                >
+                  {study.description}
+                </p>
+              )}
               <div className="case-study-outcomes">
                 {study.outcomes.map((outcome) => (
                   <span

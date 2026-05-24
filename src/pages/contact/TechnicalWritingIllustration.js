@@ -79,7 +79,8 @@ export default class TechnicalWritingIllustration extends Component {
           d="M224 372h312"
           stroke={theme.headerColor}
           strokeWidth="5"
-          strokeDasharray="8 10"
+          strokeLinecap="round"
+          opacity="0.85"
         />
         <text x="292" y="408" fill={theme.secondaryText} fontSize="14">
           Discord learning server and direct discussions

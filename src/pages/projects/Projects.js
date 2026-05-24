@@ -10,6 +10,27 @@ import ProjectsData from "../../shared/opensource/projects.json";
 import "./Projects.css";
 import ProjectPortfolioIllustration from "./ProjectPortfolioIllustration";
 
+const projectSections = [
+  {
+    id: "featured",
+    title: "Featured Platform & Terminal Work",
+    description:
+      "Current tools and infrastructure-oriented projects that best match my DevOps, Linux, observability, and cloud direction.",
+  },
+  {
+    id: "writing",
+    title: "Handbooks & Technical Writing",
+    description:
+      "Repository-backed learning systems and notes for DevOps, Linux, cloud, and practical application security.",
+  },
+  {
+    id: "earlier",
+    title: "Earlier Developer Work",
+    description:
+      "Older projects that show my full-stack and automation roots before moving deeper into DevOps and platform engineering.",
+  },
+];
+
 class Projects extends Component {
   render() {
     const theme = this.props.theme;
@@ -39,9 +60,34 @@ class Projects extends Component {
             </div>
           </Fade>
         </div>
-        <div className="repo-cards-div-main">
-          {ProjectsData.data.map((repo) => {
-            return <GithubRepoCard repo={repo} theme={theme} />;
+        <div className="project-section-list">
+          {projectSections.map((section) => {
+            const repos = ProjectsData.data.filter(
+              (repo) => repo.category === section.id
+            );
+            if (!repos.length) return null;
+
+            return (
+              <section className="project-group-section" key={section.id}>
+                <div className="project-group-heading">
+                  <h2 style={{ color: theme.text }}>{section.title}</h2>
+                  <p style={{ color: theme.secondaryText }}>
+                    {section.description}
+                  </p>
+                </div>
+                <div className="repo-cards-div-main">
+                  {repos.map((repo) => {
+                    return (
+                      <GithubRepoCard
+                        repo={repo}
+                        theme={theme}
+                        key={repo.id}
+                      />
+                    );
+                  })}
+                </div>
+              </section>
+            );
           })}
         </div>
         <Button
