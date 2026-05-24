@@ -33,6 +33,7 @@ src/
   containers/
     caseStudies/
     greeting/
+    profileTerminal/
     proofBar/
     skills/
   pages/
@@ -82,6 +83,7 @@ The old template illustrations have been replaced with custom React SVG componen
 Main illustration components:
 
 - `src/containers/greeting/PlatformHeroIllustration.js`
+- `src/containers/profileTerminal/ProfileTerminal.js`
 - `src/containers/skills/CloudInfrastructureIllustration.js`
 - `src/containers/skills/DeliveryPipelineIllustration.js`
 - `src/containers/skills/ObservabilityIllustration.js`
@@ -96,6 +98,33 @@ Main illustration components:
 - `src/pages/contact/TechnicalWritingIllustration.js`
 
 When changing SVGs, keep labels short and avoid placing text on top of graphics. Build and visually check the page after changes.
+
+## Interactive Terminal
+
+The home page includes a reusable terminal-style profile component at:
+
+```text
+src/containers/profileTerminal/ProfileTerminal.js
+```
+
+Supported commands:
+
+```text
+help
+whoami
+ls
+cat about.txt
+ls skills/
+ls projects/
+cat projects/qurli
+contact
+resume
+history
+sudo hire-me
+clear
+```
+
+The terminal is intentionally additive. Important recruiter information must also remain available in regular page sections, links, and resume content.
 
 ## Local Development
 
