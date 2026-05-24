@@ -1,6 +1,6 @@
 {
   "name": "Aniket Kumar | DevOps Engineer & Full Stack Engineer",
-  "background_color": "#ffffff",
+  "background_color": "#0B1220",
   "display": "standalone",
   "icons": [
     {
@@ -42,5 +42,5 @@
   ],
   "short_name": "crypticani",
   "start_url": ".",
-  "theme_color": "#000000"
+  "theme_color": "#0B1220"
 }
