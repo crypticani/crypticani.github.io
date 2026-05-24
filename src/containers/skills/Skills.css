@@ -1,6 +1,8 @@
 .skills-main-div {
+  align-items: center;
   display: flex;
-  overflow: hidden;
+  gap: 44px;
+  overflow: visible;
 }
 
 .skills-header {
@@ -54,19 +56,20 @@
 }
 
 .skills-text-div {
-  margin-left: 50px;
   font-family: "Google Sans Regular";
+  min-width: 0;
 }
 
 .skills-main-div > * {
   flex: 1;
   margin-bottom: 30px;
+  min-width: 0;
 }
 
 .skills-image-div > * {
   max-width: 100%;
   height: auto;
-  margin-top: 100px;
+  margin-top: 48px;
 }
 
 .skills-heading {
@@ -116,6 +119,7 @@
   }
   .skills-main-div {
     flex-direction: column;
+    gap: 12px;
   }
   .skills-text-div {
     margin-left: 0px;

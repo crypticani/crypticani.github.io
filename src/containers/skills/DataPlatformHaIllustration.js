@@ -21,12 +21,22 @@ export default class DataPlatformHaIllustration extends Component {
           stroke={theme.headerColor}
           strokeWidth="3"
         />
+        <rect
+          x="20"
+          y="118"
+          width="100"
+          height="28"
+          rx="8"
+          fill={theme.dark}
+          stroke={theme.headerColor}
+        />
         <text
-          x="28"
-          y="74"
+          x="70"
+          y="137"
           fill={theme.text}
-          fontSize="14"
+          fontSize="13"
           fontFamily="Google Sans Medium"
+          textAnchor="middle"
         >
           {label}
         </text>
@@ -75,21 +85,63 @@ export default class DataPlatformHaIllustration extends Component {
           strokeLinecap="round"
           strokeDasharray="9 10"
         />
-        {database(96, 226, "Primary", theme.imageHighlight)}
-        {database(314, 176, "Replica", "#60A5FA")}
-        {database(532, 226, "Backup", "#F59E0B")}
-        <rect
-          x="226"
-          y="374"
-          width="308"
-          height="42"
-          rx="12"
-          fill={theme.highlight}
-          stroke={theme.headerColor}
-        />
-        <text x="254" y="401" fill={theme.secondaryText} fontSize="14">
-          PostgreSQL / MySQL / MongoDB / Redis / ClickHouse
-        </text>
+        {database(96, 212, "Primary", theme.imageHighlight)}
+        {database(314, 162, "Replica", "#60A5FA")}
+        {database(532, 212, "Backup", "#F59E0B")}
+        <g transform="translate(146 386)">
+          <rect
+            width="130"
+            height="34"
+            rx="10"
+            fill={theme.highlight}
+            stroke={theme.headerColor}
+          />
+          <text
+            x="65"
+            y="22"
+            fill={theme.secondaryText}
+            fontSize="12"
+            textAnchor="middle"
+          >
+            SQL Replication
+          </text>
+        </g>
+        <g transform="translate(314 386)">
+          <rect
+            width="132"
+            height="34"
+            rx="10"
+            fill={theme.highlight}
+            stroke={theme.headerColor}
+          />
+          <text
+            x="66"
+            y="22"
+            fill={theme.secondaryText}
+            fontSize="12"
+            textAnchor="middle"
+          >
+            Cache Failover
+          </text>
+        </g>
+        <g transform="translate(484 386)">
+          <rect
+            width="130"
+            height="34"
+            rx="10"
+            fill={theme.highlight}
+            stroke={theme.headerColor}
+          />
+          <text
+            x="65"
+            y="22"
+            fill={theme.secondaryText}
+            fontSize="12"
+            textAnchor="middle"
+          >
+            Restore Plans
+          </text>
+        </g>
       </svg>
     );
   }
