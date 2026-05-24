@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-export default class DataScienceImg extends Component {
+export default class ObservabilityIllustration extends Component {
   render() {
     const theme = this.props.theme;
     const row = (y, label, statusColor) => (

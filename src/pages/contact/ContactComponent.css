@@ -40,7 +40,9 @@
 }
 
 .blog-heading-img-div {
-  display: none;
+  display: flex;
+  justify-content: center;
+  margin-top: 44px;
 }
 
 .contact-heading-text-div {
@@ -63,7 +65,7 @@
 }
 
 .blog-heading-img-div > * {
-  max-width: 100%;
+  max-width: min(100%, 760px);
   height: auto;
 }
 

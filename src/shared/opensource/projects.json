@@ -1,21 +1,37 @@
 {
   "data": [
     {
-      "id": "R_kgDORg63vA",
-      "name": "spend-meter",
-      "createdAt": "2026-03-07T16:09:35Z",
-      "url": "https://github.com/crypticani/spend-meter",
-      "description": "Mobile-first, local-first personal finance tracker that runs entirely in your browser. No login, no cloud, just your data.",
+      "id": "qurli",
+      "name": "qurli",
+      "category": "featured",
+      "createdAt": "2026-05-17T00:00:00Z",
+      "url": "https://github.com/crypticani/qurli",
+      "description": "Lightweight terminal-native HTTP client for developers, DevOps engineers, and SREs.",
       "isFork": false,
       "languages": [
-        { "name": "JavaScript", "iconifyClass": "logos-javascript" },
-        { "name": "HTML", "iconifyClass": "logos-html-5" },
-        { "name": "CSS", "iconifyClass": "logos-css-3" }
+        { "name": "CLI", "iconifyClass": "mdi:console" },
+        { "name": "HTTP", "iconifyClass": "mdi:api" }
+      ]
+    },
+    {
+      "id": "cloudpulse",
+      "name": "CloudPulse",
+      "category": "featured",
+      "createdAt": "2026-05-23T00:00:00Z",
+      "url": "https://github.com/crypticani/cloudpulse",
+      "description": "Coming soon: cloud cost visibility and FinOps analytics platform focused on practical cloud infrastructure operations.",
+      "isFork": false,
+      "status": "Coming soon",
+      "languages": [
+        { "name": "Go", "iconifyClass": "logos-go" },
+        { "name": "PostgreSQL", "iconifyClass": "logos-postgresql" },
+        { "name": "FinOps", "iconifyClass": "mdi:finance" }
       ]
     },
     {
       "id": "R_kgDOReTofA",
       "name": "uptime-lens",
+      "category": "featured",
       "createdAt": "2026-03-04T14:24:01Z",
       "url": "https://github.com/crypticani/uptime-lens",
       "description": "Real-time uptime and status monitoring for core cloud and developer services.",
@@ -27,8 +43,65 @@
       ]
     },
     {
+      "id": "work-hours-tracker",
+      "name": "work-hours-tracker",
+      "category": "featured",
+      "createdAt": "2026-05-22T09:10:17+05:30",
+      "url": "https://github.com/crypticani/work-hours-tracker",
+      "description": "Config-driven weekly work-hours calculator with browser storage and a companion attendance extension.",
+      "isFork": false,
+      "languages": [
+        { "name": "JavaScript", "iconifyClass": "logos-javascript" },
+        { "name": "HTML", "iconifyClass": "logos-html-5" },
+        { "name": "CSS", "iconifyClass": "logos-css-3" }
+      ]
+    },
+    {
+      "id": "R_kgDORg63vA",
+      "name": "spend-meter",
+      "category": "featured",
+      "createdAt": "2026-03-07T16:09:35Z",
+      "url": "https://github.com/crypticani/spend-meter",
+      "description": "Mobile-first, local-first personal finance tracker that runs entirely in your browser.",
+      "isFork": false,
+      "languages": [
+        { "name": "JavaScript", "iconifyClass": "logos-javascript" },
+        { "name": "HTML", "iconifyClass": "logos-html-5" },
+        { "name": "CSS", "iconifyClass": "logos-css-3" }
+      ]
+    },
+    {
+      "id": "the-devops-handbook",
+      "name": "The DevOps Handbook",
+      "category": "writing",
+      "createdAt": "2026-04-18T17:52:09+05:30",
+      "url": "https://github.com/crypticani/the-devops-handbook",
+      "description": "Hands-on DevOps notes across Linux, networking, Git, scripting, containers, CI/CD, observability, cloud, Terraform, Ansible, and Kubernetes.",
+      "isFork": false,
+      "languages": [
+        { "name": "DevOps", "iconifyClass": "mdi:server-network" },
+        { "name": "Linux", "iconifyClass": "logos-linux-tux" },
+        { "name": "Markdown", "iconifyClass": "logos-markdown" }
+      ]
+    },
+    {
+      "id": "the-vapt-handbook",
+      "name": "The VAPT Handbook",
+      "category": "writing",
+      "createdAt": "2026-03-29T10:12:37+05:30",
+      "url": "https://github.com/crypticani/the-vapt-handbook",
+      "description": "Practical application security notes covering recon, web/API testing, auth issues, cloud-backed surfaces, reporting, and responsible practice.",
+      "isFork": false,
+      "languages": [
+        { "name": "Security", "iconifyClass": "mdi:shield-bug" },
+        { "name": "VAPT", "iconifyClass": "mdi:bug-check" },
+        { "name": "Markdown", "iconifyClass": "logos-markdown" }
+      ]
+    },
+    {
       "id": "MDEwOlJlcG9zaXRvcnkzNjYzMzM4NjQ=",
       "name": "UTSAV",
+      "category": "earlier",
       "createdAt": "2021-05-11T09:54:00Z",
       "url": "https://github.com/crypticani/UTSAV",
       "description": "A sports event management system developed using Django.",
@@ -43,46 +116,22 @@
     {
       "id": "R_kgDOGzPoJQ",
       "name": "MyClassBot",
+      "category": "earlier",
       "createdAt": "2022-02-07T06:36:02Z",
       "url": "https://github.com/crypticani/MyClassBot",
-      "description": "A bot written in Python to automate attending classes on MyClass (Codetantra).",
+      "description": "A Python bot for automating class-attendance workflows on MyClass/Codetantra.",
       "isFork": false,
       "languages": [{ "name": "Python", "iconifyClass": "logos-python" }]
     },
     {
       "id": "MDEwOlJlcG9zaXRvcnkyOTE0NzQ0OTk=",
       "name": "himmat",
+      "category": "earlier",
       "createdAt": "2020-08-30T13:21:34Z",
       "url": "https://github.com/crypticani/himmat",
-      "description": "A CLI app for daily motivation from the book \"Lose Not Your Heart\".",
+      "description": "A Python CLI app for daily motivation from the book \"Lose Not Your Heart\".",
       "isFork": false,
       "languages": [{ "name": "Python", "iconifyClass": "logos-python" }]
-    },
-    {
-      "id": "qurli",
-      "name": "qurli",
-      "createdAt": "2026-05-17T00:00:00Z",
-      "url": "https://github.com/crypticani/qurli",
-      "description": "Lightweight terminal-native HTTP client for developers, DevOps engineers, and SREs.",
-      "isFork": false,
-      "languages": [
-        { "name": "CLI", "iconifyClass": "mdi:console" },
-        { "name": "HTTP", "iconifyClass": "mdi:api" }
-      ]
-    },
-    {
-      "id": "cloudpulse",
-      "name": "CloudPulse",
-      "createdAt": "2026-05-23T00:00:00Z",
-      "url": "https://github.com/crypticani/cloudpulse",
-      "description": "Coming soon: cloud cost visibility and FinOps analytics platform focused on practical cloud infrastructure operations.",
-      "isFork": false,
-      "status": "Coming soon",
-      "languages": [
-        { "name": "Go", "iconifyClass": "logos-go" },
-        { "name": "PostgreSQL", "iconifyClass": "logos-postgresql" },
-        { "name": "FinOps", "iconifyClass": "mdi:finance" }
-      ]
     }
   ]
 }

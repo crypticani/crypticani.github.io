@@ -3,7 +3,7 @@ import "./Greeting.css";
 import Button from "../../components/button/Button";
 import { greeting } from "../../portfolio";
 import { Fade } from "react-reveal";
-import FeelingProud from "./FeelingProud";
+import PlatformHeroIllustration from "./PlatformHeroIllustration";
 
 export default function Greeting(props) {
   const theme = props.theme;
@@ -31,50 +31,42 @@ export default function Greeting(props) {
                 {greeting.subTitle}
               </p>
               <div className="greeting-actions-row">
-                <div>
-                  <Button
-                    text="View Resume"
-                    newTab={true}
-                    href={greeting.resumeLink}
-                    theme={theme}
-                  />
-                </div>
+                <Button
+                  className="greeting-action greeting-action-primary"
+                  text="View Resume"
+                  newTab={true}
+                  href={greeting.resumeLink}
+                  theme={theme}
+                />
 
-                <div>
-                  <Button
-                    text="GitHub"
-                    newTab={true}
-                    href={greeting.githubProfile}
-                    theme={theme}
-                  />
-                </div>
+                <Button
+                  className="greeting-action"
+                  text="GitHub"
+                  newTab={true}
+                  href={greeting.githubProfile}
+                  theme={theme}
+                />
 
-                <div>
-                  <Button
-                    text="LinkedIn"
-                    newTab={true}
-                    href={greeting.linkedInProfile}
-                    theme={theme}
-                  />
-                </div>
+                <Button
+                  className="greeting-action"
+                  text="LinkedIn"
+                  newTab={true}
+                  href={greeting.linkedInProfile}
+                  theme={theme}
+                />
 
-                <div>
-                  <Button
-                    text="Contact Me"
-                    newTab={false}
-                    href={greeting.contactLink}
-                    theme={theme}
-                  />
-                </div>
+                <Button
+                  className="greeting-action"
+                  text="Contact Me"
+                  newTab={false}
+                  href={greeting.contactLink}
+                  theme={theme}
+                />
               </div>
             </div>
           </div>
           <div className="greeting-image-div">
-            {/* <img
-							alt="saad sitting on table"
-							src={require("../../assets/images/feelingProud.svg")}
-						></img> */}
-            <FeelingProud theme={theme} />
+            <PlatformHeroIllustration theme={theme} />
           </div>
         </div>
       </div>

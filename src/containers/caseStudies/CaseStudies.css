@@ -27,19 +27,7 @@
 .case-studies-grid {
   display: grid;
   gap: 20px;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
-}
-
-.case-studies-grid > * {
-  grid-column: span 2;
-}
-
-.case-studies-grid > *:nth-last-child(2) {
-  grid-column: 2 / span 2;
-}
-
-.case-studies-grid > *:last-child {
-  grid-column: 4 / span 2;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .case-study-card {
@@ -71,6 +59,26 @@
   font-family: "Google Sans Regular";
   font-size: 16px;
   line-height: 1.55;
+  margin: 0;
+}
+
+.case-study-detail {
+  margin-top: 14px;
+}
+
+.case-study-detail-label {
+  display: block;
+  font-family: "Google Sans Medium";
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+}
+
+.case-study-detail p {
+  font-family: "Google Sans Regular";
+  font-size: 15.5px;
+  line-height: 1.5;
   margin: 0;
 }
 

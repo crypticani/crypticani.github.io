@@ -11,14 +11,14 @@ const settings = {
 // SEO related settings
 const seo = {
   title:
-    "Aniket Kumar | DevOps Engineer & Full Stack Engineer | Platform Engineering | SRE",
+    "Aniket Kumar | Linux-first DevOps Engineer | Platform Engineering | SRE",
   description:
-    "Portfolio of Aniket Kumar, a DevOps Engineer and Full Stack Engineer focused on high-availability infrastructure, CI/CD automation, Kubernetes, observability, database HA/DR, cloud cost optimization, DevSecOps, and VAPT fundamentals.",
+    "Portfolio of Aniket Kumar, a Linux-first DevOps Engineer focused on cloud infrastructure, containers, networking, CI/CD automation, Kubernetes, observability, database HA/DR, DevSecOps, and practical application security.",
   keywords:
-    "DevOps Engineer, Full Stack Engineer, Platform Engineer, SRE, Kubernetes, Docker, Jenkins, GitLab CI, GitHub Actions, Prometheus, Grafana, Loki, PostgreSQL, MySQL, MongoDB, OCI, AWS, GCP, DevSecOps, FinOps, Keycloak, LDAP, VAPT, Burp Suite, Python, Django REST Framework",
+    "Linux, DevOps Engineer, Full Stack Engineer, Platform Engineer, SRE, Kubernetes, Docker, Containers, Networking, Jenkins, GitLab CI, GitHub Actions, Prometheus, Grafana, Loki, PostgreSQL, MySQL, MongoDB, OCI, AWS, GCP, DevSecOps, FinOps, Keycloak, LDAP, VAPT, Burp Suite, Python, Django REST Framework",
   og: {
     title:
-      "Aniket Kumar | DevOps Engineer & Full Stack Engineer | Platform Engineering | SRE",
+      "Aniket Kumar | Linux-first DevOps Engineer | Platform Engineering | SRE",
     type: "website",
     url: siteUrl,
   },
@@ -30,14 +30,14 @@ const greeting = {
   logo_name: "crypticani",
   nickname: "crypticani",
   headline:
-    "DevOps Engineer and Full Stack Engineer building reliable, observable, and cost-aware infrastructure.",
+    "Linux-first DevOps Engineer building reliable cloud, container, and observability platforms.",
   subTitle:
-    "I work on high-availability infrastructure, CI/CD automation, Kubernetes workloads, observability, database HA/DR, DevSecOps, and backend/tooling development across cloud and on-prem environments.",
+    "I started with Django/backend-focused full-stack engineering and moved deeper into Linux, containers, networking, CI/CD, observability, cloud infrastructure, and DevSecOps.",
   role:
     "DevOps Engineer | Full Stack Engineer | Platform Engineering | Cloud Infrastructure | SRE",
   location: "Samastipur, Bihar, India",
   resumeLink: resumePath,
-  portfolio_repository: "https://github.com/crypticani/portfolio",
+  portfolio_repository: "https://github.com/crypticani/crypticani.github.io",
   githubProfile: "https://github.com/crypticani",
   linkedInProfile: "https://linkedin.com/in/crypticani",
   contactLink: "/contact",
@@ -114,14 +114,70 @@ const socialMediaLinks = [
 const iconStyle = (color) => ({ color });
 
 const skills = {
-  summary: [
+  depthGroups: [
     {
-      title: "Infrastructure",
-      description:
-        "Cloud and on-prem systems with Linux, networking, HA architecture, DR, DNS, Nginx, and cost controls.",
+      title: "Daily Drivers",
+      label: "hands-on",
+      items: [
+        "Linux",
+        "Bash",
+        "Docker",
+        "Kubernetes",
+        "Nginx",
+        "Git",
+        "CI/CD",
+        "Prometheus",
+        "Grafana",
+      ],
     },
     {
-      title: "Delivery",
+      title: "Production Experience",
+      label: "operated",
+      items: [
+        "OCI",
+        "AWS",
+        "PostgreSQL HA",
+        "MySQL HA",
+        "MongoDB replicas",
+        "Loki",
+        "Alertmanager",
+        "Keycloak",
+        "LDAP",
+      ],
+    },
+    {
+      title: "Security Crossover",
+      label: "applied",
+      items: [
+        "Grype",
+        "DevSecOps gates",
+        "Burp Suite",
+        "OWASP",
+        "Auth/session testing",
+        "Cloud/IAM risk",
+      ],
+    },
+    {
+      title: "Development Roots",
+      label: "builder",
+      items: [
+        "Python",
+        "Django/DRF",
+        "Go tooling",
+        "Vue/Tailwind",
+        "Exporters",
+        "Automation scripts",
+      ],
+    },
+  ],
+  summary: [
+    {
+      title: "Linux & Infrastructure",
+      description:
+        "Terminal-native Linux operations, networking, DNS, Nginx, HA architecture, DR, cloud operations, and cost controls.",
+    },
+    {
+      title: "Containers & Delivery",
       description:
         "CI/CD pipelines, Kubernetes rollouts, container workflows, release automation, and DevSecOps gates.",
     },
@@ -136,9 +192,9 @@ const skills = {
         "PostgreSQL, MySQL, MongoDB, ClickHouse, Redis, KeyDB, backups, replication, failover, and restore plans.",
     },
     {
-      title: "Security",
+      title: "Security-Aware Infrastructure",
       description:
-        "IAM, Keycloak, LDAP, SAML/OIDC, container scanning, VAPT fundamentals, and practical reporting.",
+        "IAM, Keycloak, LDAP, SAML/OIDC, container scanning, web/API testing fundamentals, and practical risk reporting.",
     },
     {
       title: "Development",
@@ -149,7 +205,7 @@ const skills = {
   data: [
     {
       title: "Cloud & Infrastructure",
-      fileName: "CloudInfraImg",
+      fileName: "CloudInfrastructureIllustration",
       skills: [
         "OCI, AWS, GCP, Linux, Nginx, load balancing, DNS, HA architecture, disaster recovery, and FinOps.",
         "Designing production infrastructure with redundancy, failover paths, backup strategy, and operational runbooks.",
@@ -210,7 +266,7 @@ const skills = {
     },
     {
       title: "Containers & CI/CD",
-      fileName: "CloudInfraImg",
+      fileName: "DeliveryPipelineIllustration",
       skills: [
         "Docker, Kubernetes, Docker Compose, Jenkins, GitLab CI, GitHub Actions, and Grype.",
         "Building automated build-test-deploy workflows with safer release paths and CI/CD security gates.",
@@ -256,7 +312,7 @@ const skills = {
     },
     {
       title: "Observability",
-      fileName: "DataScienceImg",
+      fileName: "ObservabilityIllustration",
       skills: [
         "Prometheus, Grafana, Loki, Alertmanager, Fluent Bit, PromQL, and custom exporters.",
         "Building dashboards, alerts, logs, and metrics pipelines that support faster incident detection and recovery.",
@@ -297,7 +353,7 @@ const skills = {
     },
     {
       title: "Data Platforms & HA",
-      fileName: "CloudInfraImg",
+      fileName: "DataPlatformHaIllustration",
       skills: [
         "PostgreSQL + Patroni, MySQL Group Replication, MongoDB Replica Sets, ClickHouse, Redis Sentinel, and KeyDB.",
         "Designing database HA/DR patterns with backups, recovery runbooks, replication, failover, and restore validation.",
@@ -343,7 +399,7 @@ const skills = {
     },
     {
       title: "Security & IAM",
-      fileName: "DesignImg",
+      fileName: "SecurityIamIllustration",
       skills: [
         "Keycloak, LDAP, SAML/OIDC, and DevSecOps practices.",
         "Integrating SSO and IAM patterns while keeping access control, service ownership, and auditability clear.",
@@ -374,7 +430,7 @@ const skills = {
     },
     {
       title: "Application Security & VAPT",
-      fileName: "DesignImg",
+      fileName: "VaptSecurityIllustration",
       skills: [
         "Reconnaissance, inventory mapping, web/API testing, auth/session testing, and OWASP-style issue triage.",
         "Burp Suite workflows for capturing traffic, modifying requests, comparing responses, and collecting evidence.",
@@ -416,7 +472,7 @@ const skills = {
     },
     {
       title: "Development, Automation & Programming",
-      fileName: "FullStackImg",
+      fileName: "DevelopmentAutomationIllustration",
       skills: [
         "Python, Bash, Go, Django/DRF, Ansible, and Git.",
         "Building Django/DRF APIs, internal admin portals, exporters, CLI tooling, and automation scripts.",
@@ -558,7 +614,6 @@ const experience = {
     "DevOps, development, platform engineering, cloud infrastructure, and SRE work",
   description:
     "3+ years working across high-availability infrastructure, CI/CD automation, Kubernetes and containerized workloads, observability, database HA/DR, cloud operations, FinOps, IAM, DevSecOps practices, and developer tooling.",
-  header_image_path: "experience.svg",
   sections: [
     {
       title: "Work",
@@ -635,29 +690,35 @@ const experience = {
 };
 
 const caseStudies = {
-  title: "Selected Infrastructure Case Studies",
+  title: "Selected Platform Stories",
   subtitle:
-    "Anonymized, client-safe examples of the platform, reliability, security, and operations work behind my resume.",
+    "Anonymized, client-safe examples of problems I have worked through across reliability, delivery, observability, security, and cloud operations.",
   studies: [
     {
       title: "High-Availability Infrastructure & DR",
       focus: "Reliability engineering",
-      description:
-        "Designed production HA patterns, backup replication, restore runbooks, and recovery workflows across cloud and on-prem environments without exposing client-specific infrastructure.",
+      problem:
+        "Production systems needed clearer failover paths, restore confidence, and recovery ownership.",
+      built:
+        "Designed HA patterns, backup replication, restore runbooks, and recovery workflows across cloud and on-prem environments.",
       outcomes: ["99.9% SLA", "Sub-30-minute RTO", "Cross-region backups"],
     },
     {
       title: "Observability Platform",
       focus: "Monitoring and incident response",
-      description:
-        "Built Prometheus, Alertmanager, Grafana, Loki, Fluent Bit, and custom exporter coverage across hosts, containers, applications, and infrastructure health signals.",
+      problem:
+        "Teams needed faster visibility into hosts, containers, services, and infrastructure health.",
+      built:
+        "Built Prometheus, Alertmanager, Grafana, Loki, Fluent Bit, and custom exporter coverage with practical dashboards and alert paths.",
       outcomes: ["100+ hosts", "200+ containers", "15+ dashboards"],
     },
     {
       title: "CI/CD Automation with DevSecOps Gates",
       focus: "Delivery automation",
-      description:
-        "Implemented build-test-deploy pipelines across Jenkins, GitLab CI, and GitHub Actions with Grype-based vulnerability gates and safer deployment workflows.",
+      problem:
+        "Release workflows needed to move faster without letting vulnerable containers reach production unnoticed.",
+      built:
+        "Implemented Jenkins, GitLab CI, and GitHub Actions pipelines with Grype vulnerability gates and safer deployment workflows.",
       outcomes: [
         "Multiple daily releases",
         "20+ services",
@@ -667,33 +728,44 @@ const caseStudies = {
     {
       title: "Cloud Cost Optimization / FinOps",
       focus: "Cost-aware operations",
-      description:
-        "Reviewed cloud usage, eliminated waste, optimized resources, and connected operational choices to measurable infrastructure cost reduction.",
+      problem:
+        "Cloud spend needed operational review instead of one-time cleanup.",
+      built:
+        "Reviewed usage patterns, eliminated waste, optimized resources, and connected infrastructure decisions to measurable cost reduction.",
       outcomes: ["25% spend reduction", "Usage review", "Operational cleanup"],
     },
     {
       title: "Identity & SSO Foundations",
       focus: "IAM and access control",
-      description:
-        "Worked with Keycloak, LDAP, SAML/OIDC, access patterns, service ownership, and auditability for internal and application-facing identity workflows.",
+      problem:
+        "Identity flows needed clearer ownership, auditability, and integration paths across internal and application-facing systems.",
+      built:
+        "Worked with Keycloak, LDAP, SAML/OIDC, access patterns, service ownership, and audit-friendly IAM practices.",
       outcomes: ["Keycloak", "LDAP", "SAML/OIDC"],
+    },
+    {
+      title: "Security-Aware Infrastructure",
+      focus: "DevSecOps and application security",
+      problem:
+        "Infrastructure and delivery work increasingly needed practical security thinking across containers, auth, APIs, and cloud-backed apps.",
+      built:
+        "Applied container scanning, CI/CD guardrails, Burp Suite workflows, OWASP-style triage, and reporting discipline through hands-on security practice.",
+      outcomes: ["Grype", "Burp Suite", "OWASP-style triage"],
     },
   ],
 };
 
 // Projects Page
 const projectsHeader = {
-  title: "Projects",
+  title: "Public Work",
   description:
-    "GitHub-backed projects, tools, and platform ideas. I prioritize public repositories and mark early-stage work clearly when it is still being prepared.",
-  avatar_image_path: "projects_image.svg",
+    "Curated GitHub-backed tools, platform ideas, handbooks, and earlier developer work. Current infrastructure and terminal-native projects are intentionally shown first.",
 };
 
 // Contact Page
 const contactPageData = {
   contactSection: {
     title: "Contact Me",
-    profile_image_path: "avatar.svg",
     description:
       "Based in Samastipur, Bihar, India. Reach out for DevOps, platform engineering, cloud infrastructure, observability, SRE, CI/CD automation, developer tooling, and DevSecOps conversations.",
   },
@@ -732,7 +804,6 @@ const contactPageData = {
         href: "https://discord.gg/TSfxKeMZ57",
       },
     ],
-    avatar_image_path: "blogs_image.svg",
   },
 };
 

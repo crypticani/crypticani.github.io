@@ -1,7 +1,7 @@
 {
   "private": true,
-  "name": "portfolio",
-  "version": "1.1.0",
+  "name": "crypticani-dev-portfolio",
+  "version": "1.2.0",
   "homepage": "https://crypticani.dev",
   "scripts": {
     "build": "node --openssl-legacy-provider node_modules/react-scripts/scripts/build.js",

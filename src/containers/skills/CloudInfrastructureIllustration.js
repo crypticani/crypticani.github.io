@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-export default class CloudInfraImg extends Component {
+export default class CloudInfrastructureIllustration extends Component {
   render() {
     const theme = this.props.theme;
     const node = (x, y, label, accent = theme.imageHighlight) => (
@@ -82,9 +82,9 @@ export default class CloudInfraImg extends Component {
           d="M380 170v70M228 282h304M228 282v70M532 282v70"
           fill="none"
           stroke={theme.headerColor}
-          strokeWidth="4"
+          strokeWidth="5"
           strokeLinecap="round"
-          strokeDasharray="8 10"
+          opacity="0.85"
         />
         {node(305, 152, "Load Balancer", "#60A5FA")}
         {node(104, 352, "Primary Region")}

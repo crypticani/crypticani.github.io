@@ -203,7 +203,7 @@ export const materialDarkBGTheme = {
   expTxtColor: "#000a12",
   highlight: "#111827",
   dark: "#020617",
-  secondaryText: "#94A3B8",
+  secondaryText: "#CBD5E1",
   imageHighlight: "#2DD4BF",
   compImgHighlight: "#E6E6E6",
   jacketColor: "#1E3A5F",
