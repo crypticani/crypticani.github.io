@@ -1,81 +1,49 @@
-# 🚀 Contributing to the MasterPortfolio Project
+# Contributing
 
-Thank you for considering contributing to the MasterPortfolio project! Your help is greatly appreciated. 😊
+This is a personal portfolio repository for `crypticani.dev`.
 
-## 🤝 How to Contribute
+## Scope
 
-Here are some fun and precise steps to get you started:
+Keep changes aligned with the current positioning:
 
-1. **Fork the Repository** 🍴
+- DevOps engineering
+- Full stack engineering where relevant
+- Platform engineering, cloud infrastructure, and SRE
+- CI/CD, Kubernetes, observability, database HA/DR, FinOps, DevSecOps, IAM, and VAPT fundamentals
 
-   - Click the "Fork" button on the top right of the [MasterPortfolio repository](https://github.com/ashutosh1919/masterPortfolio) page on GitHub. This will create a copy of the project in your own GitHub account.
+Avoid adding generic template content, inflated claims, fake metrics, fake certifications, or client-sensitive infrastructure details.
 
-2. **Clone Your Fork** 🧙‍♂️
+## Development Flow
 
-   - In your terminal, run the following command to clone your fork to your local machine:
-     ```
-     git clone https://github.com/YourUsername/masterPortfolio.git
-     ```
+1. Create a feature branch.
+2. Keep changes focused and small enough to review.
+3. Update `src/portfolio.js` for content changes.
+4. Update route/page components only when layout or presentation changes are needed.
+5. Run verification before committing:
 
-3. **Switch to the Project Directory** 📁
+```bash
+npm run build
+env CI=true npm test -- --watchAll=false
+git diff --check
+```
 
-   - Move into the project directory using:
-     ```
-     cd masterPortfolio
-     ```
+## Content Guidelines
 
-4. **Move to Gatsby** 🚀
+- Do not call Aniket "Senior".
+- Keep Go positioned as selected tooling, not primary professional experience.
+- Keep The VAPT Handbook under writing/security content, not as a professional client project.
+- Use public GitHub projects only when the repository exists, except clearly marked coming-soon items.
+- Do not invent companies, dates, metrics, clients, certifications, or production details.
 
-   - If you're working on this task, please help us migrate the project to Gatsby. Make the necessary changes and test everything to ensure it works smoothly.
+## Secrets
 
-5. **Add Podcast and Video Sections** 🎙️📹
+Do not commit `.env`, API keys, GitHub tokens, or private infrastructure details.
 
-   - We'd love to have sections for podcasts and videos on the portfolio. Create these sections and make sure they look fantastic.
+Use `.env.example` for local environment variable names.
 
-6. **Add Tests for Automation** 🧪
+## Visual Guidelines
 
-   - To ensure code quality, add tests where appropriate. Use test frameworks like Jest or Cypress, and make sure the tests pass.
-
-7. **Set Up Travis Workflow** 🤖
-
-   - Implement a Travis CI workflow to automate builds and testing. This will help ensure that changes don't break the project.
-
-8. **Create a Branch** 🌿
-
-   - Create a new branch for your changes with a descriptive name. For example:
-     ```
-     git checkout -b gatsby-migration
-     ```
-
-9. **Make Your Changes** 💡
-
-   - Implement your awesome changes and features.
-
-10. **Commit Your Changes** 📝
-
-    - Commit your changes with a descriptive message. For example:
-      ```
-      git commit -m "Added Gatsby migration and podcast section"
-      ```
-
-11. **Push Your Changes** 🚢
-
-    - Push your changes to your fork on GitHub:
-      ```
-      git push origin gatsby-migration
-      ```
-
-12. **Create a Pull Request** 🙌
-
-    - Go to your fork on GitHub, and click the "New Pull Request" button. Follow the prompts, and submit your changes for review.
-
-13. **Celebrate** 🎉
-    - You've contributed to the MasterPortfolio project! Thanks for your hard work and dedication.
-
-## 📌 Issues
-
-If you encounter any issues or have ideas for improvements, please open an [issue](https://github.com/ashutosh1919/masterPortfolio/issues) and let us know.
-
-## 🙏 Thank You
-
-We appreciate your contribution and look forward to working together to make the MasterPortfolio project even better! 😄🚀
+- Keep the design recruiter-friendly and readable.
+- Use the current dark theme and custom SVG style.
+- Keep SVG labels short and separated from shapes/charts.
+- Check mobile and desktop layouts after visual edits.

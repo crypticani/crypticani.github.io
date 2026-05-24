@@ -37,7 +37,7 @@ const greeting = {
     "DevOps Engineer | Full Stack Engineer | Platform Engineering | Cloud Infrastructure | SRE",
   location: "Samastipur, Bihar, India",
   resumeLink: resumePath,
-  portfolio_repository: "https://github.com/crypticani/portfolio",
+  portfolio_repository: "https://github.com/crypticani/crypticani.github.io",
   githubProfile: "https://github.com/crypticani",
   linkedInProfile: "https://linkedin.com/in/crypticani",
   contactLink: "/contact",
