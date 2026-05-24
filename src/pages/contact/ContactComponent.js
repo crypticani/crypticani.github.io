@@ -4,7 +4,8 @@ import Footer from "../../components/footer/Footer";
 import TopButton from "../../components/topButton/TopButton";
 import SocialMedia from "../../components/socialMedia/SocialMedia";
 import Button from "../../components/button/Button";
-import BlogsImg from "./BlogsImg";
+import ContactChannelsIllustration from "./ContactChannelsIllustration";
+import TechnicalWritingIllustration from "./TechnicalWritingIllustration";
 import { Fade } from "react-reveal";
 import "./ContactComponent.css";
 import { greeting, contactPageData } from "../../portfolio.js";
@@ -22,10 +23,7 @@ class Contact extends Component {
           <Fade bottom duration={1000} distance="40px">
             <div className="contact-heading-div">
               <div className="contact-heading-img-div">
-                <img
-                  src={require(`../../assets/images/${ContactData["profile_image_path"]}`)}
-                  alt=""
-                />
+                <ContactChannelsIllustration theme={theme} />
               </div>
               <div className="contact-heading-text-div">
                 <h1
@@ -120,11 +118,7 @@ class Contact extends Component {
                 </div>
               </div>
               <div className="blog-heading-img-div">
-                {/* <img
-											src={require(`../../assets/images/${blogSection["avatar_image_path"]}`)}
-											alt=""
-										/> */}
-                <BlogsImg theme={theme} />
+                <TechnicalWritingIllustration theme={theme} />
               </div>
             </div>
           </Fade>

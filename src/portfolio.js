@@ -149,7 +149,7 @@ const skills = {
   data: [
     {
       title: "Cloud & Infrastructure",
-      fileName: "CloudInfraImg",
+      fileName: "CloudInfrastructureIllustration",
       skills: [
         "OCI, AWS, GCP, Linux, Nginx, load balancing, DNS, HA architecture, disaster recovery, and FinOps.",
         "Designing production infrastructure with redundancy, failover paths, backup strategy, and operational runbooks.",
@@ -210,7 +210,7 @@ const skills = {
     },
     {
       title: "Containers & CI/CD",
-      fileName: "CloudInfraImg",
+      fileName: "DeliveryPipelineIllustration",
       skills: [
         "Docker, Kubernetes, Docker Compose, Jenkins, GitLab CI, GitHub Actions, and Grype.",
         "Building automated build-test-deploy workflows with safer release paths and CI/CD security gates.",
@@ -256,7 +256,7 @@ const skills = {
     },
     {
       title: "Observability",
-      fileName: "DataScienceImg",
+      fileName: "ObservabilityIllustration",
       skills: [
         "Prometheus, Grafana, Loki, Alertmanager, Fluent Bit, PromQL, and custom exporters.",
         "Building dashboards, alerts, logs, and metrics pipelines that support faster incident detection and recovery.",
@@ -297,7 +297,7 @@ const skills = {
     },
     {
       title: "Data Platforms & HA",
-      fileName: "CloudInfraImg",
+      fileName: "DataPlatformHaIllustration",
       skills: [
         "PostgreSQL + Patroni, MySQL Group Replication, MongoDB Replica Sets, ClickHouse, Redis Sentinel, and KeyDB.",
         "Designing database HA/DR patterns with backups, recovery runbooks, replication, failover, and restore validation.",
@@ -343,7 +343,7 @@ const skills = {
     },
     {
       title: "Security & IAM",
-      fileName: "DesignImg",
+      fileName: "SecurityIamIllustration",
       skills: [
         "Keycloak, LDAP, SAML/OIDC, and DevSecOps practices.",
         "Integrating SSO and IAM patterns while keeping access control, service ownership, and auditability clear.",
@@ -374,7 +374,7 @@ const skills = {
     },
     {
       title: "Application Security & VAPT",
-      fileName: "DesignImg",
+      fileName: "VaptSecurityIllustration",
       skills: [
         "Reconnaissance, inventory mapping, web/API testing, auth/session testing, and OWASP-style issue triage.",
         "Burp Suite workflows for capturing traffic, modifying requests, comparing responses, and collecting evidence.",
@@ -416,7 +416,7 @@ const skills = {
     },
     {
       title: "Development, Automation & Programming",
-      fileName: "FullStackImg",
+      fileName: "DevelopmentAutomationIllustration",
       skills: [
         "Python, Bash, Go, Django/DRF, Ansible, and Git.",
         "Building Django/DRF APIs, internal admin portals, exporters, CLI tooling, and automation scripts.",
@@ -558,7 +558,6 @@ const experience = {
     "DevOps, development, platform engineering, cloud infrastructure, and SRE work",
   description:
     "3+ years working across high-availability infrastructure, CI/CD automation, Kubernetes and containerized workloads, observability, database HA/DR, cloud operations, FinOps, IAM, DevSecOps practices, and developer tooling.",
-  header_image_path: "experience.svg",
   sections: [
     {
       title: "Work",
@@ -686,14 +685,12 @@ const projectsHeader = {
   title: "Projects",
   description:
     "GitHub-backed projects, tools, and platform ideas. I prioritize public repositories and mark early-stage work clearly when it is still being prepared.",
-  avatar_image_path: "projects_image.svg",
 };
 
 // Contact Page
 const contactPageData = {
   contactSection: {
     title: "Contact Me",
-    profile_image_path: "avatar.svg",
     description:
       "Based in Samastipur, Bihar, India. Reach out for DevOps, platform engineering, cloud infrastructure, observability, SRE, CI/CD automation, developer tooling, and DevSecOps conversations.",
   },
@@ -732,7 +729,6 @@ const contactPageData = {
         href: "https://discord.gg/TSfxKeMZ57",
       },
     ],
-    avatar_image_path: "blogs_image.svg",
   },
 };
 

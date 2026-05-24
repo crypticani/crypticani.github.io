@@ -2,7 +2,6 @@
   "title": "Experience",
   "subtitle": "DevOps, platform engineering, cloud infrastructure, and SRE work",
   "description": "3+ years working on high-availability infrastructure, CI/CD automation, Kubernetes and containerized workloads, observability, database HA/DR, cloud operations, FinOps, IAM, and DevSecOps practices.",
-  "header_image_path": "experience.svg",
   "sections": [
     {
       "title": "Work",

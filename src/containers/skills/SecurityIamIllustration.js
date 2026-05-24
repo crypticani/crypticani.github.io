@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-export default class DesignImg extends Component {
+export default class SecurityIamIllustration extends Component {
   render() {
     const theme = this.props.theme;
     return (

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-class FeelingProud extends Component {
+class PlatformHeroIllustration extends Component {
   render() {
     const theme = this.props.theme;
     return (
@@ -152,4 +152,4 @@ class FeelingProud extends Component {
   }
 }
 
-export default FeelingProud;
+export default PlatformHeroIllustration;

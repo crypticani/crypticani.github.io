@@ -8,7 +8,7 @@ import { Fade } from "react-reveal";
 import { greeting, projectsHeader } from "../../portfolio.js";
 import ProjectsData from "../../shared/opensource/projects.json";
 import "./Projects.css";
-import ProjectsImg from "./ProjectsImg";
+import ProjectPortfolioIllustration from "./ProjectPortfolioIllustration";
 
 class Projects extends Component {
   render() {
@@ -20,11 +20,7 @@ class Projects extends Component {
           <Fade bottom duration={2000} distance="40px">
             <div className="projects-heading-div">
               <div className="projects-heading-img-div">
-                {/* <img
-											src={require(`../../assets/images/${projectsHeader["avatar_image_path"]}`)}
-											alt=""
-										/> */}
-                <ProjectsImg theme={theme} />
+                <ProjectPortfolioIllustration theme={theme} />
               </div>
               <div className="projects-heading-text-div">
                 <h1
