@@ -25,15 +25,15 @@ function outputFor(command, commandHistory) {
     case "whoami":
       return [
         "Aniket Kumar aka crypticani",
-        "Linux-first DevOps Engineer focused on reliable cloud infrastructure, containers, networking, CI/CD, observability, automation, DevSecOps, and practical security.",
+        "DevOps Engineer focused on production infrastructure, cloud migrations, containers, CI/CD, observability, automation, DevSecOps, and cloud cost optimization.",
       ];
     case "ls":
       return ["about.txt", "skills/", "projects/", "contact", "resume"];
     case "cat about.txt":
       return [
-        "Started as a Django/backend-focused full stack engineer, then moved deeper into DevOps and platform engineering.",
-        "I work across Linux systems, cloud infrastructure, CI/CD, monitoring, containers, automation, IAM, and practical DevSecOps.",
-        "Building cybersecurity depth around web/API testing, auth/session issues, cloud-backed applications, and safer delivery workflows.",
+        "Started as a Django/backend-focused full stack engineer, then moved into DevOps and platform engineering.",
+        "I work across Linux systems, cloud infrastructure, migrations, CI/CD, monitoring, containers, automation, IAM, and practical DevSecOps.",
+        "Current work focuses on reliable production systems, operational visibility, cloud cost optimization, and safer delivery workflows.",
       ];
     case "ls skills/":
       return [
@@ -44,6 +44,8 @@ function outputFor(command, commandHistory) {
         "ansible",
         "github-actions",
         "ci-cd",
+        "cloud-migration",
+        "cloud-cost-optimization",
         "prometheus",
         "grafana",
         "nginx",
@@ -56,7 +58,7 @@ function outputFor(command, commandHistory) {
     case "ls projects/":
       return [
         "qurli",
-        "CloudPulse",
+        "Torvix",
         "uptime-lens",
         "spend-meter",
         "work-hours-tracker",
@@ -96,7 +98,7 @@ function outputFor(command, commandHistory) {
       return [
         "[sudo] password for recruiter: ********",
         "Permission granted.",
-        "Aniket is available for conversations around DevOps, platform engineering, cloud infrastructure, SRE, CI/CD, observability, automation, and DevSecOps.",
+        "Aniket is available for conversations around DevOps, platform engineering, cloud migration, cloud infrastructure, CI/CD, observability, automation, cost optimization, and DevSecOps.",
         "Run `contact` to reach out.",
       ];
     default:

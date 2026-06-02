@@ -11,12 +11,12 @@
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body {
     font-family: "Liberation Sans", Arial, Helvetica, sans-serif;
-    font-size: 10.5pt;
-    line-height: 1.32;
+    font-size: 9.8pt;
+    line-height: 1.26;
     color: #1a1a1a;
     width: 8.5in;
     height: 11in;
-    padding: 0.5in 0.55in;
+    padding: 0.42in 0.5in;
     overflow: hidden;
   }
 
@@ -30,7 +30,7 @@
   }
   .subtitle {
     text-align: center;
-    font-size: 10pt;
+    font-size: 9.4pt;
     color: #333;
     margin-bottom: 2pt;
   }
@@ -60,14 +60,14 @@
   .summary {
     margin-bottom: 0;
     line-height: 1.35;
-    font-size: 10pt;
+    font-size: 9.4pt;
   }
 
   /* --- Skills --- */
   .skills-row {
     margin-bottom: 1pt;
     line-height: 1.3;
-    font-size: 10pt;
+    font-size: 9.4pt;
   }
   .skills-label {
     font-weight: bold;
@@ -131,13 +131,13 @@
 </div>
 
 <h2>Professional Summary</h2>
-<p class="summary">DevOps Engineer with 3+ years of experience building high-availability infrastructure, CI/CD automation, Kubernetes workloads, observability platforms, and database HA/DR systems across cloud and on-prem environments. Strong background in production operations, team leadership, cloud cost optimization, and DevSecOps practices including container vulnerability scanning.</p>
+<p class="summary">DevOps Engineer with 3+ years of professional experience in production infrastructure, cloud migrations, Kubernetes, CI/CD automation, observability, and cloud cost optimization. Experienced in cross-cloud migration, cloud-to-on-premise transition, Linux systems, containerized workloads, monitoring stacks, and infrastructure automation using Terraform and Ansible.</p>
 
 <h2>Technical Skills</h2>
-<div class="skills-row"><span class="skills-label">Cloud &amp; Infrastructure:</span> OCI, AWS, GCP, Linux, Nginx, Load Balancing, DNS, HA Architecture, Disaster Recovery, FinOps</div>
-<div class="skills-row"><span class="skills-label">Containers &amp; CI/CD:</span> Docker, Kubernetes, Docker Compose, Jenkins, GitLab CI, GitHub Actions, Grype</div>
-<div class="skills-row"><span class="skills-label">Observability &amp; Databases:</span> Prometheus, Grafana, Loki, Alertmanager, PromQL, PostgreSQL, MySQL, MongoDB, Redis, KeyDB, ClickHouse</div>
-<div class="skills-row"><span class="skills-label">Security, IAM &amp; Programming:</span> Keycloak, LDAP, SAML/OIDC, DevSecOps, Burp Suite, VAPT Fundamentals, Python, Bash, Go, Django/DRF, Ansible, Git</div>
+<div class="skills-row"><span class="skills-label">Cloud:</span> AWS, OCI, Azure, GCP, Cloud Migration, Cloud Cost Optimization, Disaster Recovery</div>
+<div class="skills-row"><span class="skills-label">Infrastructure:</span> Linux, Docker, Kubernetes, Terraform, Ansible, Nginx, HAProxy, Load Balancing, DNS, HA Architecture</div>
+<div class="skills-row"><span class="skills-label">CI/CD &amp; Observability:</span> Jenkins, GitHub Actions, GitLab CI/CD, Prometheus, Grafana, Alertmanager, Loki, Custom Exporters</div>
+<div class="skills-row"><span class="skills-label">Databases, Security &amp; Scripting:</span> PostgreSQL, MySQL, MongoDB, Redis, Keycloak, SAML/OIDC, SSL/TLS, RBAC, Secrets Management, Bash, Python, Git</div>
 
 <h2>Professional Experience</h2>
 
@@ -148,13 +148,14 @@
   </div>
   <div class="job-company">Amritsar, India</div>
   <ul>
-    <li>Owned HA infrastructure, CI/CD, observability, and cloud operations for 15+ production apps, sustaining 99.9% uptime SLA across all client deployments.</li>
-    <li>Led a team of 8 engineers/interns; introduced code reviews, runbooks, incident practices, and on-call rotation, reducing MTTR by 40%.</li>
-    <li>Built Jenkins, GitLab CI, and GitHub Actions pipelines for automated build-test-deploy workflows, increasing release cadence from bi-weekly to multiple daily deployments.</li>
-    <li>Containerized 20+ services with multi-stage Dockerfiles; managed Kubernetes workloads with rolling updates and zero-downtime releases, reducing image size by 60%.</li>
-    <li>Integrated Grype-based container vulnerability scanning into CI/CD gates, enforcing security policies and reducing production vulnerability exposure by 90%.</li>
-    <li>Designed HA data platforms: PostgreSQL + Patroni, MySQL Group Replication, MongoDB Replica Sets, ClickHouse, Redis Sentinel, and KeyDB with backup, PITR, and failover runbooks.</li>
-    <li>Implemented DR automation with snapshots, cross-region backup replication, and recovery runbooks, achieving sub-30-minute RTO; optimized cloud spend by 25% via rightsizing and reserved capacity.</li>
+    <li>Own production infrastructure, CI/CD, observability, and cloud operations for 15+ applications, sustaining 99.9% uptime SLA across client deployments.</li>
+    <li>Planned and executed cross-cloud migration work, including scheduled downtime windows, near real-time cutover approaches, validation, and post-migration stabilization.</li>
+    <li>Supported cloud-to-on-premise migration initiatives involving infrastructure planning, service cutover, data movement, reverse proxy updates, and production readiness checks.</li>
+    <li>Built repeatable infrastructure and delivery workflows using Terraform, Ansible, Docker, Jenkins, GitLab CI, and GitHub Actions.</li>
+    <li>Containerized 20+ services; managed Kubernetes workloads with rolling updates, zero-downtime release practices, and Grype-based CI/CD security gates.</li>
+    <li>Operated monitoring and troubleshooting workflows using Prometheus, Grafana, Loki, Alertmanager, PromQL dashboards, and custom exporters.</li>
+    <li>Managed HA data platforms including PostgreSQL + Patroni, MySQL Group Replication, MongoDB Replica Sets, ClickHouse, Redis Sentinel, and KeyDB.</li>
+    <li>Optimized cloud spend by 25% through usage review, rightsizing, cleanup of underutilized resources, and cost visibility improvements.</li>
   </ul>
 </div>
 
@@ -165,7 +166,7 @@
   </div>
   <div class="job-company">Amritsar, India</div>
   <ul>
-    <li>Built the organization's observability stack from scratch using Prometheus, Alertmanager, Grafana, Loki, and Fluent Bit across 100+ hosts and 200+ containers.</li>
+    <li>Built observability coverage using Prometheus, Alertmanager, Grafana, Loki, and Fluent Bit across 100+ hosts and 200+ containers.</li>
     <li>Developed Python exporters and 15+ Grafana dashboards with PromQL panels for infrastructure health, application performance, and alerting.</li>
     <li>Automated Linux home-directory backups to AWS S3 and built a Django + MQTT device management portal for 50+ devices.</li>
   </ul>
@@ -178,6 +179,16 @@
   </div>
   <ul>
     <li>Developed Django/DRF backend APIs and VueJS/TailwindCSS interfaces for a no-code application platform.</li>
+  </ul>
+</div>
+
+<div class="job">
+  <div class="job-header">
+    <span class="job-title">Software Development Intern &mdash; All World Gayatri Pariwar</span>
+    <span class="job-date">Feb 2021 &ndash; May 2021</span>
+  </div>
+  <ul>
+    <li>Supported bug fixes, feature updates, ERP development, and project documentation for internal software systems.</li>
   </ul>
 </div>
 

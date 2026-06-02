@@ -11,14 +11,14 @@ const settings = {
 // SEO related settings
 const seo = {
   title:
-    "Aniket Kumar | Linux-first DevOps Engineer | Platform Engineering | SRE",
+    "Aniket Kumar | DevOps Engineer | Platform Engineering | Cloud Infrastructure",
   description:
-    "Portfolio of Aniket Kumar, a Linux-first DevOps Engineer focused on cloud infrastructure, containers, networking, CI/CD automation, Kubernetes, observability, database HA/DR, DevSecOps, and practical application security.",
+    "Portfolio of Aniket Kumar, a DevOps Engineer focused on production infrastructure, cloud migrations, Kubernetes, CI/CD automation, observability, reliability, and cloud cost optimization.",
   keywords:
-    "Linux, DevOps Engineer, Full Stack Engineer, Platform Engineer, SRE, Kubernetes, Docker, Containers, Networking, Jenkins, GitLab CI, GitHub Actions, Prometheus, Grafana, Loki, PostgreSQL, MySQL, MongoDB, OCI, AWS, GCP, DevSecOps, FinOps, Keycloak, LDAP, VAPT, Burp Suite, Python, Django REST Framework",
+    "DevOps Engineer, Platform Engineer, Cloud Infrastructure, Cloud Migration, Cloud Cost Optimization, Kubernetes, Docker, Terraform, Ansible, Linux, Nginx, HAProxy, Jenkins, GitLab CI, GitHub Actions, Prometheus, Grafana, Loki, PostgreSQL, MySQL, MongoDB, OCI, AWS, Azure, GCP, DevSecOps, Keycloak, SAML, OIDC, Python, Bash",
   og: {
     title:
-      "Aniket Kumar | Linux-first DevOps Engineer | Platform Engineering | SRE",
+      "Aniket Kumar | DevOps Engineer | Platform Engineering | Cloud Infrastructure",
     type: "website",
     url: siteUrl,
   },
@@ -30,9 +30,9 @@ const greeting = {
   logo_name: "crypticani",
   nickname: "crypticani",
   headline:
-    "Linux-first DevOps Engineer building reliable cloud, container, and observability platforms.",
+    "DevOps Engineer building reliable, observable, and cost-efficient infrastructure.",
   subTitle:
-    "I started with Django/backend-focused full-stack engineering and moved deeper into Linux, containers, networking, CI/CD, observability, cloud infrastructure, and DevSecOps.",
+    "I work across cloud, Kubernetes, Linux, CI/CD, observability, and migration projects — helping teams run production systems with better automation, visibility, and operational control.",
   role:
     "DevOps Engineer | Full Stack Engineer | Platform Engineering | Cloud Infrastructure | SRE",
   location: "Samastipur, Bihar, India",
@@ -45,9 +45,9 @@ const greeting = {
 
 const proofPoints = [
   {
-    label: "DevOps Experience",
-    value: "3+ years",
-    detail: "Infrastructure, delivery, reliability, and automation work.",
+    label: "Professional DevOps Experience",
+    value: "3+ Years",
+    detail: "Production infrastructure, migration, automation, and reliability work.",
   },
   {
     label: "Production Scope",
@@ -62,7 +62,7 @@ const proofPoints = [
   {
     label: "Cost Optimization",
     value: "25%",
-    detail: "Cloud spend reduction through right-sizing and FinOps practices.",
+    detail: "Cloud spend reduction through right-sizing and cost cleanup.",
   },
 ];
 
@@ -174,7 +174,7 @@ const skills = {
     {
       title: "Linux & Infrastructure",
       description:
-        "Terminal-native Linux operations, networking, DNS, Nginx, HA architecture, DR, cloud operations, and cost controls.",
+        "Terminal-native Linux operations, networking, DNS, Nginx, HA architecture, DR, cloud migrations, and cost controls.",
     },
     {
       title: "Containers & Delivery",
@@ -194,7 +194,7 @@ const skills = {
     {
       title: "Security-Aware Infrastructure",
       description:
-        "IAM, Keycloak, LDAP, SAML/OIDC, container scanning, web/API testing fundamentals, and practical risk reporting.",
+        "IAM, Keycloak, LDAP, SAML/OIDC, container scanning, web/API testing concepts, and practical risk reporting.",
     },
     {
       title: "Development",
@@ -207,9 +207,9 @@ const skills = {
       title: "Cloud & Infrastructure",
       fileName: "CloudInfrastructureIllustration",
       skills: [
-        "OCI, AWS, GCP, Linux, Nginx, load balancing, DNS, HA architecture, disaster recovery, and FinOps.",
-        "Designing production infrastructure with redundancy, failover paths, backup strategy, and operational runbooks.",
-        "Keeping infrastructure reliable, cost-aware, and maintainable across cloud and on-prem environments.",
+        "AWS, OCI, Azure, GCP, Linux, Nginx, HAProxy, load balancing, DNS, HA architecture, disaster recovery, and cloud cost optimization.",
+        "Planning production infrastructure with redundancy, failover paths, backup strategy, operational runbooks, and migration cutover paths.",
+        "Keeping infrastructure reliable, cost-aware, and maintainable across cloud and on-premise environments.",
       ],
       softwareSkills: [
         {
@@ -228,6 +228,16 @@ const skills = {
           style: iconStyle("#4285f4"),
         },
         {
+          skillName: "Azure",
+          fontAwesomeClassname: "simple-icons:microsoftazure",
+          style: iconStyle("#0078d4"),
+        },
+        {
+          skillName: "Terraform",
+          fontAwesomeClassname: "simple-icons:terraform",
+          style: iconStyle("#7b42bc"),
+        },
+        {
           skillName: "Linux",
           fontAwesomeClassname: "simple-icons:linux",
           style: iconStyle("#111111"),
@@ -236,6 +246,11 @@ const skills = {
           skillName: "Nginx",
           fontAwesomeClassname: "simple-icons:nginx",
           style: iconStyle("#009639"),
+        },
+        {
+          skillName: "HAProxy",
+          fontAwesomeClassname: "simple-icons:haproxy",
+          style: iconStyle("#106da9"),
         },
         {
           skillName: "Load Balancing",
@@ -258,7 +273,7 @@ const skills = {
           style: iconStyle("#c2410c"),
         },
         {
-          skillName: "FinOps",
+          skillName: "Cloud Cost Optimization",
           fontAwesomeClassname: "mdi:finance",
           style: iconStyle("#047857"),
         },
@@ -454,7 +469,7 @@ const skills = {
           style: iconStyle("#ff6633"),
         },
         {
-          skillName: "VAPT Fundamentals",
+          skillName: "VAPT",
           fontAwesomeClassname: "mdi:bug-check",
           style: iconStyle("#7c2d12"),
         },
@@ -538,7 +553,7 @@ const degrees = {
       alt_name: "DSVV",
       duration: "2018 - 2021",
       descriptions: [
-        "⚡ I studied computer applications subjects including programming, data structures, algorithms, DBMS, operating systems, and cloud fundamentals.",
+        "⚡ I studied computer applications subjects including programming, data structures, algorithms, DBMS, operating systems, and cloud concepts.",
         "⚡ I also completed a modular course in cloud computing and was associated with Jigyasa Club.",
         "⚡ Academic Excellence Award",
         "⚡ CGPA: 8.0",
@@ -613,7 +628,7 @@ const experience = {
   subtitle:
     "DevOps, development, platform engineering, cloud infrastructure, and SRE work",
   description:
-    "3+ years working across high-availability infrastructure, CI/CD automation, Kubernetes and containerized workloads, observability, database HA/DR, cloud operations, FinOps, IAM, DevSecOps practices, and developer tooling.",
+    "3+ years of professional DevOps experience across production infrastructure, cloud migrations, CI/CD automation, Kubernetes and containerized workloads, observability, database HA/DR, cloud operations, IAM, DevSecOps practices, and developer tooling, backed by internship and early engineering experience.",
   sections: [
     {
       title: "Work",
@@ -627,13 +642,16 @@ const experience = {
           location: "Amritsar, India",
           descriptions: [
             "Own HA infrastructure, CI/CD, observability, and cloud operations for 15+ production applications with 99.9% uptime SLA.",
+            "Plan and execute migration work across cloud providers, including scheduled downtime windows, near real-time cutover approaches, validation, and post-migration stabilization.",
+            "Support cloud-to-on-premise migration initiatives involving infrastructure planning, service cutover, data movement, reverse proxy updates, and production readiness checks.",
             "Lead 8 engineers/interns and introduced reviews, runbooks, incident practices, and on-call rotation, reducing MTTR by 40%.",
             "Built Jenkins, GitLab CI, and GitHub Actions pipelines that moved releases from bi-weekly to multiple daily deployments.",
+            "Build repeatable infrastructure workflows using Terraform, Ansible, Docker, CI/CD pipelines, and Linux automation.",
             "Containerized 20+ services and managed Kubernetes workloads with rolling updates and zero-downtime release practices.",
             "Integrated Grype-based container vulnerability scanning into CI/CD gates, reducing production vulnerability exposure by 90%.",
             "Designed HA data platforms using PostgreSQL + Patroni, MySQL Group Replication, MongoDB Replica Sets, ClickHouse, Redis Sentinel, and KeyDB.",
             "Implemented DR automation with snapshots, cross-region backup replication, and recovery runbooks, achieving sub-30-minute RTO.",
-            "Optimized cloud spend by 25% through cost review, rightsizing, and operational cleanup.",
+            "Optimized cloud spend by 25% through cost review, rightsizing, unused-resource cleanup, and visibility improvements.",
           ],
           color: "#2f80ed",
         },
@@ -690,67 +708,67 @@ const experience = {
 };
 
 const caseStudies = {
-  title: "Selected Platform Stories",
+  title: "Production Infrastructure Focus",
   subtitle:
-    "Anonymized, client-safe examples of problems I have worked through across reliability, delivery, observability, security, and cloud operations.",
+    "Anonymized, client-safe examples of migration, automation, reliability, observability, security, and cloud cost optimization work.",
   studies: [
     {
-      title: "High-Availability Infrastructure & DR",
-      focus: "Reliability engineering",
+      title: "Cloud & Platform Migration",
+      focus: "Platform Migration",
       problem:
-        "Production systems needed clearer failover paths, restore confidence, and recovery ownership.",
+        "Business-critical systems needed migration paths across cloud providers and cloud-to-on-premise environments without unnecessary operational risk.",
       built:
-        "Designed HA patterns, backup replication, restore runbooks, and recovery workflows across cloud and on-prem environments.",
-      outcomes: ["99.9% SLA", "Sub-30-minute RTO", "Cross-region backups"],
+        "Planned downtime-based migrations, near real-time cutover approaches, infrastructure readiness checks, service cutovers, data movement, validation, and stabilization workflows.",
+      outcomes: ["Cross-cloud", "Cloud-to-on-premise", "Cutover planning"],
     },
     {
-      title: "Observability Platform",
-      focus: "Monitoring and incident response",
+      title: "Infrastructure Automation",
+      focus: "Infrastructure Automation",
+      problem:
+        "Infrastructure and release work needed fewer manual steps and more consistent execution across production environments.",
+      built:
+        "Built repeatable workflows using Terraform, Ansible, Docker, Jenkins, GitLab CI, GitHub Actions, Linux automation, and operational runbooks.",
+      outcomes: ["Terraform", "Ansible", "CI/CD"],
+    },
+    {
+      title: "Observability & Reliability",
+      focus: "Observability",
       problem:
         "Teams needed faster visibility into hosts, containers, services, and infrastructure health.",
       built:
-        "Built Prometheus, Alertmanager, Grafana, Loki, Fluent Bit, and custom exporter coverage with practical dashboards and alert paths.",
+        "Implemented monitoring and troubleshooting workflows using Prometheus, Alertmanager, Grafana, Loki, Fluent Bit, PromQL dashboards, and custom exporters.",
       outcomes: ["100+ hosts", "200+ containers", "15+ dashboards"],
     },
     {
       title: "CI/CD Automation with DevSecOps Gates",
-      focus: "Delivery automation",
+      focus: "Delivery Automation",
       problem:
-        "Release workflows needed to move faster without letting vulnerable containers reach production unnoticed.",
+        "Release workflows needed to move faster while reducing the chance of vulnerable containers or unsafe changes reaching production.",
       built:
-        "Implemented Jenkins, GitLab CI, and GitHub Actions pipelines with Grype vulnerability gates and safer deployment workflows.",
+        "Implemented Jenkins, GitLab CI, and GitHub Actions pipelines with vulnerability checks, deployment guardrails, safer release workflows, and practical security controls across containers, auth, APIs, and cloud-backed apps.",
       outcomes: [
         "Multiple daily releases",
         "20+ services",
-        "90% exposure reduction",
+        "Security gates",
       ],
     },
     {
-      title: "Cloud Cost Optimization / FinOps",
-      focus: "Cost-aware operations",
+      title: "Cloud Cost Optimization",
+      focus: "Cost-Aware Operations",
       problem:
-        "Cloud spend needed operational review instead of one-time cleanup.",
+        "Cloud spend needed better visibility, usage review, and cleanup of underutilized resources.",
       built:
-        "Reviewed usage patterns, eliminated waste, optimized resources, and connected infrastructure decisions to measurable cost reduction.",
+        "Reviewed usage patterns, identified waste, recommended rightsizing and cleanup actions, and connected infrastructure decisions to measurable cost reduction.",
       outcomes: ["25% spend reduction", "Usage review", "Operational cleanup"],
     },
     {
-      title: "Identity & SSO Foundations",
-      focus: "IAM and access control",
+      title: "Data Platforms & HA",
+      focus: "Stateful Reliability",
       problem:
-        "Identity flows needed clearer ownership, auditability, and integration paths across internal and application-facing systems.",
+        "Database-backed systems needed reliable replication, backup, failover, and restore planning across production environments.",
       built:
-        "Worked with Keycloak, LDAP, SAML/OIDC, access patterns, service ownership, and audit-friendly IAM practices.",
-      outcomes: ["Keycloak", "LDAP", "SAML/OIDC"],
-    },
-    {
-      title: "Security-Aware Infrastructure",
-      focus: "DevSecOps and application security",
-      problem:
-        "Infrastructure and delivery work increasingly needed practical security thinking across containers, auth, APIs, and cloud-backed apps.",
-      built:
-        "Applied container scanning, CI/CD guardrails, Burp Suite workflows, OWASP-style triage, and reporting discipline through hands-on security practice.",
-      outcomes: ["Grype", "Burp Suite", "OWASP-style triage"],
+        "Operated PostgreSQL + Patroni, MySQL Group Replication, MongoDB replica sets, ClickHouse, Redis Sentinel, and KeyDB with recovery runbooks.",
+      outcomes: ["Replication", "Failover", "Restore planning"],
     },
   ],
 };
@@ -759,7 +777,7 @@ const caseStudies = {
 const projectsHeader = {
   title: "Public Work",
   description:
-    "Curated GitHub-backed tools, platform ideas, handbooks, and earlier developer work. Current infrastructure and terminal-native projects are intentionally shown first.",
+    "Curated GitHub-backed tools, platform ideas, handbooks, and earlier developer work. Infrastructure, cloud, automation, and terminal-native projects are intentionally shown first.",
 };
 
 // Contact Page
@@ -770,7 +788,7 @@ const contactPageData = {
       "Based in Samastipur, Bihar, India. Reach out for DevOps, platform engineering, cloud infrastructure, observability, SRE, CI/CD automation, developer tooling, and DevSecOps conversations.",
   },
   blogSection: {
-    title: "Learning, Community & Technical Writing",
+    title: "Community & Technical Writing",
     subtitle:
       "Structured notes, handbooks, and community resources for DevOps, platform engineering, Linux, cloud, application security, and practical infrastructure workflows.",
     link: "https://blog.crypticani.dev/",
@@ -799,7 +817,7 @@ const contactPageData = {
       {
         title: "DevOps Learning Discord",
         description:
-          "A Discord community I run as @crypticani for learners working through DevOps, Linux, cloud, CI/CD, observability, and platform engineering topics.",
+          "A Discord community I run as @crypticani for engineers working through DevOps, Linux, cloud, CI/CD, observability, and platform engineering topics.",
         buttonText: "Join Discord",
         href: "https://discord.gg/TSfxKeMZ57",
       },

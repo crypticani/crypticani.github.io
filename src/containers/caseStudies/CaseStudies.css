@@ -30,11 +30,16 @@
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.case-studies-grid > * {
+  height: 100%;
+}
+
 .case-study-card {
   border: 1px solid;
   border-radius: 8px;
   display: flex;
   flex-direction: column;
+  height: 100%;
   min-height: 290px;
   padding: 24px;
   text-align: left;

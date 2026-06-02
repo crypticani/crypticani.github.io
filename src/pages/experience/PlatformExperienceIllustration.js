@@ -111,7 +111,7 @@ export default class PlatformExperienceIllustration extends Component {
             Kubernetes and observability
           </text>
           <text x="26" y="138" fill={theme.secondaryText} fontSize="13">
-            database HA/DR and FinOps
+            migrations and cost optimization
           </text>
           <path
             d="M30 174h160"

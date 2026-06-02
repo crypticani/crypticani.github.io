@@ -79,7 +79,7 @@ export default class ProjectPortfolioIllustration extends Component {
         </text>
         {card(78, 176, "qurli", "terminal HTTP client", theme.imageHighlight)}
         {card(272, 302, "handbooks", "DevOps and VAPT notes", "#60A5FA")}
-        {card(466, 176, "CloudPulse", "FinOps monitoring", "#F59E0B", "soon")}
+        {card(466, 176, "Torvix", "cost intelligence", "#F59E0B", "open")}
         <g transform="translate(314 248)">
           <rect
             width="132"

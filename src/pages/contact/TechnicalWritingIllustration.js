@@ -70,7 +70,7 @@ export default class TechnicalWritingIllustration extends Component {
           Writing &amp; Community
         </text>
         <text x="82" y="134" fill={theme.secondaryText} fontSize="15">
-          blog posts, DevOps handbook, VAPT handbook, and learning community
+          blog posts, DevOps handbook, VAPT handbook, and community notes
         </text>
         {page(94, 202, "Hashnode Blog", theme.imageHighlight)}
         {page(294, 202, "DevOps Handbook", "#60A5FA")}
@@ -83,7 +83,7 @@ export default class TechnicalWritingIllustration extends Component {
           opacity="0.85"
         />
         <text x="292" y="408" fill={theme.secondaryText} fontSize="14">
-          Discord learning server and direct discussions
+          DevOps Discord community and direct discussions
         </text>
       </svg>
     );

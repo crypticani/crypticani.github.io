@@ -9,7 +9,7 @@ Keep changes aligned with the current positioning:
 - DevOps engineering
 - Full stack engineering where relevant
 - Platform engineering, cloud infrastructure, and SRE
-- CI/CD, Kubernetes, observability, database HA/DR, FinOps, DevSecOps, IAM, and VAPT fundamentals
+- CI/CD, Kubernetes, observability, database HA/DR, cloud migration, cloud cost optimization, DevSecOps, IAM, and practical security concepts
 
 Avoid adding generic template content, inflated claims, fake metrics, fake certifications, or client-sensitive infrastructure details.
 

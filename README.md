@@ -8,7 +8,7 @@ Live site: https://crypticani.dev
 
 - Linux-first DevOps Engineer with full-stack engineering roots
 - Platform Engineering, Cloud Infrastructure, and SRE
-- Linux, containers, networking, high-availability infrastructure, CI/CD automation, Kubernetes, observability, database HA/DR, FinOps, DevSecOps, IAM, and practical application security
+- Linux, containers, networking, high-availability infrastructure, cloud migration, CI/CD automation, Kubernetes, observability, database HA/DR, cloud cost optimization, DevSecOps, IAM, and practical application security
 - Public work is grouped into featured platform/terminal tools, handbooks and technical writing, and earlier developer work
 
 ## Tech Stack

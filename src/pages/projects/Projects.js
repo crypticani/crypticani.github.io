@@ -10,6 +10,8 @@ import ProjectsData from "../../shared/opensource/projects.json";
 import "./Projects.css";
 import ProjectPortfolioIllustration from "./ProjectPortfolioIllustration";
 
+// TODO: Verify whether Torvix has moved from the existing GitHub URL
+// in projects.json to a new repository slug before changing the link.
 const projectSections = [
   {
     id: "featured",
@@ -21,7 +23,7 @@ const projectSections = [
     id: "writing",
     title: "Handbooks & Technical Writing",
     description:
-      "Repository-backed learning systems and notes for DevOps, Linux, cloud, and practical application security.",
+      "Repository-backed handbooks and technical notes for DevOps, Linux, cloud, and practical application security.",
   },
   {
     id: "earlier",

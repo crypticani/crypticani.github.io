@@ -6,7 +6,7 @@
       "category": "featured",
       "createdAt": "2026-05-17T00:00:00Z",
       "url": "https://github.com/crypticani/qurli",
-      "description": "Lightweight terminal-native HTTP client for developers, DevOps engineers, and SREs.",
+      "description": "Terminal-native HTTP client for developers and DevOps engineers testing APIs from remote servers, SSH environments, and lightweight CLI workflows.",
       "isFork": false,
       "languages": [
         { "name": "CLI", "iconifyClass": "mdi:console" },
@@ -15,17 +15,17 @@
     },
     {
       "id": "cloudpulse",
-      "name": "CloudPulse",
+      "name": "Torvix",
       "category": "featured",
       "createdAt": "2026-05-23T00:00:00Z",
       "url": "https://github.com/crypticani/cloudpulse",
-      "description": "Coming soon: cloud cost visibility and FinOps analytics platform focused on practical cloud infrastructure operations.",
+      "description": "Torvix is an open-source cloud cost intelligence platform for cost visibility, anomaly detection, forecasting, and unused-resource detection across cloud environments.",
       "isFork": false,
-      "status": "Coming soon",
+      "status": "Open Source",
       "languages": [
         { "name": "Go", "iconifyClass": "logos-go" },
         { "name": "PostgreSQL", "iconifyClass": "logos-postgresql" },
-        { "name": "FinOps", "iconifyClass": "mdi:finance" }
+        { "name": "Cost Intelligence", "iconifyClass": "mdi:finance" }
       ]
     },
     {
@@ -90,7 +90,7 @@
       "category": "writing",
       "createdAt": "2026-03-29T10:12:37+05:30",
       "url": "https://github.com/crypticani/the-vapt-handbook",
-      "description": "Practical application security notes covering recon, web/API testing, auth issues, cloud-backed surfaces, reporting, and responsible practice.",
+      "description": "Practical security repository focused on hands-on methodology, recon, web exploitation, privilege escalation, and lab-based security practice.",
       "isFork": false,
       "languages": [
         { "name": "Security", "iconifyClass": "mdi:shield-bug" },

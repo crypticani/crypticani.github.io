@@ -1,7 +1,7 @@
 {
   "title": "Experience",
   "subtitle": "DevOps, platform engineering, cloud infrastructure, and SRE work",
-  "description": "3+ years working on high-availability infrastructure, CI/CD automation, Kubernetes and containerized workloads, observability, database HA/DR, cloud operations, FinOps, IAM, and DevSecOps practices.",
+  "description": "3+ years of professional DevOps experience across production infrastructure, cloud migrations, CI/CD automation, Kubernetes and containerized workloads, observability, database HA/DR, cloud operations, IAM, and DevSecOps practices, backed by internship and early engineering experience.",
   "sections": [
     {
       "title": "Work",
@@ -14,21 +14,15 @@
           "duration": "Jun 2023 - Present",
           "location": "Amritsar, India",
           "descriptions": [
-            "Own HA infrastructure, CI/CD, observability, and cloud operations.",
-            "Support 15+ production applications with 99.9% uptime SLA.",
-            "Lead 8 engineers/interns across delivery and operations work.",
-            "Introduced reviews, runbooks, incident practices, and on-call rotation.",
-            "Reduced MTTR by 40%.",
-            "Built Jenkins, GitLab CI, and GitHub Actions pipelines.",
-            "Automated build-test-deploy workflows.",
-            "Increased release cadence from bi-weekly to multiple daily deployments.",
-            "Containerized 20+ services.",
-            "Managed Kubernetes workloads with rolling updates and zero-downtime releases.",
-            "Integrated Grype-based container vulnerability scanning into CI/CD gates.",
-            "Reduced production vulnerability exposure by 90%.",
+            "Own HA infrastructure, CI/CD, observability, and cloud operations for 15+ production applications with 99.9% uptime SLA.",
+            "Plan and execute migration work across cloud providers, including scheduled downtime windows, near real-time cutover approaches, validation, and post-migration stabilization.",
+            "Support cloud-to-on-premise migration initiatives involving infrastructure planning, service cutover, data movement, reverse proxy updates, and production readiness checks.",
+            "Lead 8 engineers/interns and introduced reviews, runbooks, incident practices, and on-call rotation, reducing MTTR by 40%.",
+            "Build repeatable infrastructure workflows using Terraform, Ansible, Docker, CI/CD pipelines, and Linux automation.",
+            "Containerized 20+ services and managed Kubernetes workloads with rolling updates and zero-downtime release practices.",
+            "Integrated Grype-based container vulnerability scanning into CI/CD gates, reducing production vulnerability exposure by 90%.",
             "Designed HA data platforms using PostgreSQL + Patroni, MySQL Group Replication, MongoDB Replica Sets, ClickHouse, Redis Sentinel, and KeyDB.",
-            "Implemented DR automation with snapshots, cross-region backup replication, and recovery runbooks.",
-            "Achieved sub-30-minute RTO and optimized cloud spend by 25%."
+            "Optimized cloud spend by 25% through cost review, rightsizing, unused-resource cleanup, and visibility improvements."
           ],
           "color": "#2f80ed"
         }
@@ -45,11 +39,9 @@
           "duration": "Jun 2022 - May 2023",
           "location": "Amritsar, India",
           "descriptions": [
-            "Built an observability stack across 100+ hosts and 200+ containers.",
-            "Used Prometheus, Alertmanager, Grafana, Loki, and Fluent Bit.",
+            "Built observability coverage using Prometheus, Alertmanager, Grafana, Loki, and Fluent Bit across 100+ hosts and 200+ containers.",
             "Developed Python exporters and 15+ Grafana dashboards with PromQL panels.",
-            "Automated Linux home-directory backups to AWS S3.",
-            "Built a Django + MQTT device management portal for 50+ devices."
+            "Automated Linux home-directory backups to AWS S3 and built a Django + MQTT device management portal for 50+ devices."
           ],
           "color": "#0f766e"
         },
@@ -73,9 +65,7 @@
           "logo_path": "awgp.png",
           "duration": "Feb 2021 - May 2021",
           "descriptions": [
-            "Collaborated with the software development team to fix bugs.",
-            "Added features to existing software.",
-            "Contributed to ERP development and wrote project documentation."
+            "Supported bug fixes, feature updates, ERP development, and project documentation for internal software systems."
           ],
           "color": "#9b1578"
         }
