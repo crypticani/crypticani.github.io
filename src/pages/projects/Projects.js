@@ -10,8 +10,6 @@ import ProjectsData from "../../shared/opensource/projects.json";
 import "./Projects.css";
 import ProjectPortfolioIllustration from "./ProjectPortfolioIllustration";
 
-// TODO: Verify whether Torvix has moved from the existing GitHub URL
-// in projects.json to a new repository slug before changing the link.
 const projectSections = [
   {
     id: "featured",
@@ -70,14 +68,19 @@ class Projects extends Component {
             if (!repos.length) return null;
 
             return (
-              <section className="project-group-section" key={section.id}>
+              <section
+                className={`project-group-section project-group-section-${section.id}`}
+                key={section.id}
+              >
                 <div className="project-group-heading">
                   <h2 style={{ color: theme.text }}>{section.title}</h2>
                   <p style={{ color: theme.secondaryText }}>
                     {section.description}
                   </p>
                 </div>
-                <div className="repo-cards-div-main">
+                <div
+                  className={`repo-cards-div-main repo-cards-div-main-${section.id}`}
+                >
                   {repos.map((repo) => {
                     return (
                       <GithubRepoCard

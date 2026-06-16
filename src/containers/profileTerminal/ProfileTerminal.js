@@ -20,7 +20,7 @@ function outputFor(command, commandHistory) {
     case "help":
       return [
         "Available commands:",
-        "whoami, ls, cat about.txt, ls skills/, ls projects/, cat projects/qurli, contact, resume, history, sudo hire-me, clear",
+        "whoami, ls, cat about.txt, ls skills/, ls projects/, cat projects/qurli, cat projects/torvix, contact, resume, history, sudo hire-me, clear",
       ];
     case "whoami":
       return [
@@ -70,6 +70,12 @@ function outputFor(command, commandHistory) {
         "qurli: a lightweight terminal-native HTTP client for developers, DevOps engineers, and SREs.",
         "Built around fast request workflows, clear output, and command-line ergonomics.",
         "Repo: https://github.com/crypticani/qurli",
+      ];
+    case "cat projects/torvix":
+      return [
+        "Torvix: a launched open-source cloud cost intelligence platform focused on OCI cost visibility.",
+        "Built around anomaly detection, forecasting, unused-resource detection, PostgreSQL-backed inventory, and Grafana-ready reporting.",
+        "Repo: https://github.com/crypticani/torvix",
       ];
     case "contact":
       return [

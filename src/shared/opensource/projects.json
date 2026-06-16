@@ -9,23 +9,22 @@
       "description": "Terminal-native HTTP client for developers and DevOps engineers testing APIs from remote servers, SSH environments, and lightweight CLI workflows.",
       "isFork": false,
       "languages": [
-        { "name": "CLI", "iconifyClass": "mdi:console" },
-        { "name": "HTTP", "iconifyClass": "mdi:api" }
+        { "name": "Rust", "iconifyClass": "simple-icons:rust" }
       ]
     },
     {
-      "id": "cloudpulse",
+      "id": "torvix",
       "name": "Torvix",
       "category": "featured",
       "createdAt": "2026-05-23T00:00:00Z",
-      "url": "https://github.com/crypticani/cloudpulse",
-      "description": "Torvix is an open-source cloud cost intelligence platform for cost visibility, anomaly detection, forecasting, and unused-resource detection across cloud environments.",
+      "url": "https://github.com/crypticani/torvix",
+      "description": "Open-source cloud cost intelligence platform focused on OCI cost visibility, anomaly detection, forecasting, unused-resource detection, and Grafana-ready reporting.",
       "isFork": false,
-      "status": "Open Source",
       "languages": [
         { "name": "Go", "iconifyClass": "logos-go" },
-        { "name": "PostgreSQL", "iconifyClass": "logos-postgresql" },
-        { "name": "Cost Intelligence", "iconifyClass": "mdi:finance" }
+        { "name": "Dockerfile", "iconifyClass": "simple-icons:docker" },
+        { "name": "Makefile", "iconifyClass": "mdi:file-cog" },
+        { "name": "Shell", "iconifyClass": "simple-icons:gnubash" }
       ]
     },
     {
@@ -65,9 +64,10 @@
       "description": "Mobile-first, local-first personal finance tracker that runs entirely in your browser.",
       "isFork": false,
       "languages": [
+        { "name": "TypeScript", "iconifyClass": "logos-typescript-icon" },
+        { "name": "CSS", "iconifyClass": "logos-css-3" },
         { "name": "JavaScript", "iconifyClass": "logos-javascript" },
-        { "name": "HTML", "iconifyClass": "logos-html-5" },
-        { "name": "CSS", "iconifyClass": "logos-css-3" }
+        { "name": "HTML", "iconifyClass": "logos-html-5" }
       ]
     },
     {
@@ -78,11 +78,7 @@
       "url": "https://github.com/crypticani/the-devops-handbook",
       "description": "Hands-on DevOps notes across Linux, networking, Git, scripting, containers, CI/CD, observability, cloud, Terraform, Ansible, and Kubernetes.",
       "isFork": false,
-      "languages": [
-        { "name": "DevOps", "iconifyClass": "mdi:server-network" },
-        { "name": "Linux", "iconifyClass": "logos-linux-tux" },
-        { "name": "Markdown", "iconifyClass": "logos-markdown" }
-      ]
+      "languages": [{ "name": "Markdown", "iconifyClass": "logos-markdown" }]
     },
     {
       "id": "the-vapt-handbook",
@@ -92,11 +88,7 @@
       "url": "https://github.com/crypticani/the-vapt-handbook",
       "description": "Practical security repository focused on hands-on methodology, recon, web exploitation, privilege escalation, and lab-based security practice.",
       "isFork": false,
-      "languages": [
-        { "name": "Security", "iconifyClass": "mdi:shield-bug" },
-        { "name": "VAPT", "iconifyClass": "mdi:bug-check" },
-        { "name": "Markdown", "iconifyClass": "logos-markdown" }
-      ]
+      "languages": [{ "name": "Markdown", "iconifyClass": "logos-markdown" }]
     },
     {
       "id": "MDEwOlJlcG9zaXRvcnkzNjYzMzM4NjQ=",
@@ -108,9 +100,8 @@
       "isFork": false,
       "languages": [
         { "name": "Python", "iconifyClass": "logos-python" },
-        { "name": "CSS", "iconifyClass": "logos-css-3" },
-        { "name": "JavaScript", "iconifyClass": "logos-javascript" },
-        { "name": "HTML", "iconifyClass": "logos-html-5" }
+        { "name": "HTML", "iconifyClass": "logos-html-5" },
+        { "name": "CSS", "iconifyClass": "logos-css-3" }
       ]
     },
     {

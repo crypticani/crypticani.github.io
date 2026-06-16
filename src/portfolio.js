@@ -13,9 +13,9 @@ const seo = {
   title:
     "Aniket Kumar | DevOps Engineer | Platform Engineering | Cloud Infrastructure",
   description:
-    "Portfolio of Aniket Kumar, a DevOps Engineer focused on production infrastructure, cloud migrations, Kubernetes, CI/CD automation, observability, reliability, and cloud cost optimization.",
+    "Portfolio of Aniket Kumar, a DevOps Engineer focused on production infrastructure, cloud migrations, Kubernetes, CI/CD automation, observability, reliability, cloud cost optimization, and Torvix.",
   keywords:
-    "DevOps Engineer, Platform Engineer, Cloud Infrastructure, Cloud Migration, Cloud Cost Optimization, Kubernetes, Docker, Terraform, Ansible, Linux, Nginx, HAProxy, Jenkins, GitLab CI, GitHub Actions, Prometheus, Grafana, Loki, PostgreSQL, MySQL, MongoDB, OCI, AWS, Azure, GCP, DevSecOps, Keycloak, SAML, OIDC, Python, Bash",
+    "DevOps Engineer, Platform Engineer, Cloud Infrastructure, Cloud Migration, Cloud Cost Optimization, Torvix, Kubernetes, Docker, Terraform, Ansible, Linux, Nginx, HAProxy, Jenkins, GitLab CI, GitHub Actions, Prometheus, Grafana, Loki, PostgreSQL, MySQL, MongoDB, OCI, AWS, Azure, GCP, DevSecOps, Keycloak, SAML, OIDC, Python, Bash",
   og: {
     title:
       "Aniket Kumar | DevOps Engineer | Platform Engineering | Cloud Infrastructure",
@@ -777,7 +777,7 @@ const caseStudies = {
 const projectsHeader = {
   title: "Public Work",
   description:
-    "Curated GitHub-backed tools, platform ideas, handbooks, and earlier developer work. Infrastructure, cloud, automation, and terminal-native projects are intentionally shown first.",
+    "Curated GitHub-backed tools, launched platform work, handbooks, and earlier developer projects. Torvix, infrastructure, cloud, automation, and terminal-native projects are intentionally shown first.",
 };
 
 // Contact Page
