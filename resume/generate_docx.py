@@ -7,13 +7,13 @@ from docx.enum.text import WD_ALIGN_PARAGRAPH
 from docx.oxml.ns import qn
 from docx.oxml import OxmlElement
 
-OUTPUT = "/home/crypticani/projects/crypticani/crypticani.github.io/public/files/Aniket_Kumar_DevOps_Resume_ATS.docx"
+OUTPUT = "/home/crypticani/projects/crypticani/crypticani.github.io/public/files/Aniket_Kumar_DevOps_Resume.docx"
 
 doc = Document()
 
 for section in doc.sections:
-    section.top_margin = Inches(0.45)
-    section.bottom_margin = Inches(0.45)
+    section.top_margin = Inches(0.42)
+    section.bottom_margin = Inches(0.42)
     section.left_margin = Inches(0.55)
     section.right_margin = Inches(0.55)
     section.page_height = Inches(11)
@@ -37,7 +37,7 @@ GRAY3 = RGBColor(0x66, 0x66, 0x66)
 
 def add_heading_line(doc, text):
     p = doc.add_paragraph()
-    p.paragraph_format.space_before = Pt(5)
+    p.paragraph_format.space_before = Pt(4)
     p.paragraph_format.space_after = Pt(2)
     run = p.add_run(text.upper())
     run.bold = True
@@ -140,16 +140,17 @@ add_body(doc,
     "Senior DevOps Engineer and acting technical lead with 4+ years of experience in high-availability "
     "infrastructure, CI/CD automation, Kubernetes orchestration, and production operations across multi-cloud "
     "and on-premise environments. Lead a team of 8+, driving incident management, root cause analysis, cloud "
-    "migration strategies, and DevSecOps practices while sustaining 99.9% SLA across 15+ production applications. "
+    "migration strategies, and DevSecOps practices while defining SLOs and sustaining 99.9% SLA across 15+ production applications. "
     "Full-stack development background with strong end-to-end troubleshooting skills; expertise in Infrastructure "
     "as Code, observability, database HA/DR, cost optimization, and security compliance (ISO 27001, SOC 2).")
 
 # ========== TECHNICAL SKILLS ==========
 add_heading_line(doc, "Technical Skills")
 add_skill_line(doc, "Cloud & Infrastructure:", "AWS, OCI, Azure, GCP, Cloud Migration, Disaster Recovery, Cost Optimization, High Availability")
-add_skill_line(doc, "Containers, CI/CD & IaC:", "Docker, Kubernetes, Docker Compose, Jenkins, GitHub Actions, GitLab CI/CD, Terraform, Ansible, Grype")
+add_skill_line(doc, "Containers, CI/CD & IaC:", "Docker, Kubernetes, Docker Compose, Jenkins, GitHub Actions, GitLab CI/CD, Terraform, Ansible, Configuration Management, Grype")
 add_skill_line(doc, "Observability & Databases:", "Prometheus, Grafana, Loki, Alertmanager, PromQL, PostgreSQL, Patroni, MySQL, MongoDB, Redis, KeyDB, ClickHouse")
 add_skill_line(doc, "Security, Compliance & Systems:", "Keycloak, SAML/OIDC, SSL/TLS, RBAC, DevSecOps, ISO 27001, SOC 2, Linux, Nginx, HAProxy, DNS, Python, Bash, Git")
+add_skill_line(doc, "Process & ITSM:", "Agile/Scrum, Jira, Freshservice, ITSM, Change Management, Incident Management, Release Management")
 
 # ========== PROFESSIONAL EXPERIENCE ==========
 add_heading_line(doc, "Professional Experience")
@@ -163,10 +164,10 @@ r.font.size = Pt(9.5)
 r.font.color.rgb = GRAY2
 r.font.name = 'Calibri'
 
-add_bullet(doc, "Serve as acting technical lead for 15+ production applications, mentoring 5+ engineers, leading root cause analysis, coordinating incident response, and managing sprint-level DevOps planning while sustaining 99.9% uptime SLA.")
+add_bullet(doc, "Serve as acting technical lead for 15+ production applications, mentoring 5+ engineers, leading root cause analysis, coordinating incident response via Freshservice, and driving Agile sprint planning while defining SLOs and sustaining 99.9% uptime SLA.")
 add_bullet(doc, "Planned and executed cloud-to-cloud and cloud-to-on-premise migrations with near-zero-downtime cutover strategies, post-migration validation, and stabilization workflows.")
 add_bullet(doc, "Drove cloud cost optimization initiatives through rightsizing, idle resource cleanup, and reserved capacity planning, reducing monthly infrastructure spend by 25%.")
-add_bullet(doc, "Supported ISO 27001 and SOC 2 audit processes by enforcing access controls, centralized logging, backup validation, and security policy compliance across cloud infrastructure.")
+add_bullet(doc, "Supported ISO 27001 and SOC 2 audit processes by enforcing access controls, change management workflows, centralized logging, backup validation, and security policy compliance across cloud infrastructure.")
 
 # --- Previous Role ---
 add_job_header(doc, "DevOps Engineer \u2014 Kochar Infotech Ltd", "Jun 2023 \u2013 Feb 2025")
