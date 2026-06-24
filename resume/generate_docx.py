@@ -1,48 +1,49 @@
 #!/usr/bin/env python3
-"""Generate ATS-safe DOCX resume for Aniket Kumar - Final version."""
+"""Generate ATS-safe DOCX resume for Aniket Kumar — Senior DevOps Engineer."""
 
 from docx import Document
 from docx.shared import Pt, Inches, RGBColor
 from docx.enum.text import WD_ALIGN_PARAGRAPH
 from docx.oxml.ns import qn
 from docx.oxml import OxmlElement
-import os
 
-OUTPUT = "/home/crypticani/projects/crypticani/crypticani.github.io/public/files/Aniket_Kumar_DevOps_Resume_ATS_Final_v2.docx"
+OUTPUT = "/home/crypticani/projects/crypticani/crypticani.github.io/public/files/Aniket_Kumar_DevOps_Resume_ATS.docx"
 
 doc = Document()
 
-# --- Page setup ---
 for section in doc.sections:
-    section.top_margin = Inches(0.42)
-    section.bottom_margin = Inches(0.42)
-    section.left_margin = Inches(0.5)
-    section.right_margin = Inches(0.5)
+    section.top_margin = Inches(0.45)
+    section.bottom_margin = Inches(0.45)
+    section.left_margin = Inches(0.55)
+    section.right_margin = Inches(0.55)
     section.page_height = Inches(11)
     section.page_width = Inches(8.5)
 
 style = doc.styles['Normal']
 font = style.font
 font.name = 'Calibri'
-font.size = Pt(9.8)
+font.size = Pt(10)
 font.color.rgb = RGBColor(0x1a, 0x1a, 0x1a)
 pf = style.paragraph_format
 pf.space_before = Pt(0)
 pf.space_after = Pt(0)
-pf.line_spacing = Pt(12)
+pf.line_spacing = Pt(12.5)
+
+BLUE = RGBColor(0x1b, 0x3a, 0x5c)
+GRAY = RGBColor(0x44, 0x44, 0x44)
+GRAY2 = RGBColor(0x55, 0x55, 0x55)
+GRAY3 = RGBColor(0x66, 0x66, 0x66)
 
 
 def add_heading_line(doc, text):
-    """Add a section heading with bottom border."""
     p = doc.add_paragraph()
-    p.paragraph_format.space_before = Pt(6)
-    p.paragraph_format.space_after = Pt(3)
+    p.paragraph_format.space_before = Pt(5)
+    p.paragraph_format.space_after = Pt(2)
     run = p.add_run(text.upper())
     run.bold = True
     run.font.size = Pt(10.5)
-    run.font.color.rgb = RGBColor(0x1b, 0x3a, 0x5c)
+    run.font.color.rgb = BLUE
     run.font.name = 'Calibri'
-    # Add bottom border
     pPr = p._p.get_or_add_pPr()
     pBdr = OxmlElement('w:pBdr')
     bottom = OxmlElement('w:bottom')
@@ -52,78 +53,57 @@ def add_heading_line(doc, text):
     bottom.set(qn('w:color'), '1B3A5C')
     pBdr.append(bottom)
     pPr.append(pBdr)
-    return p
 
 
-def add_body(doc, text, size=Pt(10), bold=False, space_after=Pt(0)):
+def add_body(doc, text, size=Pt(10)):
     p = doc.add_paragraph()
-    p.paragraph_format.space_after = space_after
+    p.paragraph_format.space_after = Pt(0)
+    p.paragraph_format.line_spacing = Pt(12.5)
     run = p.add_run(text)
     run.font.size = size
     run.font.name = 'Calibri'
-    run.bold = bold
-    return p
 
 
 def add_bullet(doc, text, size=Pt(10)):
     p = doc.add_paragraph(style='List Bullet')
     p.clear()
     p.paragraph_format.space_before = Pt(0)
-    p.paragraph_format.space_after = Pt(1)
-    p.paragraph_format.line_spacing = Pt(11.8)
+    p.paragraph_format.space_after = Pt(0.5)
+    p.paragraph_format.line_spacing = Pt(12)
     p.paragraph_format.left_indent = Inches(0.25)
     run = p.add_run(text)
     run.font.size = size
     run.font.name = 'Calibri'
-    return p
 
 
 def add_skill_line(doc, label, value):
     p = doc.add_paragraph()
-    p.paragraph_format.space_after = Pt(1)
-    p.paragraph_format.line_spacing = Pt(11.8)
-    run_label = p.add_run(label)
-    run_label.bold = True
-    run_label.font.size = Pt(10)
-    run_label.font.name = 'Calibri'
-    run_val = p.add_run(" " + value)
-    run_val.font.size = Pt(10)
-    run_val.font.name = 'Calibri'
-    return p
+    p.paragraph_format.space_after = Pt(0.5)
+    p.paragraph_format.line_spacing = Pt(12)
+    r1 = p.add_run(label)
+    r1.bold = True
+    r1.font.size = Pt(10)
+    r1.font.name = 'Calibri'
+    r2 = p.add_run(" " + value)
+    r2.font.size = Pt(10)
+    r2.font.name = 'Calibri'
 
 
 def add_job_header(doc, title, dates):
     p = doc.add_paragraph()
     p.paragraph_format.space_before = Pt(3)
     p.paragraph_format.space_after = Pt(0)
-    run_title = p.add_run(title)
-    run_title.bold = True
-    run_title.font.size = Pt(10.5)
-    run_title.font.name = 'Calibri'
-    # Add tab stop for right-aligned date
+    r1 = p.add_run(title)
+    r1.bold = True
+    r1.font.size = Pt(10.5)
+    r1.font.name = 'Calibri'
     tab_stops = p.paragraph_format.tab_stops
-    tab_stops.add_tab_stop(Inches(7.4), alignment=2)  # RIGHT
-    run_tab = p.add_run('\t')
-    run_date = p.add_run(dates)
-    run_date.font.size = Pt(9.5)
-    run_date.font.color.rgb = RGBColor(0x44, 0x44, 0x44)
-    run_date.font.name = 'Calibri'
-    return p
-
-
-def add_inline_labeled(doc, label, text, size=Pt(9.5), space_after=Pt(1)):
-    """Add a paragraph with bold label followed by normal text - single column."""
-    p = doc.add_paragraph()
-    p.paragraph_format.space_after = space_after
-    p.paragraph_format.line_spacing = Pt(12.5)
-    run_label = p.add_run(label)
-    run_label.bold = True
-    run_label.font.size = size
-    run_label.font.name = 'Calibri'
-    run_text = p.add_run(" " + text)
-    run_text.font.size = size
-    run_text.font.name = 'Calibri'
-    return p
+    tab_stops.add_tab_stop(Inches(7.4), alignment=2)
+    p.add_run('\t')
+    r2 = p.add_run(dates)
+    r2.font.size = Pt(9.5)
+    r2.font.color.rgb = GRAY
+    r2.font.name = 'Calibri'
 
 
 # ========== HEADER ==========
@@ -138,91 +118,101 @@ run.font.name = 'Calibri'
 subtitle = doc.add_paragraph()
 subtitle.alignment = WD_ALIGN_PARAGRAPH.CENTER
 subtitle.paragraph_format.space_after = Pt(1)
-run = subtitle.add_run("DevOps Engineer  |  Platform Engineering  |  Cloud Infrastructure  |  SRE")
+run = subtitle.add_run("Senior DevOps Engineer  |  Platform Engineering  |  Cloud Infrastructure  |  SRE")
 run.font.size = Pt(10)
 run.font.color.rgb = RGBColor(0x33, 0x33, 0x33)
 run.font.name = 'Calibri'
 
 contact = doc.add_paragraph()
 contact.alignment = WD_ALIGN_PARAGRAPH.CENTER
-contact.paragraph_format.space_after = Pt(4)
+contact.paragraph_format.space_after = Pt(3)
 run = contact.add_run(
     "Samastipur, Bihar, India  \u2022  +91 9939093867  \u2022  aniket.kumar@hotmail.com  \u2022  "
     "linkedin.com/in/crypticani  \u2022  github.com/crypticani  \u2022  crypticani.dev"
 )
 run.font.size = Pt(9)
-run.font.color.rgb = RGBColor(0x44, 0x44, 0x44)
+run.font.color.rgb = GRAY
 run.font.name = 'Calibri'
 
 # ========== PROFESSIONAL SUMMARY ==========
 add_heading_line(doc, "Professional Summary")
 add_body(doc,
-    "DevOps Engineer with 3+ years of professional experience in production infrastructure, cloud migrations, "
-    "Kubernetes, CI/CD automation, observability, and cloud cost optimization. Experienced in cross-cloud "
-    "migration, cloud-to-on-premise transition, Linux systems, containerized workloads, monitoring stacks, "
-    "and infrastructure automation using Terraform and Ansible.",
-    size=Pt(9.4), space_after=Pt(0))
+    "Senior DevOps Engineer and acting technical lead with 4+ years of experience in high-availability "
+    "infrastructure, CI/CD automation, Kubernetes orchestration, and production operations across multi-cloud "
+    "and on-premise environments. Lead a team of 8+, driving incident management, root cause analysis, cloud "
+    "migration strategies, and DevSecOps practices while sustaining 99.9% SLA across 15+ production applications. "
+    "Full-stack development background with strong end-to-end troubleshooting skills; expertise in Infrastructure "
+    "as Code, observability, database HA/DR, cost optimization, and security compliance (ISO 27001, SOC 2).")
 
 # ========== TECHNICAL SKILLS ==========
 add_heading_line(doc, "Technical Skills")
-add_skill_line(doc, "Cloud:", "AWS, OCI, Azure, GCP, Cloud Migration, Cloud Cost Optimization, Disaster Recovery")
-add_skill_line(doc, "Infrastructure:", "Linux, Docker, Kubernetes, Terraform, Ansible, Nginx, HAProxy, Load Balancing, DNS, HA Architecture")
-add_skill_line(doc, "CI/CD & Observability:", "Jenkins, GitHub Actions, GitLab CI/CD, Prometheus, Grafana, Alertmanager, Loki, Custom Exporters")
-add_skill_line(doc, "Databases, Security & Scripting:", "PostgreSQL, MySQL, MongoDB, Redis, Keycloak, SAML/OIDC, SSL/TLS, RBAC, Secrets Management, Bash, Python, Git")
+add_skill_line(doc, "Cloud & Infrastructure:", "AWS, OCI, Azure, GCP, Cloud Migration, Disaster Recovery, Cost Optimization, High Availability")
+add_skill_line(doc, "Containers, CI/CD & IaC:", "Docker, Kubernetes, Docker Compose, Jenkins, GitHub Actions, GitLab CI/CD, Terraform, Ansible, Grype")
+add_skill_line(doc, "Observability & Databases:", "Prometheus, Grafana, Loki, Alertmanager, PromQL, PostgreSQL, Patroni, MySQL, MongoDB, Redis, KeyDB, ClickHouse")
+add_skill_line(doc, "Security, Compliance & Systems:", "Keycloak, SAML/OIDC, SSL/TLS, RBAC, DevSecOps, ISO 27001, SOC 2, Linux, Nginx, HAProxy, DNS, Python, Bash, Git")
 
 # ========== PROFESSIONAL EXPERIENCE ==========
 add_heading_line(doc, "Professional Experience")
 
-add_job_header(doc, "DevOps Engineer \u2014 KocharTech", "Jun 2023 \u2013 Present")
-loc = doc.add_paragraph()
-loc.paragraph_format.space_after = Pt(1)
-run = loc.add_run("Amritsar, India")
-run.font.size = Pt(9.5)
-run.font.color.rgb = RGBColor(0x55, 0x55, 0x55)
-run.font.name = 'Calibri'
+# --- Current Role ---
+add_job_header(doc, "DevOps Engineer (Acting Technical Lead) \u2014 Kochar Innovations Pvt Ltd", "Mar 2025 \u2013 Present")
+p = doc.add_paragraph()
+p.paragraph_format.space_after = Pt(1)
+r = p.add_run("Amritsar, India")
+r.font.size = Pt(9.5)
+r.font.color.rgb = GRAY2
+r.font.name = 'Calibri'
 
-add_bullet(doc, "Own production infrastructure, CI/CD, observability, and cloud operations for 15+ applications, sustaining 99.9% uptime SLA across client deployments.")
-add_bullet(doc, "Planned and executed cross-cloud migration work, including scheduled downtime windows, near real-time cutover approaches, validation, and post-migration stabilization.")
-add_bullet(doc, "Supported cloud-to-on-premise migration initiatives involving infrastructure planning, service cutover, data movement, reverse proxy updates, and production readiness checks.")
-add_bullet(doc, "Built repeatable infrastructure and delivery workflows using Terraform, Ansible, Docker, Jenkins, GitLab CI, and GitHub Actions.")
-add_bullet(doc, "Containerized 20+ services; managed Kubernetes workloads with rolling updates, zero-downtime release practices, and Grype-based CI/CD security gates.")
-add_bullet(doc, "Operated monitoring and troubleshooting workflows using Prometheus, Grafana, Loki, Alertmanager, PromQL dashboards, and custom exporters.")
-add_bullet(doc, "Managed HA data platforms including PostgreSQL + Patroni, MySQL Group Replication, MongoDB Replica Sets, ClickHouse, Redis Sentinel, and KeyDB.")
-add_bullet(doc, "Optimized cloud spend by 25% through usage review, rightsizing, cleanup of underutilized resources, and cost visibility improvements.")
+add_bullet(doc, "Serve as acting technical lead for 15+ production applications, mentoring 5+ engineers, leading root cause analysis, coordinating incident response, and managing sprint-level DevOps planning while sustaining 99.9% uptime SLA.")
+add_bullet(doc, "Planned and executed cloud-to-cloud and cloud-to-on-premise migrations with near-zero-downtime cutover strategies, post-migration validation, and stabilization workflows.")
+add_bullet(doc, "Drove cloud cost optimization initiatives through rightsizing, idle resource cleanup, and reserved capacity planning, reducing monthly infrastructure spend by 25%.")
+add_bullet(doc, "Supported ISO 27001 and SOC 2 audit processes by enforcing access controls, centralized logging, backup validation, and security policy compliance across cloud infrastructure.")
 
-add_job_header(doc, "IT Intern \u2014 KocharTech", "Jun 2022 \u2013 May 2023")
-loc2 = doc.add_paragraph()
-loc2.paragraph_format.space_after = Pt(1)
-run2 = loc2.add_run("Amritsar, India")
-run2.font.size = Pt(9.5)
-run2.font.color.rgb = RGBColor(0x55, 0x55, 0x55)
-run2.font.name = 'Calibri'
+# --- Previous Role ---
+add_job_header(doc, "DevOps Engineer \u2014 Kochar Infotech Ltd", "Jun 2023 \u2013 Feb 2025")
+note = doc.add_paragraph()
+note.paragraph_format.space_after = Pt(1)
+r = note.add_run("Continuous role; company restructured to Kochar Innovations Pvt Ltd with same team and responsibilities.")
+r.font.size = Pt(9)
+r.font.color.rgb = GRAY3
+r.font.name = 'Calibri'
+r.italic = True
 
-add_bullet(doc, "Built observability coverage using Prometheus, Alertmanager, Grafana, Loki, and Fluent Bit across 100+ hosts and 200+ containers.")
-add_bullet(doc, "Developed Python exporters and 15+ Grafana dashboards with PromQL panels for infrastructure health, application performance, and alerting.")
-add_bullet(doc, "Automated Linux home-directory backups to AWS S3 and built a Django + MQTT device management portal for 50+ devices.")
+add_bullet(doc, "Designed and maintained CI/CD pipelines using Jenkins, GitHub Actions, GitLab CI/CD, Terraform, and Ansible, increasing release cadence from bi-weekly to multiple daily deployments.")
+add_bullet(doc, "Containerized 20+ services with multi-stage Dockerfiles and managed Kubernetes workloads with rolling updates and zero-downtime releases; reduced image size by 60% and deployment time by 50%.")
+add_bullet(doc, "Integrated Grype-based container vulnerability scanning into CI/CD security gates, blocking critical/high CVE deployments and reducing production vulnerability exposure by 90%.")
+add_bullet(doc, "Built full-stack observability using Prometheus, Grafana, Alertmanager, Loki, and custom Python exporters across 100+ hosts and 200+ containers with 15+ operational dashboards.")
+add_bullet(doc, "Architected HA data platforms: PostgreSQL + Patroni, MySQL Group Replication, MongoDB Replica Sets, ClickHouse, Redis Sentinel, and KeyDB with automated backup, PITR, and failover runbooks.")
+add_bullet(doc, "Implemented disaster recovery with automated snapshots, cross-region backup replication, and documented recovery runbooks, achieving sub-30-minute RTO.")
 
-add_job_header(doc, "Full Stack Development Intern \u2014 TheCodeWork", "Jun 2021 \u2013 Oct 2021")
-add_bullet(doc, "Developed Django/DRF backend APIs and VueJS/TailwindCSS interfaces for a no-code application platform.")
+# --- Intern ---
+add_job_header(doc, "IT Intern \u2014 Kochar Infotech Ltd", "Jun 2022 \u2013 May 2023")
+add_bullet(doc, "Built organization-wide monitoring infrastructure from scratch using Prometheus, Grafana, Loki, and Fluent Bit; automated backup workflows to AWS S3; developed Django + MQTT device portal for 50+ devices.")
 
-add_job_header(doc, "Software Development Intern \u2014 All World Gayatri Pariwar", "Feb 2021 \u2013 May 2021")
-add_bullet(doc, "Supported bug fixes, feature updates, ERP development, and project documentation for internal software systems.")
-
-# ========== CERTIFICATIONS & EDUCATION (single-column inline) ==========
+# ========== CERTIFICATIONS & EDUCATION ==========
 add_heading_line(doc, "Certifications & Education")
 
-add_inline_labeled(doc, "Certifications:",
-    "Oracle Cloud Infrastructure 2025 Certified Architect Associate; "
-    "Cloud Architecture \u2013 Google Cloud Skills Boost; "
-    "Google IT Automation with Python \u2013 Coursera; "
-    "Foundations of Project Management \u2013 Coursera",
-    size=Pt(9.5), space_after=Pt(1))
+p1 = doc.add_paragraph()
+p1.paragraph_format.space_after = Pt(1)
+p1.paragraph_format.line_spacing = Pt(12)
+r = p1.add_run("Certifications: ")
+r.bold = True
+r.font.size = Pt(9.5)
+r.font.name = 'Calibri'
+r2 = p1.add_run("Oracle Cloud Infrastructure 2025 Certified Architect Associate \u2022 Cloud Architecture \u2013 Google Cloud Skills Boost \u2022 Google IT Automation with Python \u2013 Coursera \u2022 Foundations of Project Management \u2013 Coursera")
+r2.font.size = Pt(9.5)
+r2.font.name = 'Calibri'
 
-add_inline_labeled(doc, "Education:",
-    "MCA, Lovely Professional University, Punjab, 2021\u20132023, CGPA 8.97; "
-    "BCA, Dev Sanskriti Vishwavidyalaya, Haridwar, 2018\u20132021, CGPA 8.0, Academic Excellence Award",
-    size=Pt(9.5), space_after=Pt(0))
+p2 = doc.add_paragraph()
+p2.paragraph_format.space_after = Pt(0)
+p2.paragraph_format.line_spacing = Pt(12)
+r = p2.add_run("Education: ")
+r.bold = True
+r.font.size = Pt(9.5)
+r.font.name = 'Calibri'
+r2 = p2.add_run("MCA, Lovely Professional University, Punjab (2021\u20132023), CGPA 8.97 \u2022 BCA, Dev Sanskriti Vishwavidyalaya, Haridwar (2018\u20132021), CGPA 8.0, Academic Excellence Award")
+r2.font.size = Pt(9.5)
+r2.font.name = 'Calibri'
 
-os.makedirs(os.path.dirname(OUTPUT), exist_ok=True)
 doc.save(OUTPUT)
 print(f"DOCX saved to: {OUTPUT}")

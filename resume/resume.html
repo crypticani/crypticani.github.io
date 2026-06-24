@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Aniket Kumar - DevOps Engineer Resume</title>
+<title>Aniket Kumar - Senior DevOps Engineer Resume</title>
 <style>
   @page {
     size: letter;
@@ -10,13 +10,13 @@
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body {
-    font-family: "Liberation Sans", Arial, Helvetica, sans-serif;
-    font-size: 9.8pt;
-    line-height: 1.26;
+    font-family: "Liberation Sans", Calibri, Arial, Helvetica, sans-serif;
+    font-size: 10.5pt;
+    line-height: 1.3;
     color: #1a1a1a;
     width: 8.5in;
     height: 11in;
-    padding: 0.42in 0.5in;
+    padding: 0.45in 0.55in 0.45in 0.55in;
     overflow: hidden;
   }
 
@@ -30,15 +30,15 @@
   }
   .subtitle {
     text-align: center;
-    font-size: 9.4pt;
+    font-size: 10pt;
     color: #333;
     margin-bottom: 2pt;
   }
   .contact {
     text-align: center;
-    font-size: 8.5pt;
+    font-size: 9pt;
     color: #444;
-    margin-bottom: 6pt;
+    margin-bottom: 5pt;
     line-height: 1.4;
   }
   .contact a { color: #444; text-decoration: none; }
@@ -49,8 +49,8 @@
     font-weight: bold;
     color: #1b3a5c;
     border-bottom: 1.2px solid #1b3a5c;
-    padding-bottom: 1.5pt;
-    margin-top: 6pt;
+    padding-bottom: 1pt;
+    margin-top: 5pt;
     margin-bottom: 3pt;
     text-transform: uppercase;
     letter-spacing: 0.5pt;
@@ -59,22 +59,22 @@
   /* --- Summary --- */
   .summary {
     margin-bottom: 0;
-    line-height: 1.35;
-    font-size: 9.4pt;
+    line-height: 1.32;
+    font-size: 10pt;
   }
 
   /* --- Skills --- */
   .skills-row {
-    margin-bottom: 1pt;
-    line-height: 1.3;
-    font-size: 9.4pt;
+    margin-bottom: 0.5pt;
+    line-height: 1.28;
+    font-size: 10pt;
   }
   .skills-label {
     font-weight: bold;
   }
 
   /* --- Experience --- */
-  .job { margin-bottom: 5pt; }
+  .job { margin-bottom: 4pt; }
   .job:last-child { margin-bottom: 0; }
   .job-header {
     display: flex;
@@ -93,7 +93,13 @@
   .job-company {
     font-size: 9.5pt;
     color: #555;
-    margin-bottom: 1.5pt;
+    margin-bottom: 1pt;
+  }
+  .job-note {
+    font-size: 9pt;
+    color: #666;
+    font-style: italic;
+    margin-bottom: 1pt;
   }
   ul {
     margin-left: 14pt;
@@ -101,20 +107,20 @@
   }
   li {
     margin-bottom: 1pt;
-    line-height: 1.3;
+    line-height: 1.28;
     font-size: 10pt;
   }
 
-  /* --- Certs & Education (single-column inline) --- */
-  .certed-inline {
-    margin-top: 2pt;
+  /* --- Certs & Education --- */
+  .compact-section {
     font-size: 9.5pt;
-    line-height: 1.35;
+    line-height: 1.3;
+    margin-top: 1pt;
   }
-  .certed-inline .sub-label {
+  .compact-section .label {
     font-weight: bold;
   }
-  .certed-inline p {
+  .compact-row {
     margin-bottom: 1pt;
   }
 </style>
@@ -122,80 +128,69 @@
 <body>
 
 <h1>Aniket Kumar</h1>
-<div class="subtitle">DevOps Engineer &nbsp;|&nbsp; Platform Engineering &nbsp;|&nbsp; Cloud Infrastructure &nbsp;|&nbsp; SRE</div>
+<div class="subtitle">Senior DevOps Engineer &nbsp;|&nbsp; Platform Engineering &nbsp;|&nbsp; Cloud Infrastructure &nbsp;|&nbsp; SRE</div>
 <div class="contact">
-  Samastipur, Bihar, India &bull; +91 9939093867 &bull; aniket.kumar@hotmail.com &bull;
-  <a href="https://linkedin.com/in/crypticani">linkedin.com/in/crypticani</a> &bull;
-  <a href="https://github.com/crypticani">github.com/crypticani</a> &bull;
+  Samastipur, Bihar, India &nbsp;&bull;&nbsp; +91 9939093867 &nbsp;&bull;&nbsp; aniket.kumar@hotmail.com
+  &nbsp;&bull;&nbsp; <a href="https://linkedin.com/in/crypticani">linkedin.com/in/crypticani</a> &nbsp;&bull;&nbsp;
+  <a href="https://github.com/crypticani">github.com/crypticani</a> &nbsp;&bull;&nbsp;
   <a href="https://crypticani.dev">crypticani.dev</a>
 </div>
 
 <h2>Professional Summary</h2>
-<p class="summary">DevOps Engineer with 3+ years of professional experience in production infrastructure, cloud migrations, Kubernetes, CI/CD automation, observability, and cloud cost optimization. Experienced in cross-cloud migration, cloud-to-on-premise transition, Linux systems, containerized workloads, monitoring stacks, and infrastructure automation using Terraform and Ansible.</p>
+<p class="summary">Senior DevOps Engineer and acting technical lead with 4+ years of experience in high-availability infrastructure, CI/CD automation, Kubernetes orchestration, and production operations across multi-cloud and on-premise environments. Lead a team of 8+, driving incident management, root cause analysis, cloud migration strategies, and DevSecOps practices while sustaining 99.9% SLA across 15+ production applications. Full-stack development background with strong end-to-end troubleshooting skills; expertise in Infrastructure as Code, observability, database HA/DR, cost optimization, and security compliance (ISO 27001, SOC 2).</p>
 
 <h2>Technical Skills</h2>
-<div class="skills-row"><span class="skills-label">Cloud:</span> AWS, OCI, Azure, GCP, Cloud Migration, Cloud Cost Optimization, Disaster Recovery</div>
-<div class="skills-row"><span class="skills-label">Infrastructure:</span> Linux, Docker, Kubernetes, Terraform, Ansible, Nginx, HAProxy, Load Balancing, DNS, HA Architecture</div>
-<div class="skills-row"><span class="skills-label">CI/CD &amp; Observability:</span> Jenkins, GitHub Actions, GitLab CI/CD, Prometheus, Grafana, Alertmanager, Loki, Custom Exporters</div>
-<div class="skills-row"><span class="skills-label">Databases, Security &amp; Scripting:</span> PostgreSQL, MySQL, MongoDB, Redis, Keycloak, SAML/OIDC, SSL/TLS, RBAC, Secrets Management, Bash, Python, Git</div>
+<div class="skills-row"><span class="skills-label">Cloud &amp; Infrastructure:</span> AWS, OCI, Azure, GCP, Cloud Migration, Disaster Recovery, Cost Optimization, High Availability</div>
+<div class="skills-row"><span class="skills-label">Containers, CI/CD &amp; IaC:</span> Docker, Kubernetes, Docker Compose, Jenkins, GitHub Actions, GitLab CI/CD, Terraform, Ansible, Grype</div>
+<div class="skills-row"><span class="skills-label">Observability &amp; Databases:</span> Prometheus, Grafana, Loki, Alertmanager, PromQL, PostgreSQL, Patroni, MySQL, MongoDB, Redis, KeyDB, ClickHouse</div>
+<div class="skills-row"><span class="skills-label">Security, Compliance &amp; Systems:</span> Keycloak, SAML/OIDC, SSL/TLS, RBAC, DevSecOps, ISO 27001, SOC 2, Linux, Nginx, HAProxy, DNS, Python, Bash, Git</div>
 
 <h2>Professional Experience</h2>
 
 <div class="job">
   <div class="job-header">
-    <span class="job-title">DevOps Engineer &mdash; KocharTech</span>
-    <span class="job-date">Jun 2023 &ndash; Present</span>
+    <span class="job-title">DevOps Engineer (Acting Technical Lead) &mdash; Kochar Innovations Pvt Ltd</span>
+    <span class="job-date">Mar 2025 &ndash; Present</span>
   </div>
   <div class="job-company">Amritsar, India</div>
   <ul>
-    <li>Own production infrastructure, CI/CD, observability, and cloud operations for 15+ applications, sustaining 99.9% uptime SLA across client deployments.</li>
-    <li>Planned and executed cross-cloud migration work, including scheduled downtime windows, near real-time cutover approaches, validation, and post-migration stabilization.</li>
-    <li>Supported cloud-to-on-premise migration initiatives involving infrastructure planning, service cutover, data movement, reverse proxy updates, and production readiness checks.</li>
-    <li>Built repeatable infrastructure and delivery workflows using Terraform, Ansible, Docker, Jenkins, GitLab CI, and GitHub Actions.</li>
-    <li>Containerized 20+ services; managed Kubernetes workloads with rolling updates, zero-downtime release practices, and Grype-based CI/CD security gates.</li>
-    <li>Operated monitoring and troubleshooting workflows using Prometheus, Grafana, Loki, Alertmanager, PromQL dashboards, and custom exporters.</li>
-    <li>Managed HA data platforms including PostgreSQL + Patroni, MySQL Group Replication, MongoDB Replica Sets, ClickHouse, Redis Sentinel, and KeyDB.</li>
-    <li>Optimized cloud spend by 25% through usage review, rightsizing, cleanup of underutilized resources, and cost visibility improvements.</li>
+    <li>Serve as acting technical lead for 15+ production applications, mentoring 5+ engineers, leading root cause analysis, coordinating incident response, and managing sprint-level DevOps planning while sustaining 99.9% uptime SLA.</li>
+    <li>Planned and executed cloud-to-cloud and cloud-to-on-premise migrations with near-zero-downtime cutover strategies, post-migration validation, and stabilization workflows.</li>
+    <li>Drove cloud cost optimization initiatives through rightsizing, idle resource cleanup, and reserved capacity planning, reducing monthly infrastructure spend by 25%.</li>
+    <li>Supported ISO 27001 and SOC 2 audit processes by enforcing access controls, centralized logging, backup validation, and security policy compliance across cloud infrastructure.</li>
   </ul>
 </div>
 
 <div class="job">
   <div class="job-header">
-    <span class="job-title">IT Intern &mdash; KocharTech</span>
+    <span class="job-title">DevOps Engineer &mdash; Kochar Infotech Ltd</span>
+    <span class="job-date">Jun 2023 &ndash; Feb 2025</span>
+  </div>
+  <div class="job-note">Continuous role; company restructured to Kochar Innovations Pvt Ltd with same team and responsibilities.</div>
+  <ul>
+    <li>Designed and maintained CI/CD pipelines using Jenkins, GitHub Actions, GitLab CI/CD, Terraform, and Ansible, increasing release cadence from bi-weekly to multiple daily deployments.</li>
+    <li>Containerized 20+ services with multi-stage Dockerfiles and managed Kubernetes workloads with rolling updates and zero-downtime releases; reduced image size by 60% and deployment time by 50%.</li>
+    <li>Integrated Grype-based container vulnerability scanning into CI/CD security gates, blocking critical/high CVE deployments and reducing production vulnerability exposure by 90%.</li>
+    <li>Built full-stack observability using Prometheus, Grafana, Alertmanager, Loki, and custom Python exporters across 100+ hosts and 200+ containers with 15+ operational dashboards.</li>
+    <li>Architected HA data platforms: PostgreSQL + Patroni, MySQL Group Replication, MongoDB Replica Sets, ClickHouse, Redis Sentinel, and KeyDB with automated backup, PITR, and failover runbooks.</li>
+    <li>Implemented disaster recovery with automated snapshots, cross-region backup replication, and documented recovery runbooks, achieving sub-30-minute RTO.</li>
+  </ul>
+</div>
+
+<div class="job">
+  <div class="job-header">
+    <span class="job-title">IT Intern &mdash; Kochar Infotech Ltd</span>
     <span class="job-date">Jun 2022 &ndash; May 2023</span>
   </div>
-  <div class="job-company">Amritsar, India</div>
   <ul>
-    <li>Built observability coverage using Prometheus, Alertmanager, Grafana, Loki, and Fluent Bit across 100+ hosts and 200+ containers.</li>
-    <li>Developed Python exporters and 15+ Grafana dashboards with PromQL panels for infrastructure health, application performance, and alerting.</li>
-    <li>Automated Linux home-directory backups to AWS S3 and built a Django + MQTT device management portal for 50+ devices.</li>
-  </ul>
-</div>
-
-<div class="job">
-  <div class="job-header">
-    <span class="job-title">Full Stack Development Intern &mdash; TheCodeWork</span>
-    <span class="job-date">Jun 2021 &ndash; Oct 2021</span>
-  </div>
-  <ul>
-    <li>Developed Django/DRF backend APIs and VueJS/TailwindCSS interfaces for a no-code application platform.</li>
-  </ul>
-</div>
-
-<div class="job">
-  <div class="job-header">
-    <span class="job-title">Software Development Intern &mdash; All World Gayatri Pariwar</span>
-    <span class="job-date">Feb 2021 &ndash; May 2021</span>
-  </div>
-  <ul>
-    <li>Supported bug fixes, feature updates, ERP development, and project documentation for internal software systems.</li>
+    <li>Built organization-wide monitoring infrastructure from scratch using Prometheus, Grafana, Loki, and Fluent Bit; automated backup workflows to AWS S3; developed Django + MQTT device portal for 50+ devices.</li>
   </ul>
 </div>
 
 <h2>Certifications &amp; Education</h2>
-<div class="certed-inline">
-  <p><span class="sub-label">Certifications:</span> Oracle Cloud Infrastructure 2025 Certified Architect Associate; Cloud Architecture &ndash; Google Cloud Skills Boost; Google IT Automation with Python &ndash; Coursera; Foundations of Project Management &ndash; Coursera</p>
-  <p><span class="sub-label">Education:</span> MCA, Lovely Professional University, Punjab, 2021&ndash;2023, CGPA 8.97; BCA, Dev Sanskriti Vishwavidyalaya, Haridwar, 2018&ndash;2021, CGPA 8.0, Academic Excellence Award</p>
+<div class="compact-section">
+  <div class="compact-row"><span class="label">Certifications:</span> Oracle Cloud Infrastructure 2025 Certified Architect Associate &bull; Cloud Architecture &ndash; Google Cloud Skills Boost &bull; Google IT Automation with Python &ndash; Coursera &bull; Foundations of Project Management &ndash; Coursera</div>
+  <div class="compact-row"><span class="label">Education:</span> MCA, Lovely Professional University, Punjab (2021&ndash;2023), CGPA 8.97 &bull; BCA, Dev Sanskriti Vishwavidyalaya, Haridwar (2018&ndash;2021), CGPA 8.0, Academic Excellence Award</div>
 </div>
 
 </body>
