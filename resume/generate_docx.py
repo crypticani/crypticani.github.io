@@ -118,7 +118,7 @@ run.font.name = 'Calibri'
 subtitle = doc.add_paragraph()
 subtitle.alignment = WD_ALIGN_PARAGRAPH.CENTER
 subtitle.paragraph_format.space_after = Pt(1)
-run = subtitle.add_run("Senior DevOps Engineer  |  Platform Engineering  |  Cloud Infrastructure  |  SRE")
+run = subtitle.add_run("Senior DevOps Engineer  |  Technical Lead  |  Platform Engineering  |  SRE")
 run.font.size = Pt(10)
 run.font.color.rgb = RGBColor(0x33, 0x33, 0x33)
 run.font.name = 'Calibri'
@@ -127,7 +127,7 @@ contact = doc.add_paragraph()
 contact.alignment = WD_ALIGN_PARAGRAPH.CENTER
 contact.paragraph_format.space_after = Pt(3)
 run = contact.add_run(
-    "Samastipur, Bihar, India  \u2022  +91 9939093867  \u2022  aniket.kumar@hotmail.com  \u2022  "
+    "Open to Relocation | India  \u2022  +91 9939093867  \u2022  aniket.kumar@hotmail.com  \u2022  "
     "linkedin.com/in/crypticani  \u2022  github.com/crypticani  \u2022  crypticani.dev"
 )
 run.font.size = Pt(9)
@@ -137,12 +137,13 @@ run.font.name = 'Calibri'
 # ========== PROFESSIONAL SUMMARY ==========
 add_heading_line(doc, "Professional Summary")
 add_body(doc,
-    "Senior DevOps Engineer and acting technical lead with 4+ years of experience in high-availability "
-    "infrastructure, CI/CD automation, Kubernetes orchestration, and production operations across multi-cloud "
-    "and on-premise environments. Lead a team of 8+, driving incident management, root cause analysis, cloud "
-    "migration strategies, and DevSecOps practices while defining SLOs and sustaining 99.9% SLA across 15+ production applications. "
-    "Full-stack development background with strong end-to-end troubleshooting skills; expertise in Infrastructure "
-    "as Code, observability, database HA/DR, cost optimization, and security compliance (ISO 27001, SOC 2).")
+    "Senior DevOps Engineer and Technical Lead with 4+ years of experience in Platform Engineering, "
+    "Kubernetes orchestration, CI/CD automation, and Reliability Engineering across multi-cloud and on-premise "
+    "environments. Technical lead for a DevOps team of 8+ engineers while directly managing and mentoring "
+    "2\u20133 interns. Drove infrastructure decision-making, RCA ownership, incident coordination, and sprint "
+    "planning while defining SLOs and sustaining 99.9% SLA across 15+ production applications. Skilled in "
+    "Terraform-based Infrastructure as Code, observability, database HA/DR, cost optimization, and supported "
+    "ISO 27001 and SOC 2 compliance initiatives.")
 
 # ========== TECHNICAL SKILLS ==========
 add_heading_line(doc, "Technical Skills")
@@ -164,10 +165,11 @@ r.font.size = Pt(9.5)
 r.font.color.rgb = GRAY2
 r.font.name = 'Calibri'
 
-add_bullet(doc, "Serve as acting technical lead for 15+ production applications, mentoring 5+ engineers, leading root cause analysis, coordinating incident response via Freshservice, and driving Agile sprint planning while defining SLOs and sustaining 99.9% uptime SLA.")
+add_bullet(doc, "Technical lead for a DevOps team of 8+ engineers while directly managing and mentoring 2\u20133 interns; drove task assignment, roster management, sprint coordination, technical guidance, incident coordination, and RCA ownership across 15+ production applications, sustaining 99.9% uptime SLA.")
 add_bullet(doc, "Planned and executed cloud-to-cloud and cloud-to-on-premise migrations with near-zero-downtime cutover strategies, post-migration validation, and stabilization workflows.")
 add_bullet(doc, "Drove cloud cost optimization initiatives through rightsizing, idle resource cleanup, and reserved capacity planning, reducing monthly infrastructure spend by 25%.")
-add_bullet(doc, "Supported ISO 27001 and SOC 2 audit processes by enforcing access controls, change management workflows, centralized logging, backup validation, and security policy compliance across cloud infrastructure.")
+add_bullet(doc, "Supported ISO 27001 and SOC 2 audit and compliance activities by enforcing access controls, change management workflows, centralized logging, backup validation, and security policy compliance across cloud infrastructure.")
+add_bullet(doc, "Defined infrastructure standards, deployment patterns, operational runbooks, and platform best practices adopted across multiple application teams, improving deployment consistency and operational reliability.")
 
 # --- Previous Role ---
 add_job_header(doc, "DevOps Engineer \u2014 Kochar Infotech Ltd", "Jun 2023 \u2013 Feb 2025")
@@ -183,8 +185,8 @@ add_bullet(doc, "Designed and maintained CI/CD pipelines using Jenkins, GitHub A
 add_bullet(doc, "Containerized 20+ services with multi-stage Dockerfiles and managed Kubernetes workloads with rolling updates and zero-downtime releases; reduced image size by 60% and deployment time by 50%.")
 add_bullet(doc, "Integrated Grype-based container vulnerability scanning into CI/CD security gates, blocking critical/high CVE deployments and reducing production vulnerability exposure by 90%.")
 add_bullet(doc, "Built full-stack observability using Prometheus, Grafana, Alertmanager, Loki, and custom Python exporters across 100+ hosts and 200+ containers with 15+ operational dashboards.")
-add_bullet(doc, "Architected HA data platforms: PostgreSQL + Patroni, MySQL Group Replication, MongoDB Replica Sets, ClickHouse, Redis Sentinel, and KeyDB with automated backup, PITR, and failover runbooks.")
-add_bullet(doc, "Implemented disaster recovery with automated snapshots, cross-region backup replication, and documented recovery runbooks, achieving sub-30-minute RTO.")
+add_bullet(doc, "Architected HA data platforms: PostgreSQL + Patroni, MySQL Group Replication, MongoDB Replica Sets, ClickHouse, Redis Sentinel, and KeyDB with automated backup, PITR, and production readiness runbooks.")
+add_bullet(doc, "Implemented disaster recovery with automated snapshots, cross-region backup replication, and documented recovery runbooks, achieving sub-30-minute RTO and operational excellence standards.")
 
 # --- Intern ---
 add_job_header(doc, "IT Intern \u2014 Kochar Infotech Ltd", "Jun 2022 \u2013 May 2023")
