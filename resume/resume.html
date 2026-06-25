@@ -16,7 +16,7 @@
     color: #1a1a1a;
     width: 8.5in;
     height: 11in;
-    padding: 0.42in 0.55in 0.42in 0.55in;
+    padding: 0.32in 0.55in 0.3in 0.55in;
     overflow: hidden;
   }
 
@@ -25,20 +25,20 @@
     font-size: 18pt;
     text-align: center;
     color: #1a1a1a;
-    margin-bottom: 1pt;
+    margin-bottom: 0pt;
     letter-spacing: 0.3pt;
   }
   .subtitle {
     text-align: center;
     font-size: 10pt;
     color: #333;
-    margin-bottom: 2pt;
+    margin-bottom: 1pt;
   }
   .contact {
     text-align: center;
     font-size: 9pt;
     color: #444;
-    margin-bottom: 4pt;
+    margin-bottom: 2pt;
     line-height: 1.4;
   }
   .contact a { color: #444; text-decoration: none; }
@@ -50,7 +50,7 @@
     color: #1b3a5c;
     border-bottom: 1.2px solid #1b3a5c;
     padding-bottom: 1pt;
-    margin-top: 4pt;
+    margin-top: 3pt;
     margin-bottom: 2pt;
     text-transform: uppercase;
     letter-spacing: 0.5pt;
@@ -59,7 +59,7 @@
   /* --- Summary --- */
   .summary {
     margin-bottom: 0;
-    line-height: 1.28;
+    line-height: 1.22;
     font-size: 10pt;
   }
 
@@ -74,7 +74,7 @@
   }
 
   /* --- Experience --- */
-  .job { margin-bottom: 3pt; }
+  .job { margin-bottom: 2pt; }
   .job:last-child { margin-bottom: 0; }
   .job-header {
     display: flex;
@@ -106,8 +106,8 @@
     margin-bottom: 0;
   }
   li {
-    margin-bottom: 0.5pt;
-    line-height: 1.25;
+    margin-bottom: 0.2pt;
+    line-height: 1.2;
     font-size: 10pt;
   }
 
@@ -128,16 +128,16 @@
 <body>
 
 <h1>Aniket Kumar</h1>
-<div class="subtitle">Senior DevOps Engineer &nbsp;|&nbsp; Platform Engineering &nbsp;|&nbsp; Cloud Infrastructure &nbsp;|&nbsp; SRE</div>
+<div class="subtitle">Senior DevOps Engineer &nbsp;|&nbsp; Technical Lead &nbsp;|&nbsp; Platform Engineering &nbsp;|&nbsp; SRE</div>
 <div class="contact">
-  Samastipur, Bihar, India &nbsp;&bull;&nbsp; +91 9939093867 &nbsp;&bull;&nbsp; aniket.kumar@hotmail.com
+  Open to Relocation | India &nbsp;&bull;&nbsp; +91 9939093867 &nbsp;&bull;&nbsp; aniket.kumar@hotmail.com
   &nbsp;&bull;&nbsp; <a href="https://linkedin.com/in/crypticani">linkedin.com/in/crypticani</a> &nbsp;&bull;&nbsp;
   <a href="https://github.com/crypticani">github.com/crypticani</a> &nbsp;&bull;&nbsp;
   <a href="https://crypticani.dev">crypticani.dev</a>
 </div>
 
 <h2>Professional Summary</h2>
-<p class="summary">Senior DevOps Engineer and acting technical lead with 4+ years of experience in high-availability infrastructure, CI/CD automation, Kubernetes orchestration, and production operations across multi-cloud and on-premise environments. Lead a team of 8+, driving incident management, root cause analysis, cloud migration strategies, and DevSecOps practices while defining SLOs and sustaining 99.9% SLA across 15+ production applications. Full-stack development background with strong end-to-end troubleshooting skills; expertise in Infrastructure as Code, observability, database HA/DR, cost optimization, and security compliance (ISO 27001, SOC 2).</p>
+<p class="summary">Senior DevOps Engineer and Technical Lead with 4+ years of experience in Platform Engineering, Kubernetes orchestration, CI/CD automation, and Reliability Engineering across multi-cloud and on-premise environments. Technical lead for a DevOps team of 8+ engineers while directly managing and mentoring 2&ndash;3 interns. Drove infrastructure decision-making, RCA ownership, incident coordination, and sprint planning while defining SLOs and sustaining 99.9% SLA across 15+ production applications. Skilled in Terraform-based Infrastructure as Code, observability, database HA/DR, cost optimization, and supported ISO 27001 and SOC 2 compliance initiatives.</p>
 
 <h2>Technical Skills</h2>
 <div class="skills-row"><span class="skills-label">Cloud &amp; Infrastructure:</span> AWS, OCI, Azure, GCP, Cloud Migration, Disaster Recovery, Cost Optimization, High Availability</div>
@@ -155,10 +155,11 @@
   </div>
   <div class="job-company">Amritsar, India</div>
   <ul>
-    <li>Serve as acting technical lead for 15+ production applications, mentoring 5+ engineers, leading root cause analysis, coordinating incident response via Freshservice, and driving Agile sprint planning while defining SLOs and sustaining 99.9% uptime SLA.</li>
+    <li>Technical lead for a DevOps team of 8+ engineers while directly managing and mentoring 2&ndash;3 interns; drove task assignment, roster management, sprint coordination, technical guidance, incident coordination, and RCA ownership across 15+ production applications, sustaining 99.9% uptime SLA.</li>
     <li>Planned and executed cloud-to-cloud and cloud-to-on-premise migrations with near-zero-downtime cutover strategies, post-migration validation, and stabilization workflows.</li>
     <li>Drove cloud cost optimization initiatives through rightsizing, idle resource cleanup, and reserved capacity planning, reducing monthly infrastructure spend by 25%.</li>
-    <li>Supported ISO 27001 and SOC 2 audit processes by enforcing access controls, change management workflows, centralized logging, backup validation, and security policy compliance across cloud infrastructure.</li>
+    <li>Supported ISO 27001 and SOC 2 audit and compliance activities by enforcing access controls, change management workflows, centralized logging, backup validation, and security policy compliance across cloud infrastructure.</li>
+    <li>Defined infrastructure standards, deployment patterns, operational runbooks, and platform best practices adopted across multiple application teams, improving deployment consistency and operational reliability.</li>
   </ul>
 </div>
 
@@ -173,8 +174,8 @@
     <li>Containerized 20+ services with multi-stage Dockerfiles and managed Kubernetes workloads with rolling updates and zero-downtime releases; reduced image size by 60% and deployment time by 50%.</li>
     <li>Integrated Grype-based container vulnerability scanning into CI/CD security gates, blocking critical/high CVE deployments and reducing production vulnerability exposure by 90%.</li>
     <li>Built full-stack observability using Prometheus, Grafana, Alertmanager, Loki, and custom Python exporters across 100+ hosts and 200+ containers with 15+ operational dashboards.</li>
-    <li>Architected HA data platforms: PostgreSQL + Patroni, MySQL Group Replication, MongoDB Replica Sets, ClickHouse, Redis Sentinel, and KeyDB with automated backup, PITR, and failover runbooks.</li>
-    <li>Implemented disaster recovery with automated snapshots, cross-region backup replication, and documented recovery runbooks, achieving sub-30-minute RTO.</li>
+    <li>Architected HA data platforms: PostgreSQL + Patroni, MySQL Group Replication, MongoDB Replica Sets, ClickHouse, Redis Sentinel, and KeyDB with automated backup, PITR, and production readiness runbooks.</li>
+    <li>Implemented disaster recovery with automated snapshots, cross-region backup replication, and documented recovery runbooks, achieving sub-30-minute RTO and operational excellence standards.</li>
   </ul>
 </div>
 
