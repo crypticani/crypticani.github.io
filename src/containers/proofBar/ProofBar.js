@@ -1,5 +1,6 @@
 import React from "react";
 import { proofPoints } from "../../portfolio";
+import CountUpValue from "../../components/countUp/CountUpValue";
 import "./ProofBar.css";
 
 export default function ProofBar({ theme }) {
@@ -19,7 +20,7 @@ export default function ProofBar({ theme }) {
               className="proof-value"
               style={{ color: theme.imageHighlight }}
             >
-              {point.value}
+              <CountUpValue value={point.value} />
             </h2>
             <p className="proof-label" style={{ color: theme.text }}>
               {point.label}

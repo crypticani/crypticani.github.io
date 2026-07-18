@@ -205,3 +205,8 @@
     width: 100%;
   }
 }
+
+.terminal-pre-line {
+  white-space: pre;
+  overflow-x: auto;
+}

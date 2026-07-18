@@ -45,3 +45,7 @@
     max-width: 100%;
   }
 }
+
+.cluster-uptime {
+  font-variant-numeric: tabular-nums;
+}

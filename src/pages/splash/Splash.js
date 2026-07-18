@@ -2,8 +2,6 @@ import React, { Component } from "react";
 import "./Splash.css";
 import { Navigate } from "react-router-dom";
 
-const BOOT_SEEN_KEY = "crypticani_boot_seen";
-
 const Ok = () => (
   <span>
     <span className="boot-dim">[</span>
@@ -126,18 +124,8 @@ class Splash extends Component {
       typeof window !== "undefined" &&
       window.matchMedia &&
       window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    // Visiting /splash directly always replays the boot; on "/" it plays
-    // only once per tab session.
-    const forceReplay =
-      typeof window !== "undefined" &&
-      window.location.pathname === "/splash";
-    const alreadySeen =
-      !forceReplay &&
-      typeof window !== "undefined" &&
-      window.sessionStorage &&
-      window.sessionStorage.getItem(BOOT_SEEN_KEY) === "1";
     this.state = {
-      redirect: alreadySeen,
+      redirect: false,
       count: reducedMotion ? BOOT_LINES.length : 0,
       reducedMotion,
     };
@@ -148,7 +136,6 @@ class Splash extends Component {
   }
 
   componentDidMount() {
-    if (this.state.redirect) return;
     this.startedAt = Date.now();
     window.addEventListener("keydown", this.skip);
     window.addEventListener("pointerdown", this.skip);
@@ -184,11 +171,6 @@ class Splash extends Component {
   }
 
   finish() {
-    try {
-      window.sessionStorage.setItem(BOOT_SEEN_KEY, "1");
-    } catch (e) {
-      // private mode — boot will just replay next time
-    }
     this.setState({ redirect: true });
   }
 

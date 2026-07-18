@@ -8,3 +8,34 @@
 .footer-div {
   margin-top: 2rem;
 }
+
+.footer-logo {
+  text-align: center;
+  font-family: ui-monospace, "Cascadia Code", "SF Mono", Menlo, Consolas,
+    monospace;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin: 0 0 6px;
+}
+
+.footer-cursor {
+  display: inline-block;
+  width: 0.55em;
+  height: 1.05em;
+  background: currentColor;
+  vertical-align: text-bottom;
+  margin-left: 4px;
+  animation: footer-blink 1.1s steps(1) infinite;
+}
+
+@keyframes footer-blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .footer-cursor {
+    animation: none;
+  }
+}

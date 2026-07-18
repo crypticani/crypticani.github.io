@@ -9,7 +9,7 @@ const prefersReducedMotion = () =>
   window.matchMedia &&
   window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-function useInView() {
+export function useInView() {
   const ref = useRef(null);
   const [inView, setInView] = useState(false);
 

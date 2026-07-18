@@ -57,8 +57,9 @@ Most portfolio content is configured in `src/portfolio.js`.
 Key sections:
 
 - `settings`: splash screen behavior (`isSplash: true` plays a Linux kernel-boot
-  loading animation in `src/pages/splash/` on first visit per session —
-  skippable with any key/click, honors `prefers-reduced-motion`)
+  loading animation in `src/pages/splash/` on every fresh page load of `/` —
+  skippable with any key/click after a 500ms grace period, honors
+  `prefers-reduced-motion`; `/splash` replays it on demand)
 - `seo`: title, description, keywords, and Open Graph basics
 - `greeting`: hero copy, resume link, social/profile links
 - `proofPoints`: quick recruiter-facing metrics
@@ -121,17 +122,25 @@ Supported commands:
 ```text
 help
 whoami
+neofetch
+uptime
 ls
 cat about.txt
 ls skills/
 ls projects/
 cat projects/qurli
+cat projects/torvix
 contact
 resume
 history
+ping recruiter
+python3
 sudo hire-me
 clear
 ```
+
+Tab completes commands. Outside the terminal, keys `1`–`5` switch pages and
+`j`/`k` scroll (never while typing in an input).
 
 The terminal is intentionally additive. Important recruiter information must also remain available in regular page sections, links, and resume content.
 
