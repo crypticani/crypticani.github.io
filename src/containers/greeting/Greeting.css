@@ -32,11 +32,21 @@
   margin-top: 20px;
 }
 
+.greeting-kicker {
+  font-family:
+    ui-monospace, "Cascadia Code", "SF Mono", Menlo, Consolas, monospace;
+  font-size: 13px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin: 80px 0 0;
+}
+
 .greeting-text {
-  margin-top: 80px;
-  font-size: 70px;
+  margin-top: 12px;
+  font-size: 64px;
   line-height: 1.1;
   font-family: "Google Sans Bold";
+  letter-spacing: -0.02em;
 }
 
 .greeting-nickname {
@@ -89,8 +99,14 @@
     flex-direction: column;
     gap: 18px;
   }
-  .greeting-text {
+
+  .greeting-kicker {
     margin-top: 30px;
+    text-align: center;
+  }
+
+  .greeting-text {
+    margin-top: 10px;
     text-align: center;
   }
   .greeting-nickname,
@@ -116,9 +132,15 @@
   .button-greeting-div {
     justify-content: space-around;
   }
+  .greeting-kicker {
+    margin-top: 0;
+    text-align: center;
+    font-size: 11px;
+  }
+
   .greeting-text {
     font-size: 30px;
-    margin-top: 0px;
+    margin-top: 8px;
     text-align: center;
   }
   .greeting-nickname {
@@ -153,6 +175,30 @@
   gap: 0.75rem;
   flex-wrap: wrap;
   margin-top: 1.5rem;
+}
+
+.greeting-btn {
+  font-family:
+    ui-monospace, "Cascadia Code", "SF Mono", Menlo, Consolas, monospace;
+  font-size: 13px;
+  padding: 10px 18px;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  text-decoration: none;
+  white-space: nowrap;
+  transition:
+    transform 0.15s ease,
+    opacity 0.15s ease;
+}
+
+.greeting-btn:hover,
+.greeting-btn:focus-visible {
+  transform: translateY(-1px);
+  opacity: 0.88;
+}
+
+.greeting-btn-primary {
+  font-weight: 700;
 }
 
 .greeting-action .main-button {

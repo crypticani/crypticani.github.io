@@ -20,18 +20,17 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: '20'
           cache: 'npm'
 
       - name: Install dependencies
         run: npm ci
 
+      - name: Test
+        run: npm test
+
       - name: Build
         run: npm run build
-        env:
-          GITHUB_TOKEN: ${{ secrets.PORTFOLIO_GITHUB_TOKEN }}
-          GITHUB_USERNAME: ${{ secrets.PORTFOLIO_GITHUB_USERNAME }}
-          CI: false
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4

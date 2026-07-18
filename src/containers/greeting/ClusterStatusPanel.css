@@ -1,0 +1,51 @@
+.cluster-panel {
+  border: 1px solid;
+  border-radius: 10px;
+  padding: 18px 20px;
+  font-family:
+    ui-monospace, "Cascadia Code", "SF Mono", Menlo, Consolas, monospace;
+  font-size: 13px;
+  width: 100%;
+  max-width: 420px;
+  box-sizing: border-box;
+}
+
+.cluster-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 9px 0;
+  border-bottom: 1px solid;
+}
+
+.cluster-row-last {
+  border-bottom: 0;
+}
+
+.cluster-up {
+  letter-spacing: 0.02em;
+}
+
+.cluster-spark {
+  display: flex;
+  align-items: flex-end;
+  gap: 3px;
+  height: 24px;
+}
+
+.cluster-spark i {
+  width: 6px;
+  border-radius: 1px;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .cluster-panel {
+    max-width: 100%;
+  }
+}
+
+.cluster-uptime {
+  font-variant-numeric: tabular-nums;
+}

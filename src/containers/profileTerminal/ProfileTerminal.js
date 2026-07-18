@@ -9,18 +9,108 @@ const initialLines = [
   {
     type: "system",
     content:
-      "Type `help` to explore Aniket's DevOps, platform, cloud, and security profile.",
+      "Type `help` to explore Aniket's DevOps, platform, cloud, and security profile. Tab completes commands.",
   },
 ];
 
+const COMMANDS = [
+  "help",
+  "whoami",
+  "neofetch",
+  "uptime",
+  "ls",
+  "cat about.txt",
+  "ls skills/",
+  "ls projects/",
+  "cat projects/qurli",
+  "cat projects/torvix",
+  "contact",
+  "resume",
+  "history",
+  "ping recruiter",
+  "python3",
+  "sudo hire-me",
+  "clear",
+];
+
+const CAREER_START = new Date("2022-06-01T09:00:00");
+
+function yearsInProduction() {
+  const years =
+    (Date.now() - CAREER_START.getTime()) / (365.25 * 24 * 3600 * 1000);
+  return Math.floor(years);
+}
+
 const linkFor = (name) => socialMediaLinks.find((link) => link.name === name);
+
+function neofetchLines() {
+  const years = yearsInProduction();
+  const info = [
+    "crypticani@production",
+    "─────────────────────",
+    "OS       crypticaniOS 4.2 (I use Linux, btw)",
+    "Role     Senior DevOps Engineer · Technical Lead",
+    `Uptime   ${years}+ years in production`,
+    "Shell    bash + python3 (automation daemon)",
+    "Clouds   OCI · AWS · GCP · Azure",
+    "K8s      20+ services, zero-downtime deploys",
+    "SLA      99.9% · MTTR −40% · Cloud spend −25%",
+    "Coffee   [██████████] 100%",
+  ];
+  const tux = [
+    "    .--.    ",
+    "   |o_o |   ",
+    "   |:_/ |   ",
+    "  //   \\ \\  ",
+    " (|     | ) ",
+    "/'\\_   _/`\\ ",
+    "\\___)=(___/ ",
+    "            ",
+    "            ",
+    "            ",
+  ];
+  return tux.map((art, index) => ({
+    type: "pre",
+    content: `${art}  ${info.at(index) || ""}`,
+  }));
+}
+
+function uptimeLines() {
+  const time = new Date().toTimeString().slice(0, 8);
+  return [
+    `${time} up ${yearsInProduction()}+ years, 15+ apps @ 99.9% SLA, load average: 0.42, 0.08, 0.01`,
+    "All systems operational. Nothing is on fire (verified by Prometheus, not vibes).",
+  ];
+}
 
 function outputFor(command, commandHistory) {
   switch (command) {
     case "help":
       return [
         "Available commands:",
-        "whoami, ls, cat about.txt, ls skills/, ls projects/, cat projects/qurli, cat projects/torvix, contact, resume, history, sudo hire-me, clear",
+        COMMANDS.filter((item) => item !== "clear").join(", ") + ", clear",
+        "Site shortcuts (outside this terminal): 1–5 switch pages, j/k scroll.",
+      ];
+    case "neofetch":
+      return neofetchLines();
+    case "uptime":
+      return uptimeLines();
+    case "ping recruiter":
+      return [
+        "PING recruiter (you): 56 data bytes",
+        "64 bytes from recruiter: icmp_seq=1 ttl=64 time=0.042 ms — hello!",
+        "--- recruiter ping statistics ---",
+        "1 packets transmitted, 1 received, 0% packet loss",
+        "Run `sudo hire-me` to establish a persistent connection.",
+      ];
+    case "python3":
+    case "python":
+      return [
+        "Python 3.12 (crypticani build) on linux — automation daemon attached",
+        ">>> import automation",
+        ">>> automation.rule",
+        "'If it happens twice, script it. If it happens three times, it gets a pipeline, alerts, and a dashboard.'",
+        ">>> exit()",
       ];
     case "whoami":
       return [
@@ -72,11 +162,14 @@ function outputFor(command, commandHistory) {
         "Repo: https://github.com/crypticani/qurli",
       ];
     case "cat projects/torvix":
+    case "torvix":
       return [
         "Torvix: a launched open-source cloud cost intelligence platform focused on OCI cost visibility.",
         "Built around anomaly detection, forecasting, unused-resource detection, PostgreSQL-backed inventory, and Grafana-ready reporting.",
         "Repo: https://github.com/crypticani/torvix",
       ];
+    case "qurli":
+      return outputFor("cat projects/qurli", commandHistory);
     case "contact":
       return [
         {
@@ -107,8 +200,13 @@ function outputFor(command, commandHistory) {
         "Aniket is available for conversations around DevOps, platform engineering, cloud migration, cloud infrastructure, CI/CD, observability, automation, cost optimization, and DevSecOps.",
         "Run `contact` to reach out.",
       ];
+    case "rm -rf /":
+      return [
+        "rm: it would be a shame if something happened to this production system.",
+        "Request logged, alert fired, incident channel created. Try `help` instead.",
+      ];
     default:
-      return ["command not found. Try `help`."];
+      return [`bash: ${command}: command not found. Try \`help\`.`];
   }
 }
 
@@ -125,6 +223,12 @@ function TerminalOutputLine({ line }) {
   if (line.type === "system") {
     return (
       <div className="terminal-line terminal-system-line">{line.content}</div>
+    );
+  }
+
+  if (line.type === "pre") {
+    return (
+      <div className="terminal-line terminal-pre-line">{line.content}</div>
     );
   }
 
@@ -177,7 +281,9 @@ export default function ProfileTerminal({ theme }) {
     setLines((currentLines) => [
       ...currentLines,
       { type: "command", content: command },
-      ...output.map((content) => ({ type: "output", content })),
+      ...output.map((content) =>
+        content && content.type ? content : { type: "output", content },
+      ),
     ]);
     setHistoryIndex(null);
   };
@@ -189,6 +295,23 @@ export default function ProfileTerminal({ theme }) {
   };
 
   const handleKeyDown = (event) => {
+    if (event.key === "Tab") {
+      event.preventDefault();
+      const partial = value.trimStart();
+      if (!partial) return;
+      const matches = COMMANDS.filter((item) => item.startsWith(partial));
+      if (matches.length === 1) {
+        setValue(matches[0]);
+      } else if (matches.length > 1) {
+        setLines((currentLines) => [
+          ...currentLines,
+          { type: "command", content: partial },
+          { type: "output", content: matches.join("   ") },
+        ]);
+      }
+      return;
+    }
+
     if (event.key === "ArrowUp") {
       event.preventDefault();
       if (!history.length) return;
@@ -222,6 +345,7 @@ export default function ProfileTerminal({ theme }) {
 
   return (
     <section
+      id="profile-terminal"
       className="profile-terminal-section"
       aria-labelledby="profile-terminal-heading"
     >

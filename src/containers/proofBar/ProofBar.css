@@ -11,9 +11,9 @@
 
 .proof-card {
   border: 1px solid;
-  border-radius: 8px;
-  min-height: 160px;
-  padding: 22px;
+  border-radius: 10px;
+  min-height: 150px;
+  padding: 20px 22px;
   text-align: left;
 }
 
@@ -21,15 +21,17 @@
   font-family: "Google Sans Medium";
   font-size: 13px;
   letter-spacing: 0.04em;
-  margin: 0 0 12px;
-  text-transform: uppercase;
+  margin: 0 0 10px;
 }
 
 .proof-value {
-  font-family: "Google Sans Bold";
-  font-size: 34px;
+  font-family:
+    ui-monospace, "Cascadia Code", "SF Mono", Menlo, Consolas, monospace;
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+  font-size: 30px;
   line-height: 1;
-  margin: 0 0 12px;
+  margin: 0 0 10px;
 }
 
 .proof-detail {
