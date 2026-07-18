@@ -1,40 +1,30 @@
 {
   "private": true,
   "name": "crypticani-dev-portfolio",
-  "version": "1.2.1",
+  "version": "2.0.0",
   "homepage": "https://crypticani.dev",
+  "type": "module",
   "scripts": {
-    "build": "node --openssl-legacy-provider node_modules/react-scripts/scripts/build.js",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -b gh-pages -d build",
-    "eject": "node node_modules/react-scripts/scripts/eject.js",
-    "start": "node --openssl-legacy-provider node_modules/react-scripts/scripts/start.js",
-    "test": "node node_modules/react-scripts/scripts/test.js"
+    "dev": "vite",
+    "start": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "format": "prettier --write \"src/**/*.{js,jsx,css}\" \"*.{json,md,html}\""
   },
   "dependencies": {
-    "apollo-boost": "^0.4.4",
-    "baseui": "^9.65.3",
-    "chart.js": "^2.9.3",
-    "gh-pages": "^2.1.1",
-    "node-fetch": "^2.6.0",
-    "prettier-package-json": "^2.1.3",
-    "react": "^16.10.2",
-    "react-bootstrap": "^1.0.0-beta.16",
-    "react-chartjs-2": "^2.9.0",
-    "react-dom": "^16.10.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "react-helmet": "^6.1.0",
-    "react-reveal": "^1.2.2",
-    "react-router-dom": "^5.1.2",
-    "react-scripts": "3.2.0",
-    "styled-components": "^5.1.1",
-    "styletron-engine-atomic": "^1.4.6",
-    "styletron-react": "^5.2.7"
+    "react-router-dom": "^6.28.0",
+    "styled-components": "^5.3.11"
   },
   "devDependencies": {
-    "dotenv": "^6.2.0",
-    "husky": "^4.2.5",
-    "lint-staged": "^10.2.11",
-    "prettier": "2.0.5"
+    "@vitejs/plugin-react": "^4.3.4",
+    "jsdom": "^25.0.1",
+    "prettier": "^3.4.2",
+    "vite": "^5.4.11",
+    "vitest": "^2.1.8"
   },
   "browserslist": {
     "production": [
@@ -47,17 +37,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.json": "prettier-package-json --write",
-    "*.{js,css,md}": "prettier --write"
   }
 }

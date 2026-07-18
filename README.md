@@ -13,12 +13,15 @@ Live site: https://crypticani.dev
 
 ## Tech Stack
 
-- React 16 and Create React App
-- React Router
+- React 18 and Vite
+- React Router v6
 - React Helmet for page metadata
+- Custom IntersectionObserver reveal shim (`src/lib/reveal`, aliased as
+  `react-reveal`)
 - Iconify and Font Awesome for skill/social icons
 - Custom code-native SVG illustrations
 - GitHub Pages compatible SPA routing
+- Vitest for tests
 
 ## Project Structure
 
@@ -140,22 +143,28 @@ Install dependencies:
 npm install
 ```
 
-Run locally:
+Run locally (Vite dev server):
 
 ```bash
-PORT=3002 npm start
+npm run dev
 ```
 
-Build production assets:
+Build production assets (outputs to `build/`):
 
 ```bash
 npm run build
 ```
 
+Preview the production build:
+
+```bash
+npm run preview
+```
+
 Run tests:
 
 ```bash
-env CI=true npm test -- --watchAll=false
+npm test
 ```
 
 Check whitespace issues before committing:
@@ -164,9 +173,9 @@ Check whitespace issues before committing:
 git diff --check
 ```
 
-## GitHub/Open Source Data
+## Projects Data
 
-The projects page currently uses curated static data in:
+The projects page uses curated static data in:
 
 ```text
 src/shared/opensource/projects.json
@@ -179,23 +188,6 @@ featured
 writing
 earlier
 ```
-
-The repository still contains `git_data_fetcher.mjs` from the original template for refreshing GitHub GraphQL data into `src/shared/opensource/*.json`. Use it only when intentionally replacing the static GitHub data.
-
-Create a local `.env` from `.env.example` before running the fetcher:
-
-```bash
-cp .env.example .env
-```
-
-Required values:
-
-```text
-GITHUB_TOKEN=your_token
-GITHUB_USERNAME=crypticani
-```
-
-Do not commit `.env` or real tokens.
 
 ## Deployment
 
@@ -212,11 +204,9 @@ Relevant files:
 - `public/index.html`: SEO, Open Graph, icons, SPA redirect handling
 - `public/404.html`: GitHub Pages SPA fallback
 
-Deployment script:
-
-```bash
-npm run deploy
-```
+Deployment is automated: pushing to `master` triggers
+`.github/workflows/deploy.yml`, which tests, builds, and publishes `build/`
+to the `gh-pages` branch.
 
 ## Verification Checklist
 
@@ -224,7 +214,7 @@ Before pushing:
 
 ```bash
 npm run build
-env CI=true npm test -- --watchAll=false
+npm test
 git diff --check
 ```
 

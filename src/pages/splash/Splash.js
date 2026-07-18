@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./Splash.css";
-import { Redirect } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 
 const BOOT_SEEN_KEY = "crypticani_boot_seen";
 
@@ -129,7 +129,8 @@ class Splash extends Component {
     // Visiting /splash directly always replays the boot; on "/" it plays
     // only once per tab session.
     const forceReplay =
-      props.location && props.location.pathname === "/splash";
+      typeof window !== "undefined" &&
+      window.location.pathname === "/splash";
     const alreadySeen =
       !forceReplay &&
       typeof window !== "undefined" &&
@@ -193,7 +194,7 @@ class Splash extends Component {
 
   render() {
     if (this.state.redirect) {
-      return <Redirect to="/home" />;
+      return <Navigate to="/home" replace />;
     }
     return (
       <div className="boot-screen" role="status" aria-label="Loading portfolio">

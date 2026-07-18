@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./DegreeCard.css";
+import { assetImage } from "../../lib/assetImage";
 import { Fade, Flip } from "react-reveal";
 
 class DegreeCard extends Component {
@@ -17,7 +18,7 @@ class DegreeCard extends Component {
                   maxHeight: "100%",
                   transform: "scale(0.9)",
                 }}
-                src={require(`../../assets/images/${degree.logo_path}`)}
+                src={assetImage(degree.logo_path)}
                 alt={degree.alt_name}
               />
             </div>
