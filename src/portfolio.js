@@ -5,20 +5,20 @@ const resumePath = `${siteUrl}/files/Aniket_Kumar_DevOps_Resume.pdf`;
 
 // Website related settings
 const settings = {
-  isSplash: false,
+  isSplash: true,
 };
 
 // SEO related settings
 const seo = {
   title:
-    "Aniket Kumar | DevOps Engineer | Platform Engineering | Cloud Infrastructure",
+    "Aniket Kumar | Senior DevOps Engineer | Platform Engineering | Cloud Infrastructure",
   description:
-    "Portfolio of Aniket Kumar, a DevOps Engineer focused on production infrastructure, cloud migrations, Kubernetes, CI/CD automation, observability, reliability, cloud cost optimization, and Torvix.",
+    "Portfolio of Aniket Kumar, a Senior DevOps Engineer focused on production infrastructure, cloud migrations, Kubernetes, CI/CD automation, observability, reliability, cloud cost optimization, and Torvix.",
   keywords:
     "DevOps Engineer, Platform Engineer, Cloud Infrastructure, Cloud Migration, Cloud Cost Optimization, Torvix, Kubernetes, Docker, Terraform, Ansible, Linux, Nginx, HAProxy, Jenkins, GitLab CI, GitHub Actions, Prometheus, Grafana, Loki, PostgreSQL, MySQL, MongoDB, OCI, AWS, Azure, GCP, DevSecOps, Keycloak, SAML, OIDC, Python, Bash",
   og: {
     title:
-      "Aniket Kumar | DevOps Engineer | Platform Engineering | Cloud Infrastructure",
+      "Aniket Kumar | Senior DevOps Engineer | Platform Engineering | Cloud Infrastructure",
     type: "website",
     url: siteUrl,
   },
@@ -29,12 +29,13 @@ const greeting = {
   title: "Aniket Kumar",
   logo_name: "crypticani",
   nickname: "crypticani",
+  kicker: "Senior DevOps Engineer · Platform · SRE",
   headline:
-    "DevOps Engineer building reliable, observable, and cost-efficient infrastructure.",
+    "Building reliable, observable, and cost-efficient infrastructure.",
   subTitle:
-    "I work across cloud, Kubernetes, Linux, CI/CD, observability, and migration projects — helping teams run production systems with better automation, visibility, and operational control.",
+    "Linux, Kubernetes, CI/CD, and three clouds — I keep 15+ production apps at 99.9% SLA, and automate the boring parts in Python before they page anyone.",
   role:
-    "DevOps Engineer | Full Stack Engineer | Platform Engineering | Cloud Infrastructure | SRE",
+    "Senior DevOps Engineer | Technical Lead | Platform Engineering | Cloud Infrastructure | SRE",
   location: "Samastipur, Bihar, India",
   resumeLink: resumePath,
   portfolio_repository: "https://github.com/crypticani/crypticani.github.io",
@@ -45,24 +46,25 @@ const greeting = {
 
 const proofPoints = [
   {
-    label: "Professional DevOps Experience",
-    value: "3+ Years",
-    detail: "Production infrastructure, migration, automation, and reliability work.",
+    label: "Production DevOps",
+    value: "4+ yrs",
+    detail:
+      "Senior DevOps and acting technical lead across production infrastructure.",
   },
   {
-    label: "Production Scope",
-    value: "15+ apps",
-    detail: "High-availability operations across production services.",
+    label: "Services on Kubernetes",
+    value: "20+",
+    detail: "Containerized and migrated to zero-downtime deployments.",
   },
   {
-    label: "Reliability Target",
-    value: "99.9% SLA",
-    detail: "Runbooks, incident practices, observability, and on-call flow.",
+    label: "Cloud Spend",
+    value: "−25%",
+    detail: "Right-sizing, reserved capacity planning, and cost cleanup.",
   },
   {
-    label: "Cost Optimization",
-    value: "25%",
-    detail: "Cloud spend reduction through right-sizing and cost cleanup.",
+    label: "Disaster-Recovery RTO",
+    value: "<30 min",
+    detail: "Automated failover and restore runbooks, tested regularly.",
   },
 ];
 
@@ -628,7 +630,7 @@ const experience = {
   subtitle:
     "DevOps, development, platform engineering, cloud infrastructure, and SRE work",
   description:
-    "3+ years of professional DevOps experience across production infrastructure, cloud migrations, CI/CD automation, Kubernetes and containerized workloads, observability, database HA/DR, cloud operations, IAM, DevSecOps practices, and developer tooling, backed by internship and early engineering experience.",
+    "4+ years of professional DevOps experience across production infrastructure, cloud migrations, CI/CD automation, Kubernetes and containerized workloads, observability, database HA/DR, cloud operations, IAM, DevSecOps practices, and developer tooling, backed by internship and early engineering experience.",
   sections: [
     {
       title: "Work",

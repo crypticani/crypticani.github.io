@@ -35,10 +35,52 @@
   line-height: normal;
 }
 .header .logo-name {
-  font-family: "Agustina Regular";
-  font-weight: bold;
-  padding: 0 10px;
-  /* color: #55198b; */
+  font-family: ui-monospace, "Cascadia Code", "SF Mono", Menlo, Consolas,
+    monospace;
+  font-weight: 600;
+  font-size: 0.9em;
+  padding: 0 6px;
+  letter-spacing: -0.01em;
+}
+
+/* live status indicator */
+
+.header-status {
+  display: none;
+  align-items: center;
+  gap: 7px;
+  font-family: ui-monospace, "Cascadia Code", "SF Mono", Menlo, Consolas,
+    monospace;
+  font-size: 11px;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+
+.header-status-pulse {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: currentColor;
+  box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.55);
+  animation: header-pulse 2s infinite;
+}
+
+@keyframes header-pulse {
+  70% {
+    box-shadow: 0 0 0 7px rgba(52, 211, 153, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .header-status-pulse {
+    animation: none;
+  }
+}
+
+@media (min-width: 48em) {
+  .header-status {
+    display: inline-flex;
+  }
 }
 
 /* menu */

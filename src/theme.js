@@ -197,18 +197,24 @@ export const materialTealTheme = {
   splashBg: "#05505E",
 };
 
+// "Control Plane" — ops-console evolution of the dark teal brand
 export const materialDarkBGTheme = {
   body: "#0B1220",
   text: "#E5E7EB",
   expTxtColor: "#000a12",
-  highlight: "#111827",
-  dark: "#020617",
-  secondaryText: "#CBD5E1",
+  highlight: "#0E1930",
+  dark: "#060B16",
+  secondaryText: "#8FA3BF",
   imageHighlight: "#2DD4BF",
   compImgHighlight: "#E6E6E6",
   jacketColor: "#1E3A5F",
-  headerColor: "#1F2937",
-  splashBg: "#0B1220",
+  headerColor: "#1C2B47",
+  splashBg: "#070B09",
+  panel: "#0E1930",
+  border: "#1C2B47",
+  accentBlue: "#60A5FA",
+  ok: "#34D399",
+  nameColor: "#F1F5F9",
   homeBackgroundImage: homeBg, // new key for background image
 };
 

@@ -1,9 +1,8 @@
 import React from "react";
 import "./Greeting.css";
-import Button from "../../components/button/Button";
 import { greeting } from "../../portfolio";
 import { Fade } from "react-reveal";
-import PlatformHeroIllustration from "./PlatformHeroIllustration";
+import ClusterStatusPanel from "./ClusterStatusPanel";
 
 export default function Greeting(props) {
   const theme = props.theme;
@@ -13,14 +12,18 @@ export default function Greeting(props) {
         <div className="greeting-main">
           <div className="greeting-text-div">
             <div>
-              <h1 className="greeting-text" style={{ color: theme.text }}>
+              <p
+                className="greeting-kicker"
+                style={{ color: theme.imageHighlight }}
+              >
+                {greeting.kicker}
+              </p>
+              <h1
+                className="greeting-text"
+                style={{ color: theme.nameColor || theme.text }}
+              >
                 {greeting.title}
               </h1>
-              {greeting.nickname && (
-                <h2 className="greeting-nickname" style={{ color: theme.text }}>
-                  ( {greeting.nickname} )
-                </h2>
-              )}
               <h2 className="greeting-headline" style={{ color: theme.text }}>
                 {greeting.headline}
               </h2>
@@ -31,42 +34,55 @@ export default function Greeting(props) {
                 {greeting.subTitle}
               </p>
               <div className="greeting-actions-row">
-                <Button
-                  className="greeting-action greeting-action-primary"
-                  text="View Resume"
-                  newTab={true}
+                <a
+                  className="greeting-btn greeting-btn-primary"
                   href={greeting.resumeLink}
-                  theme={theme}
-                />
-
-                <Button
-                  className="greeting-action"
-                  text="GitHub"
-                  newTab={true}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    backgroundColor: theme.imageHighlight,
+                    color: theme.dark,
+                  }}
+                >
+                  ▸ view resume
+                </a>
+                <a
+                  className="greeting-btn"
+                  href="#profile-terminal"
+                  style={{
+                    borderColor: theme.border || theme.headerColor,
+                    color: theme.text,
+                  }}
+                >
+                  $ open terminal
+                </a>
+                <a
+                  className="greeting-btn"
                   href={greeting.githubProfile}
-                  theme={theme}
-                />
-
-                <Button
-                  className="greeting-action"
-                  text="LinkedIn"
-                  newTab={true}
-                  href={greeting.linkedInProfile}
-                  theme={theme}
-                />
-
-                <Button
-                  className="greeting-action"
-                  text="Contact Me"
-                  newTab={false}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    borderColor: theme.border || theme.headerColor,
+                    color: theme.text,
+                  }}
+                >
+                  github
+                </a>
+                <a
+                  className="greeting-btn"
                   href={greeting.contactLink}
-                  theme={theme}
-                />
+                  style={{
+                    borderColor: theme.border || theme.headerColor,
+                    color: theme.text,
+                  }}
+                >
+                  contact
+                </a>
               </div>
             </div>
           </div>
           <div className="greeting-image-div">
-            <PlatformHeroIllustration theme={theme} />
+            <ClusterStatusPanel theme={theme} />
           </div>
         </div>
       </div>

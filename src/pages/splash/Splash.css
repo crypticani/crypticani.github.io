@@ -1,58 +1,101 @@
-.logo_wrapper {
-  height: 100vh;
-  width: 100vw;
-  align-items: center;
-  justify-content: center;
-}
+/* Kernel-boot splash — committed phosphor world, independent of site theme */
 
-.screen {
-  height: 100%;
+.boot-screen {
+  position: fixed;
+  inset: 0;
+  background: #070b09;
+  color: #b7e4c7;
+  font-family: ui-monospace, "Cascadia Code", "SF Mono", Menlo, Consolas,
+    monospace;
+  font-size: 14px;
+  line-height: 1.8;
   display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-body {
-  padding: 0;
-  margin: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.screen {
-  /* background-color: #55198b; */
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 40px 44px;
+  box-sizing: border-box;
   overflow: hidden;
-  border-radius: 100%;
-  animation: grow 5.5s forwards;
+  cursor: pointer;
 }
 
-@keyframes grow {
-  0% {
-    transform: scale(0);
+.boot-line {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.boot-ok {
+  color: #4ade80;
+  white-space: pre;
+}
+
+.boot-dim {
+  color: #4e6e5d;
+}
+
+.boot-amber {
+  color: #fbbf24;
+}
+
+.boot-kmsg {
+  color: #7fae8f;
+}
+
+/* login name types itself */
+.boot-typed {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  vertical-align: bottom;
+  width: 9ch;
+  animation: boot-typing 0.6s steps(9, end);
+}
+
+@keyframes boot-typing {
+  from {
+    width: 0;
   }
-  10% {
-    transform: scale(1);
-    border-radius: 0%;
-    height: 100%;
-    width: 100%;
-  }
-  90% {
-    transform: scale(1);
-    border-radius: 0%;
-    height: 100%;
-    width: 100%;
-  }
-  100% {
-    transform: scale(0);
-    transform-origin: 50% 50%;
-    border-radius: 100%;
+  to {
+    width: 9ch;
   }
 }
 
-#logo {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.boot-caret {
+  display: inline-block;
+  width: 0.6em;
+  height: 1.05em;
+  background: #4ade80;
+  vertical-align: text-bottom;
+  margin-left: 2px;
+  animation: boot-blink 1s steps(1) infinite;
+}
+
+@keyframes boot-blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.boot-skip {
+  position: fixed;
+  bottom: 18px;
+  right: 24px;
+  color: #4e6e5d;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 600px) {
+  .boot-screen {
+    padding: 26px 18px;
+    font-size: 12px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .boot-typed,
+  .boot-caret {
+    animation: none;
+    width: 9ch;
+  }
 }

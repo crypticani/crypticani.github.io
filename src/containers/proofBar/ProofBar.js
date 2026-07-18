@@ -11,16 +11,19 @@ export default function ProofBar({ theme }) {
             className="proof-card"
             key={point.label}
             style={{
-              backgroundColor: theme.highlight,
-              borderColor: theme.headerColor,
+              backgroundColor: theme.panel || theme.highlight,
+              borderColor: theme.border || theme.headerColor,
             }}
           >
-            <p className="proof-label" style={{ color: theme.imageHighlight }}>
-              {point.label}
-            </p>
-            <h2 className="proof-value" style={{ color: theme.text }}>
+            <h2
+              className="proof-value"
+              style={{ color: theme.imageHighlight }}
+            >
               {point.value}
             </h2>
+            <p className="proof-label" style={{ color: theme.text }}>
+              {point.label}
+            </p>
             <p className="proof-detail" style={{ color: theme.secondaryText }}>
               {point.detail}
             </p>

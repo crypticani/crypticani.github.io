@@ -53,7 +53,9 @@ Most portfolio content is configured in `src/portfolio.js`.
 
 Key sections:
 
-- `settings`: splash screen behavior
+- `settings`: splash screen behavior (`isSplash: true` plays a Linux kernel-boot
+  loading animation in `src/pages/splash/` on first visit per session —
+  skippable with any key/click, honors `prefers-reduced-motion`)
 - `seo`: title, description, keywords, and Open Graph basics
 - `greeting`: hero copy, resume link, social/profile links
 - `proofPoints`: quick recruiter-facing metrics
@@ -80,9 +82,13 @@ Update `resumePath` in `src/portfolio.js` if the filename changes.
 
 The old template illustrations have been replaced with custom React SVG components aligned to the current portfolio content.
 
+The home hero uses a "Control Plane" cluster status panel
+(`src/containers/greeting/ClusterStatusPanel.js`) instead of an illustration;
+`PlatformHeroIllustration.js` is kept but currently unused.
+
 Main illustration components:
 
-- `src/containers/greeting/PlatformHeroIllustration.js`
+- `src/containers/greeting/PlatformHeroIllustration.js` (unused)
 - `src/containers/profileTerminal/ProfileTerminal.js`
 - `src/containers/skills/CloudInfrastructureIllustration.js`
 - `src/containers/skills/DeliveryPipelineIllustration.js`

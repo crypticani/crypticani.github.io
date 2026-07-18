@@ -222,6 +222,7 @@ export default function ProfileTerminal({ theme }) {
 
   return (
     <section
+      id="profile-terminal"
       className="profile-terminal-section"
       aria-labelledby="profile-terminal-heading"
     >
