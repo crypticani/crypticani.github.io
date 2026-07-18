@@ -18,7 +18,11 @@ export default function Main({ theme }) {
         <Route
           path="/"
           element={
-            settings.isSplash ? <Splash theme={theme} /> : <Home theme={theme} />
+            settings.isSplash ? (
+              <Splash theme={theme} />
+            ) : (
+              <Home theme={theme} />
+            )
           }
         />
         <Route path="/home" element={<Home theme={theme} />} />
@@ -29,10 +33,17 @@ export default function Main({ theme }) {
         <Route
           path="/splash"
           element={
-            settings.isSplash ? <Splash theme={theme} /> : <Navigate to="/home" replace />
+            settings.isSplash ? (
+              <Splash theme={theme} />
+            ) : (
+              <Navigate to="/home" replace />
+            )
           }
         />
-        <Route path="/opensource" element={<Navigate to="/projects" replace />} />
+        <Route
+          path="/opensource"
+          element={<Navigate to="/projects" replace />}
+        />
         <Route path="*" element={<Error404 theme={theme} />} />
       </Routes>
     </BrowserRouter>

@@ -25,8 +25,8 @@
 }
 
 .proof-value {
-  font-family: ui-monospace, "Cascadia Code", "SF Mono", Menlo, Consolas,
-    monospace;
+  font-family:
+    ui-monospace, "Cascadia Code", "SF Mono", Menlo, Consolas, monospace;
   font-variant-numeric: tabular-nums;
   font-weight: 700;
   font-size: 30px;

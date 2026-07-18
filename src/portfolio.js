@@ -30,12 +30,10 @@ const greeting = {
   logo_name: "crypticani",
   nickname: "crypticani",
   kicker: "Senior DevOps Engineer · Platform · SRE",
-  headline:
-    "Building reliable, observable, and cost-efficient infrastructure.",
+  headline: "Building reliable, observable, and cost-efficient infrastructure.",
   subTitle:
     "Linux, Kubernetes, CI/CD, and three clouds — I keep 15+ production apps at 99.9% SLA, and automate the boring parts in Python before they page anyone.",
-  role:
-    "Senior DevOps Engineer | Technical Lead | Platform Engineering | Cloud Infrastructure | SRE",
+  role: "Senior DevOps Engineer | Technical Lead | Platform Engineering | Cloud Infrastructure | SRE",
   location: "Samastipur, Bihar, India",
   resumeLink: resumePath,
   portfolio_repository: "https://github.com/crypticani/crypticani.github.io",
@@ -748,11 +746,7 @@ const caseStudies = {
         "Release workflows needed to move faster while reducing the chance of vulnerable containers or unsafe changes reaching production.",
       built:
         "Implemented Jenkins, GitLab CI, and GitHub Actions pipelines with vulnerability checks, deployment guardrails, safer release workflows, and practical security controls across containers, auth, APIs, and cloud-backed apps.",
-      outcomes: [
-        "Multiple daily releases",
-        "20+ services",
-        "Security gates",
-      ],
+      outcomes: ["Multiple daily releases", "20+ services", "Security gates"],
     },
     {
       title: "Cloud Cost Optimization",

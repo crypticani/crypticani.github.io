@@ -3,7 +3,7 @@ import { useInView } from "react-reveal";
 
 // Renders values like "4+ yrs", "−25%", "<30 min", "20+" and counts the
 // numeric part up from 0 when the element scrolls into view.
-const VALUE_PATTERN = /^([^0-9]*)(\d+)(.*)$/;
+const DIGITS = /\d+/;
 
 const prefersReducedMotion = () =>
   typeof window !== "undefined" &&
@@ -12,8 +12,8 @@ const prefersReducedMotion = () =>
 
 export default function CountUpValue({ value, duration = 900, ...rest }) {
   const [ref, inView] = useInView();
-  const match = VALUE_PATTERN.exec(value);
-  const target = match ? parseInt(match[2], 10) : null;
+  const match = DIGITS.exec(value);
+  const target = match ? parseInt(match[0], 10) : null;
   const [current, setCurrent] = useState(0);
 
   useEffect(() => {
@@ -38,11 +38,14 @@ export default function CountUpValue({ value, duration = 900, ...rest }) {
     return <span {...rest}>{value}</span>;
   }
 
+  const prefix = value.slice(0, match.index);
+  const suffix = value.slice(match.index + match[0].length);
+
   return (
     <span ref={ref} {...rest}>
-      {match[1]}
+      {prefix}
       {inView ? current : 0}
-      {match[3]}
+      {suffix}
     </span>
   );
 }

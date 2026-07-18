@@ -71,8 +71,16 @@ function neofetchLines() {
   ];
   return tux.map((art, index) => ({
     type: "pre",
-    content: `${art}  ${info[index] || ""}`,
+    content: `${art}  ${info.at(index) || ""}`,
   }));
+}
+
+function uptimeLines() {
+  const time = new Date().toTimeString().slice(0, 8);
+  return [
+    `${time} up ${yearsInProduction()}+ years, 15+ apps @ 99.9% SLA, load average: 0.42, 0.08, 0.01`,
+    "All systems operational. Nothing is on fire (verified by Prometheus, not vibes).",
+  ];
 }
 
 function outputFor(command, commandHistory) {
@@ -85,14 +93,8 @@ function outputFor(command, commandHistory) {
       ];
     case "neofetch":
       return neofetchLines();
-    case "uptime": {
-      const now = new Date();
-      const time = now.toTimeString().slice(0, 8);
-      return [
-        `${time} up ${yearsInProduction()}+ years, 15+ apps @ 99.9% SLA, load average: 0.42, 0.08, 0.01`,
-        "All systems operational. Nothing is on fire (verified by Prometheus, not vibes).",
-      ];
-    }
+    case "uptime":
+      return uptimeLines();
     case "ping recruiter":
       return [
         "PING recruiter (you): 56 data bytes",
@@ -280,7 +282,7 @@ export default function ProfileTerminal({ theme }) {
       ...currentLines,
       { type: "command", content: command },
       ...output.map((content) =>
-        content && content.type ? content : { type: "output", content }
+        content && content.type ? content : { type: "output", content },
       ),
     ]);
     setHistoryIndex(null);

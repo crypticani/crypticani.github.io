@@ -5,8 +5,8 @@
   inset: 0;
   background: #070b09;
   color: #b7e4c7;
-  font-family: ui-monospace, "Cascadia Code", "SF Mono", Menlo, Consolas,
-    monospace;
+  font-family:
+    ui-monospace, "Cascadia Code", "SF Mono", Menlo, Consolas, monospace;
   font-size: 14px;
   line-height: 1.8;
   display: flex;
@@ -54,6 +54,7 @@
   from {
     width: 0;
   }
+
   to {
     width: 9ch;
   }

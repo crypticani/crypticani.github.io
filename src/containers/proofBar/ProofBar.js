@@ -16,10 +16,7 @@ export default function ProofBar({ theme }) {
               borderColor: theme.border || theme.headerColor,
             }}
           >
-            <h2
-              className="proof-value"
-              style={{ color: theme.imageHighlight }}
-            >
+            <h2 className="proof-value" style={{ color: theme.imageHighlight }}>
               <CountUpValue value={point.value} />
             </h2>
             <p className="proof-label" style={{ color: theme.text }}>

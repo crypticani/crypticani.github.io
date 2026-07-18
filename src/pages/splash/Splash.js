@@ -74,8 +74,7 @@ const BOOT_LINES = [
     el: (
       <span>
         <Ok />
-        Reached target <span className="boot-amber">Cloud Infrastructure</span>
-        .
+        Reached target <span className="boot-amber">Cloud Infrastructure</span>.
       </span>
     ),
   },
@@ -161,13 +160,15 @@ class Splash extends Component {
 
   next() {
     const { count } = this.state;
-    if (count >= BOOT_LINES.length) {
+    const line = BOOT_LINES.at(count);
+    if (!line) {
       this.timer = setTimeout(this.finish, 350);
       return;
     }
-    this.timer = setTimeout(() => {
-      this.setState({ count: count + 1 }, () => this.next());
-    }, BOOT_LINES[count].d);
+    this.timer = setTimeout(
+      () => this.setState({ count: count + 1 }, () => this.next()),
+      line.d,
+    );
   }
 
   finish() {

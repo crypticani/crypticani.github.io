@@ -29,7 +29,7 @@ export function useInView() {
           }
         });
       },
-      { threshold: 0.15 }
+      { threshold: 0.15 },
     );
     observer.observe(node);
     return () => observer.disconnect();
@@ -76,7 +76,14 @@ export function Fade({
   );
 }
 
-export function Flip({ children, left, right, duration = 1000, delay = 0, ...rest }) {
+export function Flip({
+  children,
+  left,
+  right,
+  duration = 1000,
+  delay = 0,
+  ...rest
+}) {
   const [ref, inView] = useInView();
   const angle = right ? "-90deg" : "90deg";
   return (

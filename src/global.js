@@ -7,10 +7,6 @@ export const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
   }
 
-  html {
-    scroll-behavior: smooth;
-  }
-
   body {
     align-items: center;
     background: ${({ theme }) => theme.body};
