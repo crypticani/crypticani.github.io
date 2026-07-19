@@ -10,9 +10,15 @@
 }
 
 .certs-body-div {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  width: 90%;
+  margin: 14px auto 0;
+}
+
+.certs-body-div > div {
+  height: 100%;
 }
 
 @media (max-width: 1380px) {

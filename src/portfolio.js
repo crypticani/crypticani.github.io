@@ -101,7 +101,7 @@ const socialMediaLinks = [
     name: "X-Twitter",
     link: "https://twitter.com/crypticani",
     fontAwesomeIcon: "fa-x-twitter",
-    backgroundColor: "#000000",
+    backgroundColor: "#4B5563",
   },
   {
     name: "Instagram",
