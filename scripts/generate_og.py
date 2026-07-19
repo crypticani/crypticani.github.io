@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
-"""Render the OG social card (scripts/og/card.html) to public/icons/og-card.png.
+"""
+Render the OG social card (scripts/og/card.html) to public/icons/og-card.png.
 
 Requires a chromium/chrome binary. Run from the repo root:
     python3 scripts/generate_og.py
 """
 
 import shutil
-import subprocess
+import subprocess  # nosec B404 — fixed local browser invocation, no untrusted input
 import sys
 from pathlib import Path
 
@@ -30,7 +31,7 @@ def find_browser():
 
 def main():
     browser = find_browser()
-    subprocess.run(
+    subprocess.run(  # nosec B603 — argv list with hardcoded flags and repo-local paths
         [
             browser,
             "--headless",
