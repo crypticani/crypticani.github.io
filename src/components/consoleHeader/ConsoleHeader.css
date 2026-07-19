@@ -1,0 +1,38 @@
+.console-header {
+  margin: 0 0 26px;
+  text-align: left;
+}
+
+.console-header-cmd {
+  font-family:
+    "JetBrains Mono", ui-monospace, "Cascadia Code", "SF Mono", Menlo, Consolas,
+    monospace;
+  font-size: 13px;
+  margin: 0 0 10px;
+}
+
+.console-header-title {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.15;
+  margin: 0 0 8px;
+}
+
+.console-header-desc {
+  font-size: 15px;
+  line-height: 1.6;
+  max-width: 72ch;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .console-header-title {
+    font-size: 24px;
+  }
+
+  .console-header-desc {
+    font-size: 14px;
+  }
+}

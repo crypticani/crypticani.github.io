@@ -7,6 +7,12 @@
   position: relative;
 }
 
+/* the reveal wrapper around the card must grow, not shrink to content */
+.experience-list-item > div:last-child {
+  flex: 1;
+  min-width: 0;
+}
+
 /* ─── Logo ────────────────────────────────────────────────────────────────── */
 .experience-card-logo-div {
   flex: 0 0 auto;
@@ -76,9 +82,13 @@
   background: rgba(255, 255, 255, 0.04);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3),
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.3),
     inset 0 1px 0 rgba(255, 255, 255, 0.05);
-  transition: box-shadow 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+  transition:
+    box-shadow 0.3s ease,
+    transform 0.3s ease,
+    border-color 0.3s ease;
   position: relative;
   overflow: hidden;
 }
@@ -100,7 +110,8 @@
 
 .experience-card:hover {
   transform: translateY(-3px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4),
+  box-shadow:
+    0 12px 40px rgba(0, 0, 0, 0.4),
     inset 0 1px 0 rgba(255, 255, 255, 0.08);
   border-color: rgba(255, 255, 255, 0.14);
 }
@@ -152,7 +163,9 @@
   text-decoration: none;
   opacity: 0.8;
   border-bottom: 1px solid transparent;
-  transition: opacity 0.2s ease, border-color 0.2s ease;
+  transition:
+    opacity 0.2s ease,
+    border-color 0.2s ease;
 }
 
 .experience-card-company > a:hover {

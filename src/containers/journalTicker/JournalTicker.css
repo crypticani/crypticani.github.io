@@ -1,0 +1,25 @@
+.journal-ticker {
+  width: 90%;
+  margin: -30px auto 44px;
+  padding: 9px 18px;
+  border: 1px solid;
+  border-radius: 8px;
+  font-family:
+    "JetBrains Mono", ui-monospace, "Cascadia Code", "SF Mono", Menlo, Consolas,
+    monospace;
+  font-size: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.journal-time {
+  font-variant-numeric: tabular-nums;
+}
+
+@media (max-width: 620px) {
+  .journal-ticker {
+    margin-top: -14px;
+    font-size: 11px;
+  }
+}

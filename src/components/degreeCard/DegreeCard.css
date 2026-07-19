@@ -27,7 +27,7 @@
   border: 1px solid #d9dbdf;
   /* background-color: #6c63ff; */
   /* background: transparent; */
-  box-shadow: 5px 5px 5px #d9dbdf;
+  box-shadow: none;
 }
 
 .body-header {
@@ -78,7 +78,7 @@
   border-right: 1px solid #d9dbdf;
   border-radius: 7px;
   margin: 10px;
-  box-shadow: 5px 5px 5px #d9dbdf;
+  box-shadow: none;
 }
 
 .visit-btn {

@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      @font-face {
+        font-family: "IBM Plex Sans";
+        font-weight: 400;
+        src: url("../../public/fonts/ibm-plex-sans-400.woff2") format("woff2");
+      }
+      @font-face {
+        font-family: "IBM Plex Sans";
+        font-weight: 600;
+        src: url("../../public/fonts/ibm-plex-sans-600.woff2") format("woff2");
+      }
+      @font-face {
+        font-family: "JetBrains Mono";
+        font-weight: 400;
+        src: url("../../public/fonts/jetbrains-mono-400.woff2") format("woff2");
+      }
+      @font-face {
+        font-family: "JetBrains Mono";
+        font-weight: 700;
+        src: url("../../public/fonts/jetbrains-mono-700.woff2") format("woff2");
+      }
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      .card {
+        width: 1200px;
+        height: 630px;
+        box-sizing: border-box;
+        background: linear-gradient(135deg, #0b1220 0%, #0d1a30 100%);
+        color: #e5e7eb;
+        font-family: "IBM Plex Sans", sans-serif;
+        padding: 52px 64px;
+        display: flex;
+        flex-direction: column;
+      }
+      .top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: "JetBrains Mono", monospace;
+        font-size: 24px;
+      }
+      .brand {
+        color: #2dd4bf;
+        font-weight: 700;
+      }
+      .brand .dim {
+        color: #8fa3bf;
+        font-weight: 400;
+      }
+      .status {
+        color: #34d399;
+        font-size: 21px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: #34d399;
+        box-shadow: 0 0 14px #34d39988;
+      }
+      .mid {
+        display: flex;
+        align-items: center;
+        gap: 48px;
+        flex: 1;
+      }
+      .kicker {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 19px;
+        letter-spacing: 0.1em;
+        color: #2dd4bf;
+        text-transform: uppercase;
+        margin: 0 0 14px;
+        white-space: nowrap;
+      }
+      .name {
+        font-size: 92px;
+        font-weight: 600;
+        color: #f1f5f9;
+        letter-spacing: -0.02em;
+        line-height: 1.02;
+        margin: 0 0 16px;
+      }
+      .role {
+        font-size: 30px;
+        color: #8fa3bf;
+        margin: 0 0 26px;
+        max-width: 15em;
+        line-height: 1.35;
+      }
+      .chips {
+        display: flex;
+        gap: 14px;
+        flex-wrap: wrap;
+      }
+      .chip {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 22px;
+        color: #2dd4bf;
+        background: #0e1930;
+        border: 1.5px solid #1c2b47;
+        border-radius: 10px;
+        padding: 10px 18px;
+      }
+      .panel {
+        background: #0e1930;
+        border: 1.5px solid #1c2b47;
+        border-radius: 14px;
+        padding: 26px 30px;
+        font-family: "JetBrains Mono", monospace;
+        font-size: 20px;
+        min-width: 380px;
+      }
+      .prow {
+        display: flex;
+        justify-content: space-between;
+        gap: 26px;
+        padding: 12px 0;
+        border-bottom: 1.5px solid #14213a;
+        color: #8fa3bf;
+        white-space: nowrap;
+      }
+      .prow:last-child {
+        border-bottom: 0;
+      }
+      .prow .v {
+        color: #e5e7eb;
+      }
+      .prow .up {
+        color: #34d399;
+      }
+      .spark {
+        display: flex;
+        align-items: flex-end;
+        gap: 4px;
+        height: 30px;
+      }
+      .spark i {
+        width: 9px;
+        background: #2dd4bf55;
+        border-radius: 2px;
+      }
+      .spark i.hot {
+        background: #2dd4bf;
+      }
+      .foot {
+        display: flex;
+        justify-content: space-between;
+        font-family: "JetBrains Mono", monospace;
+        font-size: 22px;
+        color: #4e6e5d;
+        margin-top: 8px;
+      }
+      .foot .ok {
+        color: #34d399;
+      }
+      .foot .url {
+        color: #8fa3bf;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <div class="top">
+        <span class="brand"
+          ><span class="dim">&lt;</span>crypticani<span class="dim"
+            >/&gt;</span
+          ></span
+        >
+        <span class="status"
+          ><span class="dot"></span>all systems operational</span
+        >
+      </div>
+      <div class="mid">
+        <div>
+          <p class="kicker">Senior DevOps Engineer · Platform · SRE</p>
+          <p class="name">Aniket Kumar</p>
+          <p class="role">
+            Reliable, observable, cost-efficient infrastructure — automated in
+            Python.
+          </p>
+          <div class="chips">
+            <span class="chip">99.9% SLA</span
+            ><span class="chip">MTTR −40%</span>
+            <span class="chip">−25% cloud spend</span
+            ><span class="chip">20+ svcs on K8s</span>
+          </div>
+        </div>
+        <div class="panel">
+          <div class="prow">
+            <span>cluster/production</span><span class="up">● healthy</span>
+          </div>
+          <div class="prow"><span>uptime</span><span class="v">4y+</span></div>
+          <div class="prow">
+            <span>deploys</span
+            ><span class="v">daily <span class="up">▲</span></span>
+          </div>
+          <div class="prow">
+            <span>traffic</span
+            ><span class="spark"
+              ><i style="height: 35%"></i><i style="height: 60%"></i
+              ><i style="height: 45%"></i><i style="height: 75%"></i
+              ><i style="height: 58%"></i><i class="hot" style="height: 95%"></i
+            ></span>
+          </div>
+        </div>
+      </div>
+      <div class="foot">
+        <span
+          >[ <span class="ok">OK</span> ] portfolio.service started in
+          0.8s</span
+        >
+        <span class="url">crypticani.dev</span>
+      </div>
+    </div>
+  </body>
+</html>

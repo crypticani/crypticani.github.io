@@ -1,55 +1,62 @@
-/* header */
+/* Console header: logo · clock/status · search · tmux tabs.
+   No hamburger — on phones the tabs become a horizontal scroll row so
+   navigation is always visible. */
 
 .header {
-  display: block;
-  max-width: 90%;
-  padding: 20px 10px;
-  margin: 0px auto;
-}
-
-.header ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  overflow: hidden;
-  /* background-color: #fff; */
-}
-.grey-color {
-  color: #868e96;
-}
-
-.header li a {
-  display: block;
-  padding: 20px 20px;
-  /* color: black; */
-  text-decoration: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 14px;
+  padding: 8px 4%;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgb(11 18 32 / 0.92);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgb(28 43 71 / 0.9);
+  box-sizing: border-box;
 }
 
 .header .logo {
-  display: block;
-  float: left;
-  font-size: 1.5em;
+  font-size: 1.15em;
   text-decoration: none;
-  margin-top: 10px;
   line-height: normal;
+  white-space: nowrap;
 }
+
 .header .logo-name {
   font-family:
-    ui-monospace, "Cascadia Code", "SF Mono", Menlo, Consolas, monospace;
+    "JetBrains Mono", ui-monospace, "Cascadia Code", "SF Mono", Menlo, Consolas,
+    monospace;
   font-weight: 600;
   font-size: 0.9em;
   padding: 0 6px;
   letter-spacing: -0.01em;
 }
 
-/* live status indicator */
+/* clock + status (desktop only) */
+
+.header-meta {
+  display: none;
+  align-items: center;
+  gap: 14px;
+}
+
+.header-clock {
+  font-family:
+    "JetBrains Mono", ui-monospace, "Cascadia Code", "SF Mono", Menlo, Consolas,
+    monospace;
+  font-size: 11px;
+  font-variant-numeric: tabular-nums;
+}
 
 .header-status {
-  display: none;
+  display: inline-flex;
   align-items: center;
   gap: 7px;
   font-family:
-    ui-monospace, "Cascadia Code", "SF Mono", Menlo, Consolas, monospace;
+    "JetBrains Mono", ui-monospace, "Cascadia Code", "SF Mono", Menlo, Consolas,
+    monospace;
   font-size: 11px;
   letter-spacing: 0.05em;
   white-space: nowrap;
@@ -60,125 +67,127 @@
   height: 7px;
   border-radius: 50%;
   background: currentColor;
-  box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.55);
+  box-shadow: 0 0 0 0 rgb(52 211 153 / 0.55);
   animation: header-pulse 2s infinite;
 }
 
 @keyframes header-pulse {
   70% {
-    box-shadow: 0 0 0 7px rgba(52, 211, 153, 0);
+    box-shadow: 0 0 0 7px rgb(52 211 153 / 0);
+  }
+}
+
+/* command palette trigger — styled like a search field so it gets noticed */
+
+.header-palette-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family:
+    "JetBrains Mono", ui-monospace, "Cascadia Code", "SF Mono", Menlo, Consolas,
+    monospace;
+  font-size: 12px;
+  border: 1px solid;
+  border-radius: 8px;
+  padding: 7px 12px;
+  cursor: pointer;
+  margin-left: auto;
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.header-palette-btn:hover,
+.header-palette-btn:focus-visible {
+  border-color: #2dd4bf;
+  box-shadow: 0 0 0 3px rgb(45 212 191 / 0.15);
+  outline: none;
+}
+
+.header-palette-btn kbd {
+  font-family: inherit;
+  font-size: 10px;
+  border: 1px solid;
+  border-radius: 4px;
+  padding: 1px 6px;
+}
+
+.header-palette-prompt {
+  font-weight: 700;
+}
+
+/* tmux tabs — always visible; horizontal scroll on small screens */
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-family:
+    "JetBrains Mono", ui-monospace, "Cascadia Code", "SF Mono", Menlo, Consolas,
+    monospace;
+}
+
+.menu .tmux-tab {
+  font-size: 13px;
+  border-radius: 6px;
+  padding: 8px 14px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.menu .tmux-tab:hover {
+  background: rgb(255 255 255 / 0.07);
+}
+
+/* ≥768px: clock + status appear, tabs sit on the same row */
+
+@media (min-width: 48em) {
+  .header-meta {
+    display: inline-flex;
+  }
+
+  .menu {
+    order: 4;
+  }
+
+  .header-palette-btn {
+    margin-left: auto;
+    margin-right: 4px;
+  }
+}
+
+/* <768px: logo + search on row one, full-width scrollable tab row below */
+
+@media (max-width: 47.99em) {
+  .header {
+    padding: 8px 12px 6px;
+  }
+
+  .menu {
+    flex-basis: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding-bottom: 4px;
+  }
+
+  .menu::-webkit-scrollbar {
+    display: none;
+  }
+
+  .menu .tmux-tab {
+    font-size: 12px;
+    padding: 7px 11px;
+  }
+
+  .header-palette-btn {
+    font-size: 11px;
+    padding: 6px 10px;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .header-status-pulse {
     animation: none;
-  }
-}
-
-@media (min-width: 48em) {
-  .header-status {
-    display: inline-flex;
-  }
-}
-
-/* menu */
-
-.menu {
-  font-family: "Google Sans Regular";
-}
-
-.header .menu {
-  clear: both;
-  max-height: 0;
-  transition: max-height 0.2s ease-out;
-}
-
-/* menu icon */
-
-.header .menu-icon {
-  cursor: pointer;
-  float: right;
-  padding: 28px 20px;
-  position: relative;
-  user-select: none;
-}
-
-.header .menu-icon .navicon {
-  background: currentColor;
-  display: block;
-  height: 2px;
-  position: relative;
-  transition: background 0.2s ease-out;
-  width: 18px;
-}
-
-.header .menu-icon .navicon:before,
-.header .menu-icon .navicon:after {
-  background: currentColor;
-  content: "";
-  display: block;
-  height: 100%;
-  position: absolute;
-  transition: all 0.2s ease-out;
-  width: 100%;
-}
-
-.header .menu-icon .navicon:before {
-  top: 5px;
-}
-
-.header .menu-icon .navicon:after {
-  top: -5px;
-}
-
-/* menu btn */
-
-.header .menu-btn {
-  display: none;
-}
-
-.header .menu-btn:checked ~ .menu {
-  max-height: 370px;
-}
-
-.header .menu-btn:checked ~ .menu-icon .navicon {
-  background: transparent;
-}
-
-.header .menu-btn:checked ~ .menu-icon .navicon:before {
-  transform: rotate(-45deg);
-}
-
-.header .menu-btn:checked ~ .menu-icon .navicon:after {
-  transform: rotate(45deg);
-}
-
-.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
-.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
-  top: 0;
-}
-
-/* 48em = 768px */
-
-@media (min-width: 48em) {
-  .header li {
-    float: left;
-  }
-  .header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .header .menu {
-    max-height: none;
-  }
-  .header .menu-icon {
-    display: none;
-  }
-}
-@media (max-width: 960px) and (min-width: 768px) {
-  .header {
-    font-size: 12px;
   }
 }

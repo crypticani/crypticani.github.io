@@ -4,9 +4,8 @@ import Footer from "../../components/footer/Footer";
 import TopButton from "../../components/topButton/TopButton";
 import Educations from "../../containers/education/Educations";
 import Certifications from "../../containers/certifications/Certifications";
-// import CompetitiveSites from "../../components/competitiveSites/CompetitiveSites";
-import EducationCredentialIllustration from "./EducationCredentialIllustration";
-// import { competitiveSites } from "../../portfolio";
+import ConsoleHeader from "../../components/consoleHeader/ConsoleHeader";
+import InfoPanel from "../../components/infoPanel/InfoPanel";
 import { certifications } from "../../portfolio";
 import "./EducationComponent.css";
 import { Fade } from "react-reveal";
@@ -18,22 +17,29 @@ class Education extends Component {
       <div className="education-main">
         <Header theme={this.props.theme} />
         <div className="basic-education">
-          <Fade bottom duration={2000} distance="40px">
-            <div className="heading-div">
-              <div className="heading-img-div">
-                <EducationCredentialIllustration theme={theme} />
-              </div>
-              <div className="heading-text-div">
-                <h1 className="heading-text" style={{ color: theme.text }}>
-                  Education
-                </h1>
-                <h3 className="heading-sub-text" style={{ color: theme.text }}>
-                  Qualification and Certifications
-                </h3>
-                {/* <CompetitiveSites logos={competitiveSites.competitiveSites} /> */}
-              </div>
-            </div>
-          </Fade>
+          <div className="console-page-header">
+            <Fade bottom duration={1200} distance="24px">
+              <ConsoleHeader
+                theme={theme}
+                command="ls ~/education --certifications"
+                title="Education & Certifications"
+                description="MCA with 8.97 CGPA, cloud architecture, Python automation, and security credentials."
+              />
+            </Fade>
+            <Fade bottom duration={1200} distance="24px">
+              <InfoPanel
+                theme={theme}
+                title="credentials/summary"
+                rows={[
+                  { k: "masters", v: "MCA · CGPA 8.97", accent: true },
+                  { k: "bachelors", v: "BCA · CGPA 8.0" },
+                  { k: "cloud", v: "OCI Architect Associate ‘25" },
+                  { k: "automation", v: "Google IT Automation (Python)" },
+                  { k: "certifications", v: "6 verified" },
+                ]}
+              />
+            </Fade>
+          </div>
           <Educations theme={this.props.theme} />
           {certifications.certifications.length > 0 ? (
             <Certifications theme={this.props.theme} />

@@ -6,9 +6,9 @@
 }
 .greet-main {
   width: 90%;
-  padding: 20px 10px;
+  padding: 10px 10px;
   margin: 0px auto;
-  margin-top: 2rem;
+  margin-top: 0.5rem;
 }
 
 .gretting-main {
@@ -34,16 +34,17 @@
 
 .greeting-kicker {
   font-family:
-    ui-monospace, "Cascadia Code", "SF Mono", Menlo, Consolas, monospace;
+    "JetBrains Mono", ui-monospace, "Cascadia Code", "SF Mono", Menlo, Consolas,
+    monospace;
   font-size: 13px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  margin: 80px 0 0;
+  margin: 34px 0 0;
 }
 
 .greeting-text {
-  margin-top: 12px;
-  font-size: 64px;
+  margin-top: 10px;
+  font-size: 52px;
   line-height: 1.1;
   font-family: "Google Sans Bold";
   letter-spacing: -0.02em;
@@ -57,15 +58,15 @@
 
 .greeting-headline {
   max-width: 760px;
-  margin: 28px 40px 18px 0;
-  font-size: 30px;
+  margin: 18px 40px 12px 0;
+  font-size: 22px;
   line-height: 1.25;
   font-family: "Google Sans Medium";
 }
 
 .greeting-text-p {
-  max-width: 780px;
-  font-size: 24px;
+  max-width: 620px;
+  font-size: 17px;
   line-height: 1.45;
   margin-right: 40px;
   font-family: "Google Sans Medium";
@@ -180,7 +181,8 @@
 
 .greeting-btn {
   font-family:
-    ui-monospace, "Cascadia Code", "SF Mono", Menlo, Consolas, monospace;
+    "JetBrains Mono", ui-monospace, "Cascadia Code", "SF Mono", Menlo, Consolas,
+    monospace;
   font-size: 13px;
   padding: 10px 18px;
   border-radius: 6px;

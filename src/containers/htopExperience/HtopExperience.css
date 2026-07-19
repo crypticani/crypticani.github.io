@@ -1,0 +1,84 @@
+.htop-section {
+  width: 90%;
+  margin: 0 auto 20px;
+}
+
+.htop-window {
+  border: 1px solid;
+  border-radius: 12px;
+  padding: 18px 22px;
+  font-family:
+    "JetBrains Mono", ui-monospace, "Cascadia Code", "SF Mono", Menlo, Consolas,
+    monospace;
+}
+
+.htop-cmdline {
+  font-size: 13px;
+  margin: 0 0 6px;
+}
+
+.htop-meta {
+  font-size: 12px;
+  margin: 0 0 12px;
+}
+
+.htop-meta b {
+  font-weight: 400;
+}
+
+.htop-scroll {
+  overflow-x: auto;
+}
+
+.htop-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12.5px;
+  min-width: 640px;
+}
+
+.htop-table th {
+  text-align: left;
+  padding: 4px 12px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.htop-table td {
+  padding: 9px 12px;
+  border-bottom: 1px solid;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+.htop-table td.htop-command {
+  white-space: normal;
+  min-width: 260px;
+}
+
+.htop-cpu {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.htop-bar {
+  width: 84px;
+  height: 8px;
+  border-radius: 2px;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.htop-bar i {
+  display: block;
+  height: 100%;
+  transition: width 0.7s ease;
+}
+
+.htop-pc {
+  font-size: 11px;
+  width: 3ch;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}

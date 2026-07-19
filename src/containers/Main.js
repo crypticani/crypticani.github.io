@@ -1,5 +1,11 @@
 import React from "react";
-import { Route, Routes, BrowserRouter, Navigate } from "react-router-dom";
+import {
+  Route,
+  Routes,
+  BrowserRouter,
+  Navigate,
+  useLocation,
+} from "react-router-dom";
 import Home from "../pages/home/HomeComponent";
 import Splash from "../pages/splash/Splash";
 import Education from "../pages/education/EducationComponent";
@@ -9,12 +15,15 @@ import Projects from "../pages/projects/Projects";
 import { settings } from "../portfolio.js";
 import Error404 from "../pages/errors/error404/Error";
 import KeyboardNav from "../components/keyboardNav/KeyboardNav";
+import CommandPalette from "../components/commandPalette/CommandPalette";
+import "./Main.css";
 
-export default function Main({ theme }) {
+// Keyed by pathname so every route change replays the tmux-style pane wipe.
+function AnimatedRoutes({ theme }) {
+  const location = useLocation();
   return (
-    <BrowserRouter basename="/">
-      <KeyboardNav />
-      <Routes>
+    <div className="pane-wipe" key={location.pathname}>
+      <Routes location={location}>
         <Route
           path="/"
           element={
@@ -46,6 +55,16 @@ export default function Main({ theme }) {
         />
         <Route path="*" element={<Error404 theme={theme} />} />
       </Routes>
+    </div>
+  );
+}
+
+export default function Main({ theme }) {
+  return (
+    <BrowserRouter basename="/">
+      <KeyboardNav />
+      <CommandPalette theme={theme} />
+      <AnimatedRoutes theme={theme} />
     </BrowserRouter>
   );
 }

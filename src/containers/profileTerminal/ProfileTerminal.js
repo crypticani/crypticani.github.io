@@ -89,7 +89,7 @@ function outputFor(command, commandHistory) {
       return [
         "Available commands:",
         COMMANDS.filter((item) => item !== "clear").join(", ") + ", clear",
-        "Site shortcuts (outside this terminal): 1–5 switch pages, j/k scroll.",
+        "Site shortcuts (outside this terminal): 0–4 switch pages, j/k scroll, Ctrl+K command palette.",
       ];
     case "neofetch":
       return neofetchLines();
@@ -143,6 +143,8 @@ function outputFor(command, commandHistory) {
         "ldap",
         "bash",
         "python",
+        "fastapi",
+        "ai-llm-rag",
         "cloud-infrastructure",
       ];
     case "ls projects/":
@@ -264,6 +266,20 @@ export default function ProfileTerminal({ theme }) {
     }
   }, [lines]);
 
+  // Commands forwarded from the command palette (Ctrl+K → "run: …")
+  const executeRef = useRef(null);
+  useEffect(() => {
+    const onExec = (event) => {
+      const command = event.detail && event.detail.command;
+      if (!command) return;
+      const section = document.getElementById("profile-terminal");
+      if (section) section.scrollIntoView({ behavior: "smooth" });
+      if (executeRef.current) executeRef.current(command);
+    };
+    window.addEventListener("crypticani:terminal-exec", onExec);
+    return () => window.removeEventListener("crypticani:terminal-exec", onExec);
+  }, []);
+
   const executeCommand = (rawCommand) => {
     const command = rawCommand.trim();
     if (!command) return;
@@ -287,6 +303,8 @@ export default function ProfileTerminal({ theme }) {
     ]);
     setHistoryIndex(null);
   };
+
+  executeRef.current = executeCommand;
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -350,12 +368,21 @@ export default function ProfileTerminal({ theme }) {
       aria-labelledby="profile-terminal-heading"
     >
       <div className="profile-terminal-copy">
+        <p
+          className="profile-terminal-cmdline"
+          style={{ color: theme.secondaryText }}
+        >
+          <span style={{ color: theme.imageHighlight }}>
+            crypticani@prod:~$
+          </span>{" "}
+          ssh recruiter@crypticani.dev
+        </p>
         <h2 id="profile-terminal-heading" style={{ color: theme.text }}>
           Explore my profile like a terminal
         </h2>
         <p style={{ color: theme.secondaryText }}>
-          A recruiter-friendly command line for quickly scanning my background,
-          skills, projects, contact links, and resume.
+          A recruiter-friendly command line — try `neofetch`, `sudo hire-me`, or
+          Tab completion.
         </p>
       </div>
 

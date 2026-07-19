@@ -34,13 +34,15 @@
   0% {
     opacity: 0.01;
     transform: translateY(-20px);
-    transition: opacity 300ms cubic-bezier(0.645, 0.045, 0.355, 1),
+    transition:
+      opacity 300ms cubic-bezier(0.645, 0.045, 0.355, 1),
       transform 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
   }
   100% {
     opacity: 1;
     transform: translateY(0px);
-    transition: opacity 300ms cubic-bezier(0.645, 0.045, 0.355, 1),
+    transition:
+      opacity 300ms cubic-bezier(0.645, 0.045, 0.355, 1),
       transform 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
   }
 }
@@ -49,13 +51,59 @@
   0% {
     opacity: 0.01;
     transform: translateY(20px);
-    transition: opacity 300ms cubic-bezier(0.645, 0.045, 0.355, 1),
+    transition:
+      opacity 300ms cubic-bezier(0.645, 0.045, 0.355, 1),
       transform 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
   }
   100% {
     opacity: 1;
     transform: translateY(0px);
-    transition: opacity 300ms cubic-bezier(0.645, 0.045, 0.355, 1),
+    transition:
+      opacity 300ms cubic-bezier(0.645, 0.045, 0.355, 1),
       transform 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
   }
+}
+
+/* Console page layout: header text left, summary panel right */
+.console-page-header {
+  width: 90%;
+  margin: 26px auto 6px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 44px;
+}
+
+.console-page-header > * {
+  min-width: 0;
+}
+
+.console-page-header > div:first-child {
+  flex: 1;
+}
+
+.console-page-header .console-header {
+  max-width: 680px;
+}
+
+@media (max-width: 900px) {
+  .console-page-header {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+/* Cap content width on large screens — sections already center via margin auto */
+.greet-main,
+.journal-ticker,
+.proof-bar-section,
+.profile-terminal-section,
+.case-studies-section,
+.console-page-header,
+.htop-section,
+.certs-body-div,
+.certs-header,
+.educations-header,
+.main {
+  max-width: 1320px;
 }

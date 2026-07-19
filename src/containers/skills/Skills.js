@@ -1,6 +1,6 @@
 import React from "react";
 import "./Skills.css";
-import SkillSection from "./SkillSection";
+import ConsoleHeader from "../../components/consoleHeader/ConsoleHeader";
 import { skills } from "../../portfolio";
 import { Fade } from "react-reveal";
 
@@ -8,22 +8,14 @@ export default function Skills(props) {
   const theme = props.theme;
   return (
     <div className="main" id="skills">
-      <div className="skills-header-div">
-        <Fade bottom duration={2000} distance="20px">
-          <h1 className="skills-header" style={{ color: theme.text }}>
-            Capabilities
-          </h1>
-        </Fade>
-        <Fade bottom duration={1400} distance="20px">
-          <p
-            className="skills-header-subtitle"
-            style={{ color: theme.secondaryText }}
-          >
-            A compact view of how my DevOps, platform, SRE, security, and
-            full-stack work fits together.
-          </p>
-        </Fade>
-      </div>
+      <Fade bottom duration={1200} distance="20px">
+        <ConsoleHeader
+          theme={theme}
+          command="cat /etc/aniket/capabilities.conf"
+          title="Capabilities"
+          description="A compact view of how my DevOps, platform, SRE, security, and full-stack work fits together."
+        />
+      </Fade>
       <div className="skill-depth-grid" aria-label="Skill depth groups">
         {skills.depthGroups.map((group) => (
           <Fade bottom duration={900} distance="20px" key={group.title}>
@@ -89,7 +81,6 @@ export default function Skills(props) {
           </Fade>
         ))}
       </div>
-      <SkillSection theme={theme} />
     </div>
   );
 }
