@@ -1,0 +1,46 @@
+.info-panel {
+  border: 1px solid;
+  border-radius: 12px;
+  padding: 6px 18px 10px;
+  font-family:
+    "JetBrains Mono", ui-monospace, "Cascadia Code", "SF Mono", Menlo, Consolas,
+    monospace;
+  font-size: 12.5px;
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box;
+}
+
+.info-panel-title {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 9px 0;
+  border-bottom: 1px solid;
+  font-size: 11px;
+  letter-spacing: 0.04em;
+}
+
+.info-panel-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 14px;
+  padding: 9px 0;
+  border-bottom: 1px solid;
+}
+
+.info-panel-row:last-child {
+  border-bottom: 0;
+}
+
+.info-panel-row span:last-child {
+  text-align: right;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 900px) {
+  .info-panel {
+    max-width: 100%;
+  }
+}

@@ -5,6 +5,7 @@ import TopButton from "../../components/topButton/TopButton";
 import SocialMedia from "../../components/socialMedia/SocialMedia";
 import Button from "../../components/button/Button";
 import ConsoleHeader from "../../components/consoleHeader/ConsoleHeader";
+import InfoPanel from "../../components/infoPanel/InfoPanel";
 import TechnicalWritingIllustration from "./TechnicalWritingIllustration";
 import { Fade } from "react-reveal";
 import "./ContactComponent.css";
@@ -20,9 +21,9 @@ class Contact extends Component {
       <div className="contact-main">
         <Header theme={theme} />
         <div className="basic-contact">
-          <Fade bottom duration={1000} distance="40px">
-            <div className="contact-heading-div">
-              <div className="contact-heading-text-div">
+          <div className="console-page-header">
+            <Fade bottom duration={1000} distance="24px">
+              <div>
                 <ConsoleHeader
                   theme={theme}
                   command="cat /etc/aniket/contact"
@@ -39,8 +40,22 @@ class Contact extends Component {
                   />
                 </div>
               </div>
-            </div>
-          </Fade>
+            </Fade>
+            <Fade bottom duration={1000} distance="24px">
+              <InfoPanel
+                theme={theme}
+                title="contact/channels"
+                rows={[
+                  { k: "email", v: "aniket.kumar@hotmail.com", accent: true },
+                  { k: "github", v: "github.com/crypticani" },
+                  { k: "linkedin", v: "in/crypticani" },
+                  { k: "discord", v: "@crypticani" },
+                  { k: "blog", v: "blog.crypticani.dev" },
+                  { k: "response time", v: "< 24h · IST" },
+                ]}
+              />
+            </Fade>
+          </div>
           <Fade bottom duration={1000} distance="40px">
             <div className="blog-heading-div">
               <div className="blog-heading-text-div">

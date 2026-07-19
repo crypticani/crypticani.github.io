@@ -64,8 +64,31 @@
   }
 }
 
-/* Console page layout */
+/* Console page layout: header text left, summary panel right */
 .console-page-header {
   width: 90%;
   margin: 26px auto 6px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 44px;
+}
+
+.console-page-header > * {
+  min-width: 0;
+}
+
+.console-page-header > div:first-child {
+  flex: 1;
+}
+
+.console-page-header .console-header {
+  max-width: 680px;
+}
+
+@media (max-width: 900px) {
+  .console-page-header {
+    flex-direction: column;
+    gap: 20px;
+  }
 }

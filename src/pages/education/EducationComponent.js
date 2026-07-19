@@ -5,6 +5,7 @@ import TopButton from "../../components/topButton/TopButton";
 import Educations from "../../containers/education/Educations";
 import Certifications from "../../containers/certifications/Certifications";
 import ConsoleHeader from "../../components/consoleHeader/ConsoleHeader";
+import InfoPanel from "../../components/infoPanel/InfoPanel";
 import { certifications } from "../../portfolio";
 import "./EducationComponent.css";
 import { Fade } from "react-reveal";
@@ -23,6 +24,19 @@ class Education extends Component {
                 command="ls ~/education --certifications"
                 title="Education & Certifications"
                 description="MCA with 8.97 CGPA, cloud architecture, Python automation, and security credentials."
+              />
+            </Fade>
+            <Fade bottom duration={1200} distance="24px">
+              <InfoPanel
+                theme={theme}
+                title="credentials/summary"
+                rows={[
+                  { k: "masters", v: "MCA · CGPA 8.97", accent: true },
+                  { k: "bachelors", v: "BCA · CGPA 8.0" },
+                  { k: "cloud", v: "OCI Architect Associate ‘25" },
+                  { k: "automation", v: "Google IT Automation (Python)" },
+                  { k: "certifications", v: "6 verified" },
+                ]}
               />
             </Fade>
           </div>
