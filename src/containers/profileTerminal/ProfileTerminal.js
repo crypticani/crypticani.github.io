@@ -143,6 +143,8 @@ function outputFor(command, commandHistory) {
         "ldap",
         "bash",
         "python",
+        "fastapi",
+        "ai-llm-rag",
         "cloud-infrastructure",
       ];
     case "ls projects/":

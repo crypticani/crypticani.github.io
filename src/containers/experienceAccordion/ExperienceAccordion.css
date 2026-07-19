@@ -1,6 +1,8 @@
 /* ─── Accordion wrapper ───────────────────────────────────────────────────── */
 .experience-accord {
-  margin: 30px 50px 60px;
+  width: 90%;
+  max-width: 1320px;
+  margin: 30px auto 60px;
 }
 
 /* Section label displayed above each group */

@@ -1,6 +1,5 @@
 import React from "react";
 import "./Skills.css";
-import SkillSection from "./SkillSection";
 import ConsoleHeader from "../../components/consoleHeader/ConsoleHeader";
 import { skills } from "../../portfolio";
 import { Fade } from "react-reveal";
@@ -82,7 +81,6 @@ export default function Skills(props) {
           </Fade>
         ))}
       </div>
-      <SkillSection theme={theme} />
     </div>
   );
 }
