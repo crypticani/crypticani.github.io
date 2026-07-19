@@ -159,7 +159,7 @@ class Splash extends Component {
   }
 
   next() {
-    const { count } = this.state;
+    const count = this.state.count;
     const line = BOOT_LINES.at(count);
     if (!line) {
       this.timer = setTimeout(this.finish, 350);
