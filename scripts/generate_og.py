@@ -1,10 +1,8 @@
 #!/usr/bin/env python3
-"""
-Render the OG social card (scripts/og/card.html) to public/icons/og-card.png.
+"""Render scripts/og/card.html to public/icons/og-card.png via headless chromium."""
 
-Requires a chromium/chrome binary. Run from the repo root:
-    python3 scripts/generate_og.py
-"""
+# Requires a chromium/chrome binary. Run from the repo root:
+#     python3 scripts/generate_og.py
 
 import shutil
 import subprocess  # nosec B404 — fixed local browser invocation, no untrusted input
