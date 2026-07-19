@@ -92,3 +92,18 @@
     gap: 20px;
   }
 }
+
+/* Cap content width on large screens — sections already center via margin auto */
+.greet-main,
+.journal-ticker,
+.proof-bar-section,
+.profile-terminal-section,
+.case-studies-section,
+.console-page-header,
+.htop-section,
+.certs-body-div,
+.certs-header,
+.educations-header,
+.main {
+  max-width: 1320px;
+}
