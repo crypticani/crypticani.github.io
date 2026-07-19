@@ -8,7 +8,7 @@ import { Fade } from "react-reveal";
 import { greeting, projectsHeader } from "../../portfolio.js";
 import ProjectsData from "../../shared/opensource/projects.json";
 import "./Projects.css";
-import ProjectPortfolioIllustration from "./ProjectPortfolioIllustration";
+import ConsoleHeader from "../../components/consoleHeader/ConsoleHeader";
 
 const projectSections = [
   {
@@ -37,33 +37,20 @@ class Projects extends Component {
     return (
       <div className="projects-main">
         <Header theme={theme} />
-        <div className="basic-projects">
-          <Fade bottom duration={2000} distance="40px">
-            <div className="projects-heading-div">
-              <div className="projects-heading-img-div">
-                <ProjectPortfolioIllustration theme={theme} />
-              </div>
-              <div className="projects-heading-text-div">
-                <h1
-                  className="projects-heading-text"
-                  style={{ color: theme.text }}
-                >
-                  {projectsHeader.title}
-                </h1>
-                <p
-                  className="projects-header-detail-text subTitle"
-                  style={{ color: theme.secondaryText }}
-                >
-                  {projectsHeader["description"]}
-                </p>
-              </div>
-            </div>
+        <div className="console-page-header">
+          <Fade bottom duration={1200} distance="24px">
+            <ConsoleHeader
+              theme={theme}
+              command="ls ~/public --sort=stars"
+              title={projectsHeader.title}
+              description={projectsHeader["description"]}
+            />
           </Fade>
         </div>
         <div className="project-section-list">
           {projectSections.map((section) => {
             const repos = ProjectsData.data.filter(
-              (repo) => repo.category === section.id
+              (repo) => repo.category === section.id,
             );
             if (!repos.length) return null;
 
@@ -83,11 +70,7 @@ class Projects extends Component {
                 >
                   {repos.map((repo) => {
                     return (
-                      <GithubRepoCard
-                        repo={repo}
-                        theme={theme}
-                        key={repo.id}
-                      />
+                      <GithubRepoCard repo={repo} theme={theme} key={repo.id} />
                     );
                   })}
                 </div>

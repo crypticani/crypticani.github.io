@@ -2,9 +2,16 @@
 
 .header {
   display: block;
-  max-width: 90%;
-  padding: 20px 10px;
-  margin: 0px auto;
+  max-width: 100%;
+  padding: 8px 4%;
+  margin: 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgb(11 18 32 / 0.92);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgb(28 43 71 / 0.9);
+  box-sizing: border-box;
 }
 
 .header ul {
@@ -20,22 +27,22 @@
 
 .header li a {
   display: block;
-  padding: 20px 20px;
-  /* color: black; */
+  padding: 14px 16px;
   text-decoration: none;
 }
 
 .header .logo {
   display: block;
   float: left;
-  font-size: 1.5em;
+  font-size: 1.15em;
   text-decoration: none;
-  margin-top: 10px;
+  margin-top: 6px;
   line-height: normal;
 }
 .header .logo-name {
   font-family:
-    ui-monospace, "Cascadia Code", "SF Mono", Menlo, Consolas, monospace;
+    "JetBrains Mono", ui-monospace, "Cascadia Code", "SF Mono", Menlo, Consolas,
+    monospace;
   font-weight: 600;
   font-size: 0.9em;
   padding: 0 6px;
@@ -49,7 +56,8 @@
   align-items: center;
   gap: 7px;
   font-family:
-    ui-monospace, "Cascadia Code", "SF Mono", Menlo, Consolas, monospace;
+    "JetBrains Mono", ui-monospace, "Cascadia Code", "SF Mono", Menlo, Consolas,
+    monospace;
   font-size: 11px;
   letter-spacing: 0.05em;
   white-space: nowrap;
@@ -180,5 +188,59 @@
 @media (max-width: 960px) and (min-width: 768px) {
   .header {
     font-size: 12px;
+  }
+}
+
+/* tmux-style nav tabs */
+
+.menu .tmux-tab {
+  font-family:
+    "JetBrains Mono", ui-monospace, "Cascadia Code", "SF Mono", Menlo, Consolas,
+    monospace;
+  font-size: 13px;
+  border-radius: 6px;
+  padding: 8px 14px;
+  margin: 0 2px;
+}
+
+.header-right {
+  display: none;
+  align-items: center;
+  gap: 14px;
+  margin-left: 18px;
+}
+
+.header-clock {
+  font-family:
+    "JetBrains Mono", ui-monospace, "Cascadia Code", "SF Mono", Menlo, Consolas,
+    monospace;
+  font-size: 11px;
+  font-variant-numeric: tabular-nums;
+}
+
+.header-palette-btn {
+  font-family:
+    "JetBrains Mono", ui-monospace, "Cascadia Code", "SF Mono", Menlo, Consolas,
+    monospace;
+  font-size: 11px;
+  background: none;
+  border: 1px solid;
+  border-radius: 5px;
+  padding: 2px 9px;
+  cursor: pointer;
+}
+
+.header-palette-btn:hover,
+.header-palette-btn:focus-visible {
+  opacity: 0.75;
+}
+
+@media (min-width: 48em) {
+  .header-right {
+    display: inline-flex;
+  }
+
+  .header li a.tmux-tab {
+    padding: 8px 14px;
   }
 }

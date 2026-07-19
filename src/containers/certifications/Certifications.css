@@ -1,8 +1,12 @@
 .certs-header {
-  font-size: 40px;
-  line-height: 1.1;
-  font-family: "Google Sans Regular";
-  text-align: center;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+  text-align: left;
+  width: 90%;
+  margin: 30px auto 4px;
 }
 
 .certs-body-div {

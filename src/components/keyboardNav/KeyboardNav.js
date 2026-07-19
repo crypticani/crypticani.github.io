@@ -1,15 +1,15 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
-// TTY-style keyboard shortcuts (easter egg, documented in the terminal's
-// `help`): 1–5 switch pages, j/k scroll. Never fires while typing.
-const ROUTES = {
-  1: "/home",
-  2: "/education",
-  3: "/experience",
-  4: "/projects",
-  5: "/contact",
-};
+// TTY-style keyboard shortcuts (documented in the terminal's `help`):
+// 0–4 switch pages (tmux window numbers), j/k scroll. Never fires while typing.
+const ROUTES = new Map([
+  ["0", "/home"],
+  ["1", "/education"],
+  ["2", "/experience"],
+  ["3", "/projects"],
+  ["4", "/contact"],
+]);
 
 export default function KeyboardNav() {
   const navigate = useNavigate();
@@ -28,8 +28,8 @@ export default function KeyboardNav() {
       // Don't hijack keys while the boot splash is running (any key skips it)
       if (document.querySelector(".boot-screen")) return;
 
-      if (ROUTES[event.key]) {
-        navigate(ROUTES[event.key]);
+      if (ROUTES.has(event.key)) {
+        navigate(ROUTES.get(event.key));
       } else if (event.key === "j") {
         window.scrollBy({ top: 140, behavior: "smooth" });
       } else if (event.key === "k") {

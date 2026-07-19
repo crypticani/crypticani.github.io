@@ -4,7 +4,7 @@ import Footer from "../../components/footer/Footer";
 import TopButton from "../../components/topButton/TopButton";
 import SocialMedia from "../../components/socialMedia/SocialMedia";
 import Button from "../../components/button/Button";
-import ContactChannelsIllustration from "./ContactChannelsIllustration";
+import ConsoleHeader from "../../components/consoleHeader/ConsoleHeader";
 import TechnicalWritingIllustration from "./TechnicalWritingIllustration";
 import { Fade } from "react-reveal";
 import "./ContactComponent.css";
@@ -22,22 +22,13 @@ class Contact extends Component {
         <div className="basic-contact">
           <Fade bottom duration={1000} distance="40px">
             <div className="contact-heading-div">
-              <div className="contact-heading-img-div">
-                <ContactChannelsIllustration theme={theme} />
-              </div>
               <div className="contact-heading-text-div">
-                <h1
-                  className="contact-heading-text"
-                  style={{ color: theme.text }}
-                >
-                  {ContactData["title"]}
-                </h1>
-                <p
-                  className="contact-header-detail-text subTitle"
-                  style={{ color: theme.secondaryText }}
-                >
-                  {ContactData["description"]}
-                </p>
+                <ConsoleHeader
+                  theme={theme}
+                  command="cat /etc/aniket/contact"
+                  title={ContactData["title"]}
+                  description={ContactData["description"]}
+                />
                 <SocialMedia theme={theme} />
                 <div className="resume-btn-div">
                   <Button

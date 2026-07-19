@@ -1,0 +1,21 @@
+.pane-wipe {
+  animation: pane-wipe-in 0.3s ease-out;
+}
+
+@keyframes pane-wipe-in {
+  from {
+    clip-path: inset(0 100% 0 0);
+    opacity: 0.6;
+  }
+
+  to {
+    clip-path: inset(0 0 0 0);
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pane-wipe {
+    animation: none;
+  }
+}

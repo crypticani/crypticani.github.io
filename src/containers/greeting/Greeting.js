@@ -2,7 +2,7 @@ import React from "react";
 import "./Greeting.css";
 import { greeting } from "../../portfolio";
 import { Fade } from "react-reveal";
-import ClusterStatusPanel from "./ClusterStatusPanel";
+import TopologyHero from "./TopologyHero";
 
 export default function Greeting(props) {
   const theme = props.theme;
@@ -82,7 +82,7 @@ export default function Greeting(props) {
             </div>
           </div>
           <div className="greeting-image-div">
-            <ClusterStatusPanel theme={theme} />
+            <TopologyHero theme={theme} />
           </div>
         </div>
       </div>
