@@ -136,6 +136,8 @@ const skills = {
       items: [
         "OCI",
         "AWS",
+        "Cloudflare",
+        "Tailscale",
         "Jenkins",
         "GitLab CI",
         "GitHub Actions",
@@ -322,17 +324,32 @@ const experience = {
   subtitle:
     "DevOps, development, platform engineering, cloud infrastructure, and SRE work",
   description:
-    "4+ years of professional DevOps experience across production infrastructure, cloud migrations, CI/CD automation, Kubernetes and containerized workloads, observability, database HA/DR, cloud operations, IAM, DevSecOps practices, and developer tooling, backed by internship and early engineering experience.",
+    "4+ years of full-time DevOps and cloud infrastructure experience across production infrastructure, IaC, cloud migrations, CI/CD automation, Kubernetes, observability, database HA/DR, Cloudflare, Tailscale, SOC 2 compliance, and DevSecOps practices.",
   sections: [
     {
       title: "Work",
       experiences: [
         {
+          title: "Cloud Infrastructure Engineer (DevOps)",
+          company: "Hr.com",
+          company_url: "https://www.hr.com/",
+          logo_path: "hrcom.png",
+          duration: "Sep 2026 - Present",
+          location: "Remote",
+          descriptions: [
+            "Provision and manage tenant infrastructure end-to-end using Infrastructure as Code (IaC) — coordinating cloud resource creation, networking, and configuration for new customers.",
+            "Administer Cloudflare for DNS, CDN, WAF, and traffic management, and Tailscale for secure zero-trust network connectivity across services.",
+            "Debug and resolve cloud infrastructure and database-related issues, ensuring reliability and minimal downtime across production systems.",
+            "Actively assist in SOC 2 audit activities, contributing to evidence collection, access control enforcement, and compliance documentation.",
+          ],
+          color: "#e05735",
+        },
+        {
           title: "Senior DevOps Engineer (Acting Technical Lead)",
           company: "KocharTech",
           company_url: "https://www.kochartech.com/",
           logo_path: "kochartech-small.jpg",
-          duration: "Jun 2023 - Present",
+          duration: "Jun 2023 - Sep 2026",
           location: "Amritsar, India",
           descriptions: [
             "Own HA infrastructure, CI/CD, observability, and cloud operations for 15+ production applications with 99.9% uptime SLA.",
@@ -535,15 +552,24 @@ const contactPageData = {
 const htopProcesses = [
   {
     pid: 1,
+    role: "Cloud Infrastructure Engineer",
+    org: "Hr.com",
+    cpu: 92,
+    time: "2026→now",
+    command:
+      "Tenant IaC · Cloudflare · Tailscale · cloud infra debugging · SOC 2 audit",
+  },
+  {
+    pid: 2,
     role: "Senior DevOps Engineer",
     org: "KocharTech",
     cpu: 88,
-    time: "2023→now",
+    time: "2023→26",
     command:
       "HA infra · CI/CD · 99.9% SLA · leads 8+ engineers · MTTR −40% · −25% cloud spend",
   },
   {
-    pid: 2,
+    pid: 3,
     role: "IT Intern",
     org: "KocharTech",
     cpu: 54,
@@ -552,7 +578,7 @@ const htopProcesses = [
       "observability for 100+ hosts, 200+ containers · Python exporters · 15+ Grafana dashboards",
   },
   {
-    pid: 3,
+    pid: 4,
     role: "Full Stack Intern",
     org: "TheCodeWork",
     cpu: 31,
@@ -560,7 +586,7 @@ const htopProcesses = [
     command: "Django/DRF APIs · Vue + Tailwind no-code platform UI",
   },
   {
-    pid: 4,
+    pid: 5,
     role: "SDE Intern",
     org: "All World Gayatri Pariwar",
     cpu: 18,

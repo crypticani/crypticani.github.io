@@ -137,27 +137,41 @@ run.font.name = 'Calibri'
 # ========== PROFESSIONAL SUMMARY ==========
 add_heading_line(doc, "Professional Summary")
 add_body(doc,
-    "Senior DevOps Engineer and Technical Lead with 4+ years of experience in Platform Engineering, "
-    "Kubernetes orchestration, CI/CD automation, and Reliability Engineering across multi-cloud and on-premise "
-    "environments. Technical lead for a DevOps team of 8+ engineers while directly managing and mentoring "
-    "2\u20133 interns. Drove infrastructure decision-making, RCA ownership, incident coordination, and sprint "
-    "planning while defining SLOs and sustaining 99.9% SLA across 15+ production applications. Skilled in "
-    "Terraform-based Infrastructure as Code, observability, database HA/DR, cost optimization, and supported "
-    "ISO 27001 and SOC 2 compliance initiatives.")
+    "Cloud Infrastructure and DevOps Engineer with 4+ years of full-time experience in Platform Engineering, "
+    "Infrastructure as Code, Kubernetes orchestration, CI/CD automation, and Reliability Engineering across "
+    "multi-cloud and on-premise environments. Currently at Hr.com managing tenant infrastructure, Cloudflare, "
+    "Tailscale, and assisting in SOC 2 audit. Previously served as Technical Lead for a DevOps team of 8+ "
+    "engineers, driving infrastructure decisions, incident coordination, and sprint planning while sustaining "
+    "99.9% SLA across 15+ production applications. Skilled in Terraform, observability, database HA/DR, cost "
+    "optimization, and compliance initiatives including ISO 27001 and SOC 2.")
 
 # ========== TECHNICAL SKILLS ==========
 add_heading_line(doc, "Technical Skills")
 add_skill_line(doc, "Cloud & Infrastructure:", "AWS, OCI, Azure, GCP, Cloud Migration, Disaster Recovery, Cost Optimization, High Availability")
 add_skill_line(doc, "Containers, CI/CD & IaC:", "Docker, Kubernetes, Docker Compose, Jenkins, GitHub Actions, GitLab CI/CD, Terraform, Ansible, Configuration Management, Grype")
 add_skill_line(doc, "Observability & Databases:", "Prometheus, Grafana, Loki, Alertmanager, PromQL, PostgreSQL, Patroni, MySQL, MongoDB, Redis, KeyDB, ClickHouse")
-add_skill_line(doc, "Security, Compliance & Systems:", "Keycloak, SAML/OIDC, SSL/TLS, RBAC, DevSecOps, ISO 27001, SOC 2, Linux, Nginx, HAProxy, DNS, Python, Bash, Git")
+add_skill_line(doc, "Security, Compliance & Systems:", "Keycloak, SAML/OIDC, SSL/TLS, RBAC, DevSecOps, Cloudflare, Tailscale, ISO 27001, SOC 2, Linux, Nginx, HAProxy, DNS, Python, Bash, Git")
 add_skill_line(doc, "Process & ITSM:", "Agile/Scrum, Jira, Freshservice, ITSM, Change Management, Incident Management, Release Management")
 
 # ========== PROFESSIONAL EXPERIENCE ==========
 add_heading_line(doc, "Professional Experience")
 
-# --- Current Role ---
-add_job_header(doc, "DevOps Engineer (Acting Technical Lead) \u2014 Kochar Innovations Pvt Ltd", "Mar 2025 \u2013 Present")
+# --- Hr.com ---
+add_job_header(doc, "Cloud Infrastructure Engineer (DevOps) \u2014 Hr.com", "Sep 2026 \u2013 Present")
+p = doc.add_paragraph()
+p.paragraph_format.space_after = Pt(1)
+r = p.add_run("Remote")
+r.font.size = Pt(9.5)
+r.font.color.rgb = GRAY2
+r.font.name = 'Calibri'
+
+add_bullet(doc, "Provision and manage tenant infrastructure end-to-end using Infrastructure as Code (IaC) \u2014 coordinating cloud resource creation, networking, and configuration for new customers while ensuring consistent, repeatable deployments.")
+add_bullet(doc, "Administer Cloudflare for DNS, CDN, WAF, and traffic management, and Tailscale for secure zero-trust network connectivity across services.")
+add_bullet(doc, "Debug and resolve cloud infrastructure and database-related issues, ensuring reliability and minimal downtime across production systems.")
+add_bullet(doc, "Actively assist in SOC 2 audit activities, contributing to evidence collection, access control enforcement, and compliance documentation.")
+
+# --- Kochar (merged) ---
+add_job_header(doc, "DevOps Engineer (Acting Technical Lead) \u2014 Kochar Innovations Pvt Ltd", "Jun 2023 \u2013 Sep 2026")
 p = doc.add_paragraph()
 p.paragraph_format.space_after = Pt(1)
 r = p.add_run("Amritsar, India")
@@ -165,32 +179,13 @@ r.font.size = Pt(9.5)
 r.font.color.rgb = GRAY2
 r.font.name = 'Calibri'
 
-add_bullet(doc, "Technical lead for a DevOps team of 8+ engineers while directly managing and mentoring 2\u20133 interns; drove task assignment, roster management, sprint coordination, technical guidance, incident coordination, and RCA ownership across 15+ production applications, sustaining 99.9% uptime SLA.")
-add_bullet(doc, "Planned and executed cloud-to-cloud and cloud-to-on-premise migrations with near-zero-downtime cutover strategies, post-migration validation, and stabilization workflows.")
-add_bullet(doc, "Drove cloud cost optimization initiatives through rightsizing, idle resource cleanup, and reserved capacity planning, reducing monthly infrastructure spend by 25%.")
-add_bullet(doc, "Supported ISO 27001 and SOC 2 audit and compliance activities by enforcing access controls, change management workflows, centralized logging, backup validation, and security policy compliance across cloud infrastructure.")
-add_bullet(doc, "Defined infrastructure standards, deployment patterns, operational runbooks, and platform best practices adopted across multiple application teams, improving deployment consistency and operational reliability.")
-
-# --- Previous Role ---
-add_job_header(doc, "DevOps Engineer \u2014 Kochar Infotech Ltd", "Jun 2023 \u2013 Feb 2025")
-note = doc.add_paragraph()
-note.paragraph_format.space_after = Pt(1)
-r = note.add_run("Continuous role; company restructured to Kochar Innovations Pvt Ltd with same team and responsibilities.")
-r.font.size = Pt(9)
-r.font.color.rgb = GRAY3
-r.font.name = 'Calibri'
-r.italic = True
-
+add_bullet(doc, "Served as Technical Lead for a DevOps team of 8+ engineers; drove task assignment, sprint coordination, incident coordination, and RCA ownership across 15+ production applications, sustaining 99.9% uptime SLA.")
 add_bullet(doc, "Designed and maintained CI/CD pipelines using Jenkins, GitHub Actions, GitLab CI/CD, Terraform, and Ansible, increasing release cadence from bi-weekly to multiple daily deployments.")
 add_bullet(doc, "Containerized 20+ services with multi-stage Dockerfiles and managed Kubernetes workloads with rolling updates and zero-downtime releases; reduced image size by 60% and deployment time by 50%.")
-add_bullet(doc, "Integrated Grype-based container vulnerability scanning into CI/CD security gates, blocking critical/high CVE deployments and reducing production vulnerability exposure by 90%.")
+add_bullet(doc, "Planned and executed cloud-to-cloud and cloud-to-on-premise migrations with near-zero-downtime strategies, post-migration validation, and stabilization workflows; drove cost optimization reducing monthly spend by 25%.")
+add_bullet(doc, "Architected HA data platforms: PostgreSQL + Patroni, MySQL Group Replication, MongoDB Replica Sets, ClickHouse, Redis Sentinel, and KeyDB with automated backup, PITR, and disaster recovery achieving sub-30-minute RTO.")
 add_bullet(doc, "Built full-stack observability using Prometheus, Grafana, Alertmanager, Loki, and custom Python exporters across 100+ hosts and 200+ containers with 15+ operational dashboards.")
-add_bullet(doc, "Architected HA data platforms: PostgreSQL + Patroni, MySQL Group Replication, MongoDB Replica Sets, ClickHouse, Redis Sentinel, and KeyDB with automated backup, PITR, and production readiness runbooks.")
-add_bullet(doc, "Implemented disaster recovery with automated snapshots, cross-region backup replication, and documented recovery runbooks, achieving sub-30-minute RTO and operational excellence standards.")
-
-# --- Intern ---
-add_job_header(doc, "IT Intern \u2014 Kochar Infotech Ltd", "Jun 2022 \u2013 May 2023")
-add_bullet(doc, "Built organization-wide monitoring infrastructure from scratch using Prometheus, Grafana, Loki, and Fluent Bit; automated backup workflows to AWS S3; developed Django + MQTT device portal for 50+ devices.")
+add_bullet(doc, "Integrated Grype-based container vulnerability scanning into CI/CD security gates, reducing production vulnerability exposure by 90%; supported ISO 27001 and SOC 2 audit and compliance activities.")
 
 # ========== CERTIFICATIONS & EDUCATION ==========
 add_heading_line(doc, "Certifications & Education")
@@ -207,13 +202,24 @@ r2.font.size = Pt(9.5)
 r2.font.name = 'Calibri'
 
 p2 = doc.add_paragraph()
-p2.paragraph_format.space_after = Pt(0)
+p2.paragraph_format.space_after = Pt(1)
 p2.paragraph_format.line_spacing = Pt(12)
-r = p2.add_run("Education: ")
+r = p2.add_run("Post Graduation: ")
 r.bold = True
 r.font.size = Pt(9.5)
 r.font.name = 'Calibri'
-r2 = p2.add_run("MCA, Lovely Professional University, Punjab (2021\u20132023), CGPA 8.97 \u2022 BCA, Dev Sanskriti Vishwavidyalaya, Haridwar (2018\u20132021), CGPA 8.0, Academic Excellence Award")
+r2 = p2.add_run("MCA, Lovely Professional University, Punjab  \u2022  2021\u20132023  \u2022  CGPA 8.97")
+r2.font.size = Pt(9.5)
+r2.font.name = 'Calibri'
+
+p3 = doc.add_paragraph()
+p3.paragraph_format.space_after = Pt(0)
+p3.paragraph_format.line_spacing = Pt(12)
+r = p3.add_run("Graduation: ")
+r.bold = True
+r.font.size = Pt(9.5)
+r.font.name = 'Calibri'
+r2 = p3.add_run("BCA, Dev Sanskriti Vishwavidyalaya, Haridwar  \u2022  2018\u20132021  \u2022  CGPA 8.0  \u2022  Academic Excellence Award")
 r2.font.size = Pt(9.5)
 r2.font.name = 'Calibri'
 

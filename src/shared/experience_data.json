@@ -7,11 +7,26 @@
       "title": "Work",
       "experiences": [
         {
+          "title": "Cloud Infrastructure Engineer (DevOps)",
+          "company": "Hr.com",
+          "company_url": "https://www.hr.com/",
+          "logo_path": "hrcom.png",
+          "duration": "Sep 2026 - Present",
+          "location": "Remote",
+          "descriptions": [
+            "Provision and manage tenant infrastructure end-to-end using Infrastructure as Code (IaC) — coordinating cloud resource creation, networking, and configuration for new customers.",
+            "Administer Cloudflare for DNS, CDN, WAF, and traffic management, and Tailscale for secure zero-trust network connectivity across services.",
+            "Debug and resolve cloud infrastructure and database-related issues, ensuring reliability and minimal downtime across production systems.",
+            "Actively assist in SOC 2 audit activities, contributing to evidence collection, access control enforcement, and compliance documentation."
+          ],
+          "color": "#e05735"
+        },
+        {
           "title": "DevOps Engineer",
           "company": "KocharTech",
           "company_url": "https://www.kochartech.com/",
           "logo_path": "kochartech-small.jpg",
-          "duration": "Jun 2023 - Present",
+          "duration": "Jun 2023 - Sep 2026",
           "location": "Amritsar, India",
           "descriptions": [
             "Own HA infrastructure, CI/CD, observability, and cloud operations for 15+ production applications with 99.9% uptime SLA.",
